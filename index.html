@@ -58,7 +58,7 @@
   .eyebrow{ font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; font-weight:600; margin-bottom:1.1rem; display:inline-block; }
   .eyebrow.c-violet{color:var(--violet);} .eyebrow.c-cyan{color:var(--cyan);} .eyebrow.c-orange{color:var(--orange);}
 
-  /* NAV (PERFECT 3-COLUMN ALIGNMENT) */
+  /* NAV (Laptop Style Default) */
   header{ position:fixed; top:16px; left:0; right:0; z-index:100; padding:0 3vw; }
   header .navbar{
     max-width:1180px; margin:0 auto; display:flex; align-items:center; justify-content:space-between;
@@ -262,67 +262,86 @@
   .reveal{opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1);}
   .reveal.in{opacity:1; transform:translateY(0);}
 
-  /* MOBILE SPECIFIC SINGLE LINE FIT */
+  /* MOBILE PRECISE TUNED VIEW */
   @media (max-width:860px){
-    header{ top:8px; padding:0 2vw; }
+    header{ top:6px; padding:0 4px; }
     header .navbar{
-      padding:.45rem .6rem;
-      gap:.3rem;
+      padding:.32rem .4rem !important;
+      gap:.15rem !important;
+      justify-content:flex-start !important;
     }
     
     .logo{
-      font-size:.88rem;
+      font-size:.78rem !important;
+      margin-right:4px !important;
+      flex-shrink:0 !important;
     }
 
+    /* HK-க்கு மிக அருகில் நேர்த்தியாக மெனு */
     nav.links{
-      gap:.35rem;
-      font-size:.56rem;
-      font-weight:700;
-      letter-spacing:.02em;
+      display:flex !important;
+      gap:.2rem !important;
+      font-size:.48rem !important;
+      font-weight:700 !important;
+      letter-spacing:0 !important;
+      flex-shrink:0 !important;
     }
     nav.links a{
-      padding:2px 2px;
-      color:var(--fg);
+      padding:1px 2px !important;
+      color:var(--fg) !important;
     }
 
+    /* வலதுபக்க பட்டன்கள் முழுமையாக திரைக்குள் பொருந்த */
     .nav-actions{
-      gap:.25rem;
+      margin-left:auto !important;
+      gap:.15rem !important;
+      flex-shrink:0 !important;
     }
     .nav-actions .btn-primary{
-      padding:.42rem .65rem;
-      font-size:.62rem;
+      padding:.3rem .45rem !important;
+      font-size:.52rem !important;
+      font-weight:700 !important;
+      border-radius:999px !important;
     }
     .nav-actions .btn-cv{
-      padding:.42rem .5rem;
-      font-size:.65rem;
+      padding:.3rem .38rem !important;
+      font-size:.54rem !important;
+      border-radius:999px !important;
     }
-    .nav-actions .btn-cv span.label-full{ display:none; }
+    .nav-actions .btn-cv span.label-full{ display:none !important; }
 
-    /* HERO ADJUSTMENT */
-    .hero{ padding-top:90px; }
-    .hero .wrap{ padding-right:3.2rem; }
-    .hero h1{ font-size:clamp(2.2rem, 9.5vw, 3.4rem); }
-    .hero .role{ font-size:1rem; }
-    .hero p.lede{ font-size:.88rem; margin:1rem 0 1.5rem; }
-    .cta-row{ gap:.7rem; margin-bottom:1.8rem; }
-    .cta-row .btn{ padding:.75rem 1.2rem; font-size:.78rem; width:100%; justify-content:center; }
+    /* HERO கன்டென்ட் மேலே ஏற்றப்பட்டு சம இடைவெளி (Equal Spacing) */
+    .hero{ 
+      padding-top:48px !important; 
+      min-height:auto !important; 
+      padding-bottom:20px !important; 
+    }
+    .hero .wrap{ padding-right:2.8rem !important; }
+    .kicker{ font-size:.82rem !important; margin-bottom:.35rem !important; }
+    .hero h1{ font-size:clamp(2rem, 9vw, 3rem) !important; line-height:.98 !important; }
+    .hero .role{ font-size:.92rem !important; margin-top:.6rem !important; }
+    .hero p.lede{ font-size:.82rem !important; margin:.6rem 0 1.1rem !important; line-height:1.45 !important; }
+    .cta-row{ gap:.55rem !important; margin-bottom:1.2rem !important; }
+    .cta-row .btn{ padding:.65rem 1rem !important; font-size:.74rem !important; width:100% !important; justify-content:center !important; }
+    .status-pill{ font-size:.7rem !important; padding:.45rem .8rem !important; }
 
-    /* SIDE DOCK */
+    /* சைடு ஐகான்கள் கச்சிதமான பொருத்தம் */
     .social-dock{
-      right:4px;
-      padding:.45rem .25rem;
-      gap:.4rem;
-      border-radius:12px;
+      right:3px !important;
+      top:45% !important;
+      padding:.35rem .15rem !important;
+      gap:.3rem !important;
+      border-radius:10px !important;
     }
     .social-dock a{
-      width:28px;
-      height:28px;
-      font-size:.75rem;
+      width:25px !important;
+      height:25px !important;
+      font-size:.68rem !important;
     }
 
-    .work-grid, .services-grid, .process-grid, .why-grid, .contact-grid{ grid-template-columns:1fr; }
-    .about-copy, .about-side{ grid-column:span 12; }
-    section{ padding:4rem 0; }
+    .work-grid, .services-grid, .process-grid, .why-grid, .contact-grid{ grid-template-columns:1fr !important; }
+    .about-copy, .about-side{ grid-column:span 12 !important; }
+    section{ padding:3rem 0 !important; }
   }
 </style>
 </head>
@@ -340,7 +359,7 @@
     <!-- LEFT -->
     <a href="#home" class="logo">HK<span>.</span></a>
     
-    <!-- CENTER -->
+    <!-- CENTER (CLOSE TO HK) -->
     <nav class="links">
       <a href="#about">About</a>
       <a href="#work">Work</a>
