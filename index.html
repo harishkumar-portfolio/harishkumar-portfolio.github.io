@@ -31,11 +31,13 @@
   .wrap{max-width:1180px; margin:0 auto; padding:0 6vw; width:100%;}
   ::selection{background:var(--violet); color:#fff;}
 
-  /* PRELOADER */
+  /* ========================================================
+     PREMIUM 2.5s PRELOADER / SPLASH SCREEN
+     ======================================================== */
   #preloader {
     position: fixed; inset: 0; background: #07070b; z-index: 99999;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
-    transition: opacity 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0.6s ease;
+    transition: opacity 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0.7s ease;
   }
   #preloader.fade-out {
     opacity: 0;
@@ -43,31 +45,36 @@
     pointer-events: none;
   }
   .preloader-box {
-    display: flex; flex-direction: column; align-items: center; gap: 1.4rem; position: relative;
+    display: flex; flex-direction: column; align-items: center; gap: 1.5rem; position: relative;
   }
   .spinner-wrap {
-    position: relative; width: 90px; height: 90px;
+    position: relative; width: 95px; height: 95px;
     display: flex; align-items: center; justify-content: center;
   }
   .spinner-ring {
     position: absolute; inset: 0; border-radius: 50%;
-    border: 3px solid transparent;
+    border: 3px solid rgba(255,255,255,0.06);
     border-top-color: var(--cyan);
     border-right-color: var(--violet);
-    animation: preloaderSpin 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
-    box-shadow: 0 0 20px rgba(0,245,212,0.3);
+    animation: preloaderSpin 1.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+    box-shadow: 0 0 25px rgba(0,245,212,0.35);
   }
   @keyframes preloaderSpin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
   .preloader-logo {
-    width: 68px; height: 68px; border-radius: 50%;
+    width: 72px; height: 72px; border-radius: 50%;
     background: linear-gradient(135deg, rgba(139,92,246,0.35), rgba(0,245,212,0.25));
     border: 1px solid var(--border); backdrop-filter: blur(10px);
     display: flex; align-items: center; justify-content: center;
-    font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.3rem; color: #fff;
-    box-shadow: 0 0 25px rgba(139,92,246,0.4);
+    font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.35rem; color: #fff;
+    box-shadow: 0 0 30px rgba(139,92,246,0.45);
+    animation: logoGlow 2s ease-in-out infinite alternate;
+  }
+  @keyframes logoGlow {
+    0% { transform: scale(0.96); box-shadow: 0 0 20px rgba(139,92,246,0.3); }
+    100% { transform: scale(1.04); box-shadow: 0 0 35px rgba(0,245,212,0.55); }
   }
   .preloader-logo span { color: var(--orange); }
   .preloader-text {
@@ -75,31 +82,13 @@
     display: flex; align-items: center; gap: 0.5rem;
   }
   .preloader-bar-bg {
-    width: 170px; height: 4px; background: rgba(255,255,255,0.08); border-radius: 99px; overflow: hidden;
+    width: 180px; height: 4px; background: rgba(255,255,255,0.08); border-radius: 99px; overflow: hidden;
   }
   .preloader-bar-fill {
     width: 0%; height: 100%;
     background: linear-gradient(90deg, var(--violet), var(--cyan), var(--orange));
-    border-radius: 99px; transition: width 0.15s ease-out;
-    box-shadow: 0 0 10px var(--cyan);
-  }
-
-  /* SCROLL PROGRESS BAR */
-  #scrollProgress{
-    position:fixed; top:0; left:0; height:3.5px; width:0%;
-    background:linear-gradient(90deg, var(--violet), var(--cyan), var(--orange));
-    z-index:9999; transition:width 0.1s ease-out;
-  }
-
-  /* CUSTOM GLOW CURSOR */
-  .custom-cursor{
-    position:fixed; width:280px; height:280px; border-radius:50%;
-    background:radial-gradient(circle, rgba(139,92,246,0.15) 0%, rgba(0,245,212,0.05) 50%, transparent 70%);
-    pointer-events:none; transform:translate(-50%, -50%); z-index:1;
-    transition:transform 0.1s ease-out; display:none;
-  }
-  @media(min-width: 861px){
-    .custom-cursor{ display:block; }
+    border-radius: 99px;
+    box-shadow: 0 0 12px var(--cyan);
   }
 
   .grad-text{
@@ -130,7 +119,7 @@
   .eyebrow{ font-size:.78rem; letter-spacing:.22em; text-transform:uppercase; font-weight:700; margin-bottom:1.1rem; display:inline-block; }
   .eyebrow.c-violet{color:#A78BFA;} .eyebrow.c-cyan{color:#2DD4BF;} .eyebrow.c-orange{color:#FB923C;}
 
-  /* NAV (DESKTOP) */
+  /* NAV */
   header{ position:fixed; top:16px; left:0; width:100%; z-index:100; padding:0 3vw; }
   header .navbar{
     max-width:1180px; margin:0 auto; display:flex; align-items:center; justify-content:space-between;
@@ -146,7 +135,6 @@
   nav.links a:hover{color:#fff;}
   .nav-actions{display:flex; align-items:center; justify-content:flex-end; gap:.7rem; flex-shrink:0;}
 
-  /* HAMBURGER TOGGLE */
   .menu-toggle{
     display:none; background:none; border:none; color:#fff; font-size:1.3rem;
     cursor:pointer; padding:0.4rem; z-index:110;
@@ -206,7 +194,7 @@
     background:rgba(124,92,255,.12);
   }
 
-  /* SECTIONS WITH DIVIDER LINE */
+  /* SECTIONS */
   section{ padding:8rem 0; position:relative; overflow:hidden; border-bottom:1px solid rgba(255,255,255,0.08); }
   .grid-12{display:grid; grid-template-columns:repeat(12,1fr); gap:2.2rem;}
   .section-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:2rem; margin-bottom:4rem; flex-wrap:wrap;}
@@ -338,15 +326,6 @@
   }
   .form-field input:focus, .form-field textarea:focus{ outline:none; border-color:var(--cyan); box-shadow:0 0 0 3px rgba(0,245,212,0.25); background:rgba(255,255,255,0.1); }
 
-  /* TRUST BADGES */
-  .trust-box{
-    margin-top:1.4rem; padding-top:1.2rem; border-top:1px solid rgba(255,255,255,0.1);
-    display:flex; flex-direction:column; gap:0.6rem;
-  }
-  .trust-item{ display:flex; align-items:center; gap:0.6rem; font-size:0.85rem; color:var(--fg-dim); font-weight:500; }
-  .dot-pulse{ width:8px; height:8px; border-radius:50%; background:#10B981; position:relative; box-shadow:0 0 10px #10B981; flex-shrink:0;}
-  .dot-pulse::after{ content:''; position:absolute; inset:-4px; border-radius:50%; border:1px solid #10B981; animation:pulse 2s infinite;}
-
   /* SCROLL TO TOP BUTTON */
   .scroll-top-btn{
     position:fixed;
@@ -393,9 +372,7 @@
   .reveal{opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1);}
   .reveal.in{opacity:1; transform:translateY(0);}
 
-  /* ========================================================
-     PREMIUM FROSTED GLASS MOBILE MENU
-     ======================================================== */
+  /* MOBILE RESPONSIVE FIX */
   @media (max-width: 860px){
     body{ width: 100vw; }
     .wrap{ padding: 0 5vw; }
@@ -409,12 +386,11 @@
 
     .menu-toggle{ display: block; }
 
-    /* FROSTED GLASS DROPDOWN MENU */
     nav.links{
       display: none;
       position: absolute;
       top: 65px; left: 0; width: 100%;
-      background: rgba(15, 15, 26, 0.75); /* அடர் கருப்பு நீக்கப்பட்டு க்ளியர் கிளாஸ் சேர்க்கப்பட்டது */
+      background: rgba(15, 15, 26, 0.75);
       backdrop-filter: blur(28px);
       -webkit-backdrop-filter: blur(28px);
       border: 1px solid rgba(255, 255, 255, 0.18);
@@ -508,7 +484,7 @@
 </head>
 <body>
 
-<!-- PRELOADER -->
+<!-- PRELOADER (2.5s TIMED PRELOADER) -->
 <div id="preloader">
   <div class="preloader-box">
     <div class="spinner-wrap">
@@ -525,12 +501,6 @@
   </div>
 </div>
 
-<!-- TOP SCROLL PROGRESS BAR -->
-<div id="scrollProgress"></div>
-
-<!-- CUSTOM GLOW CURSOR (PC) -->
-<div class="custom-cursor" id="customCursor"></div>
-
 <div class="aurora">
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
@@ -543,7 +513,7 @@
     <!-- LEFT -->
     <a href="#home" class="logo">HK<span>.</span></a>
     
-    <!-- CENTER (PREMIUM FROSTED GLASS DROPDOWN) -->
+    <!-- CENTER (FROSTED GLASS MOBILE MENU) -->
     <nav class="links" id="navLinks">
       <a href="#about" class="nav-item">About</a>
       <a href="#work" class="nav-item">Work</a>
@@ -809,12 +779,6 @@
       <div class="form-field"><label>Email</label><input type="email" required placeholder="you@email.com"></div>
       <div class="form-field"><label>Message</label><textarea rows="5" required placeholder="Tell me about the project..."></textarea></div>
       <button type="submit" class="btn btn-primary magnetic" style="width:100%; justify-content:center;">Send Message <span class="arrow">→</span></button>
-      
-      <!-- TRUST BADGES -->
-      <div class="trust-box">
-        <div class="trust-item"><span class="dot-pulse"></span> Response Time: Usually replies within 24 hours</div>
-        <div class="trust-item"><i class="fa-solid fa-check" style="color:var(--cyan);"></i> Free Project Consultation Available</div>
-      </div>
     </form>
   </div>
 </section>
@@ -840,41 +804,39 @@
 </footer>
 
 <script>
-  // Preloader Logic
+  // Preloader Logic (Strict 2.4s Smooth Loading Animation)
   window.addEventListener('DOMContentLoaded', () => {
     const preloader = document.getElementById('preloader');
     const loadPct = document.getElementById('loadPct');
     const loadBar = document.getElementById('loadBar');
+    
     let progress = 0;
+    const duration = 2400; // 2.4 வினாடிகள்
+    const intervalTime = 40;
+    const step = 100 / (duration / intervalTime);
 
-    const interval = setInterval(() => {
-      progress += Math.floor(Math.random() * 20) + 10;
+    const timer = setInterval(() => {
+      progress += step;
       if (progress >= 100) {
         progress = 100;
-        clearInterval(interval);
+        clearInterval(timer);
         if (loadPct) loadPct.textContent = '100%';
         if (loadBar) loadBar.style.width = '100%';
         setTimeout(() => {
           if (preloader) preloader.classList.add('fade-out');
         }, 300);
       } else {
-        if (loadPct) loadPct.textContent = progress + '%';
-        if (loadBar) loadBar.style.width = progress + '%';
+        const rounded = Math.floor(progress);
+        if (loadPct) loadPct.textContent = rounded + '%';
+        if (loadBar) loadBar.style.width = rounded + '%';
       }
-    }, 60);
+    }, intervalTime);
   });
 
-  // Top Scroll Progress Bar & Scroll-To-Top Button
-  const scrollProgress = document.getElementById('scrollProgress');
+  // Scroll-To-Top Button
   const scrollTopBtn = document.getElementById('scrollTopBtn');
-
   window.addEventListener('scroll', ()=>{
-    const winScroll = document.documentElement.scrollTop;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = (winScroll / height) * 100;
-    if(scrollProgress) scrollProgress.style.width = scrolled + '%';
-
-    if(winScroll > 350){
+    if(window.scrollY > 350){
       scrollTopBtn.classList.add('visible');
     } else {
       scrollTopBtn.classList.remove('visible');
@@ -886,15 +848,6 @@
       top: 0,
       behavior: 'smooth'
     });
-  });
-
-  // Custom Glow Cursor (Desktop)
-  const cursor = document.getElementById('customCursor');
-  window.addEventListener('mousemove', (e)=>{
-    if(cursor){
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
-    }
   });
 
   // Mobile Hamburger Menu Toggle
