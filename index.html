@@ -58,11 +58,11 @@
   .eyebrow{ font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; font-weight:600; margin-bottom:1.1rem; display:inline-block; }
   .eyebrow.c-violet{color:var(--violet);} .eyebrow.c-cyan{color:var(--cyan);} .eyebrow.c-orange{color:var(--orange);}
 
-  /* NAV */
+  /* NAV (DESKTOP) */
   header{ position:fixed; top:16px; left:0; right:0; z-index:100; padding:0 3vw; }
   header .navbar{
     max-width:1180px; margin:0 auto; display:flex; align-items:center; justify-content:space-between;
-    padding:.75rem 1.6rem; border-radius:999px; gap:1rem;
+    padding:.75rem 1.6rem; border-radius:999px; gap:1rem; position:relative;
   }
   .logo{font-family:'Syne',sans-serif; font-weight:700; font-size:1.15rem; flex-shrink:0;}
   .logo span{color:var(--orange);}
@@ -73,6 +73,12 @@
   nav.links a{position:relative; transition:color .3s; white-space:nowrap;}
   nav.links a:hover{color:#fff;}
   .nav-actions{display:flex; align-items:center; justify-content:flex-end; gap:.7rem; flex-shrink:0;}
+
+  /* HAMBURGER TOGGLE (DESKTOP-ல் மறைந்திருக்கும்) */
+  .menu-toggle{
+    display:none; background:none; border:none; color:#fff; font-size:1.25rem;
+    cursor:pointer; padding:0.4rem; z-index:110;
+  }
 
   /* BUTTONS */
   .btn{
@@ -262,67 +268,69 @@
   .reveal{opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1);}
   .reveal.in{opacity:1; transform:translateY(0);}
 
-  /* MOBILE RESPONSIVE FIX */
-  @media (max-width:860px){
-    header{ top:8px; padding:0 2vw; }
+  /* ========================================================
+     MOBILE RESPONSIVE ENHANCEMENTS (FOR PHONES ONLY)
+     ======================================================== */
+  @media (max-width: 860px){
+    header{ top:10px; padding:0 4vw; }
     header .navbar{
-      padding:.45rem .6rem;
-      gap:.3rem;
+      padding:.6rem 1.1rem;
+      border-radius:24px;
     }
     
-    .logo{
-      font-size:.88rem;
-    }
+    .logo{ font-size:1.05rem; }
 
+    /* மொபைல் மெனு பட்டனை காட்டுதல் */
+    .menu-toggle{ display:block; }
+
+    /* நேவிகேஷன் லிங்க்களை அழகான டிராப் டவுன் மெனுவாக மாற்றுதல் */
     nav.links{
-      gap:.35rem;
-      font-size:.56rem;
-      font-weight:700;
-      letter-spacing:.02em;
+      display:none; /* ஆரம்பத்தில் மறைந்திருக்கும் */
+      position:absolute;
+      top:65px; left:0; right:0;
+      background:rgba(10, 10, 15, 0.95);
+      backdrop-filter:blur(25px);
+      -webkit-backdrop-filter:blur(25px);
+      border:1px solid var(--border);
+      border-radius:20px;
+      flex-direction:column;
+      padding:1.5rem 0;
+      gap:1.2rem;
+      box-shadow:0 20px 40px rgba(0,0,0,0.8);
     }
-    nav.links a{
-      padding:2px 2px;
-      color:var(--fg);
-    }
+    nav.links.active{ display:flex; } /* கிளிக் செய்யும்போது தோன்றும் */
+    nav.links a{ font-size:.9rem; font-weight:600; padding:.4rem 1rem; }
 
-    .nav-actions{
-      gap:.25rem;
-    }
-    .nav-actions .btn-primary{
-      padding:.42rem .65rem;
-      font-size:.62rem;
-    }
-    .nav-actions .btn-cv{
-      padding:.42rem .5rem;
-      font-size:.65rem;
-    }
-    .nav-actions .btn-cv span.label-full{ display:none; }
+    /* நேவிகேஷன் பட்டன்கள் */
+    .nav-actions .btn-cv{ display:none; } /* டாப் பாரில் CV-ஐ மறைத்து Hero-ல் மட்டும் காட்டுதல் */
+    .nav-actions .btn-primary{ padding:.5rem .9rem; font-size:.74rem; }
 
-    /* HERO ADJUSTMENT */
-    .hero{ padding-top:90px; }
-    .hero .wrap{ padding-right:3.2rem; }
-    .hero h1{ font-size:clamp(2.2rem, 9.5vw, 3.4rem); }
-    .hero .role{ font-size:1rem; }
-    .hero p.lede{ font-size:.88rem; margin:1rem 0 1.5rem; }
-    .cta-row{ gap:.7rem; margin-bottom:1.8rem; }
-    .cta-row .btn{ padding:.75rem 1.2rem; font-size:.78rem; width:100%; justify-content:center; }
+    /* HERO & TYPOGRAPHY FIX */
+    .hero{ padding-top:100px; }
+    .hero .wrap{ padding-right:6vw; } /* சமூக பட்டன்களுடன் மோதாமல் இருக்க */
+    .hero h1{ font-size:clamp(2.3rem, 10vw, 3.2rem); }
+    .hero .role{ font-size:1rem; line-height:1.4; }
+    .hero p.lede{ font-size:.92rem; margin:1.2rem 0 1.8rem; }
+    .cta-row{ gap:.8rem; margin-bottom:2rem; }
+    .cta-row .btn{ width:100%; justify-content:center; }
 
-    /* SIDE DOCK */
+    /* FLOATING DOCK */
     .social-dock{
-      right:4px;
-      padding:.45rem .25rem;
+      right:6px;
+      padding:.5rem .25rem;
       gap:.4rem;
-      border-radius:12px;
+      border-radius:14px;
     }
     .social-dock a{
-      width:28px;
-      height:28px;
-      font-size:.75rem;
+      width:32px;
+      height:32px;
+      font-size:.85rem;
     }
 
+    /* GRID FIXES (அனைத்தும் 1 Column ஆக மாறும்) */
     .work-grid, .services-grid, .process-grid, .why-grid, .contact-grid{ grid-template-columns:1fr; }
     .about-copy, .about-side{ grid-column:span 12; }
-    section{ padding:4rem 0; }
+    section{ padding:4.5rem 0; }
   }
 </style>
 </head>
@@ -340,19 +348,20 @@
     <!-- LEFT -->
     <a href="#home" class="logo">HK<span>.</span></a>
     
-    <!-- CENTER -->
-    <nav class="links">
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#services">Services</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+    <!-- CENTER (MOBILE HAMBURGER MENU) -->
+    <nav class="links" id="navLinks">
+      <a href="#about" class="nav-item">About</a>
+      <a href="#work" class="nav-item">Work</a>
+      <a href="#services" class="nav-item">Services</a>
+      <a href="#skills" class="nav-item">Skills</a>
+      <a href="#contact" class="nav-item">Contact</a>
     </nav>
     
     <!-- RIGHT -->
     <div class="nav-actions">
       <a href="resume.pdf" download="Harish_Kumar_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-cv small magnetic"><i class="fas fa-file-pdf"></i> <span class="label-full">Download CV</span></a>
       <a href="#contact" class="btn btn-primary magnetic">Get In Touch</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
     </div>
   </div>
 </header>
@@ -379,9 +388,7 @@
     <a href="https://www.linkedin.com/in/harish-kumar-b3790934b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
     <a href="https://www.behance.net/harishkumar639" target="_blank" rel="noopener noreferrer" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
     <a href="https://www.instagram.com/___njr__01" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-    <a href="mailto:harishkumar10njr2005@gmail.com" aria-label="Email">
-    <i class="fa-solid fa-envelope"></i>
-</a>
+    <a href="mailto:Harishkumar10njr2005@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
   </div>
 </section>
 
@@ -518,14 +525,12 @@
     <div style="grid-column:span 12;" class="reveal">
       <div class="ticker-wrap">
         <div class="ticker-track" id="tickerTrack">
-          <!-- set 1 -->
           <div class="tool-chip glass"><span class="tool-icon" style="background:#31A8FF;">Ps</span><span class="tname">Adobe Photoshop</span></div>
           <div class="tool-chip glass"><span class="tool-icon" style="background:#FF9A00;">Ai</span><span class="tname">Adobe Illustrator</span></div>
           <div class="tool-chip glass"><span class="tool-icon" style="background:#1B1B1B; color:#fff;">Cd</span><span class="tname">CorelDRAW</span></div>
           <div class="tool-chip glass"><span class="tool-icon" style="background:#A259FF;">Fi</span><span class="tname">Figma</span></div>
           <div class="tool-chip glass"><span class="tool-icon" style="background:#FF3366;">Id</span><span class="tname">Adobe InDesign</span></div>
           <div class="tool-chip glass"><span class="tool-icon" style="background:linear-gradient(135deg,#7C5CFF,#31E7E0);">AI</span><span class="tname">AI Workflow Tools</span></div>
-          <!-- set 2 (duplicate for seamless loop) -->
           <div class="tool-chip glass"><span class="tool-icon" style="background:#31A8FF;">Ps</span><span class="tname">Adobe Photoshop</span></div>
           <div class="tool-chip glass"><span class="tool-icon" style="background:#FF9A00;">Ai</span><span class="tname">Adobe Illustrator</span></div>
           <div class="tool-chip glass"><span class="tool-icon" style="background:#1B1B1B; color:#fff;">Cd</span><span class="tname">CorelDRAW</span></div>
@@ -578,7 +583,7 @@
           <span class="icon"><i class="fa-brands fa-whatsapp"></i></span>
           <span class="meta"><span class="label">WhatsApp</span><span class="value">+91 63846 51054</span></span>
         </a>
-        <a class="badge glass" href="https://mail.google.com/mail/?view=cm&fs=1&to=Harishkumar10njr2005@gmail.com" target="_blank" rel="noopener noreferrer">
+        <a class="badge glass" href="mailto:Harishkumar10njr2005@gmail.com">
           <span class="icon"><i class="fa-solid fa-envelope"></i></span>
           <span class="meta"><span class="label">Email</span><span class="value">Harishkumar10njr2005@gmail.com</span></span>
         </a>
@@ -623,6 +628,35 @@
 </footer>
 
 <script>
+  // Mobile Hamburger Toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  const navItems = document.querySelectorAll('.nav-item');
+
+  if(menuToggle && navLinks){
+    menuToggle.addEventListener('click', ()=>{
+      navLinks.classList.toggle('active');
+      const icon = menuToggle.querySelector('i');
+      if(navLinks.classList.contains('active')){
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+      } else {
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    // மெனுவில் உள்ள ஐட்டத்தை கிளிக் செய்ததும் மெனு மூடப்பட
+    navItems.forEach(item => {
+      item.addEventListener('click', ()=>{
+        navLinks.classList.remove('active');
+        const icon = menuToggle.querySelector('i');
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      });
+    });
+  }
+
   // scroll reveal
   const revealEls = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries)=>{
