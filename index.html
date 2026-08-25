@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Harish Kumar | Graphic Designer | Print, Digital & Branding</title>
 <meta name="description" content="Harish Kumar — Graphic Designer specializing in Print, Digital & Branding. Open to opportunities in India and Dubai.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,14 +21,14 @@
     --orange:#FF6B3A;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  html{scroll-behavior:smooth; overflow-x:hidden; width:100%;}
   body{
     background:var(--bg); color:var(--fg); font-family:'Plus Jakarta Sans',sans-serif;
-    line-height:1.6; overflow-x:hidden; position:relative;
+    line-height:1.6; overflow-x:hidden; width:100%; position:relative;
   }
   h1,h2,h3,h4{font-family:'Syne',sans-serif; letter-spacing:-0.02em;}
   a{color:inherit; text-decoration:none;}
-  .wrap{max-width:1180px; margin:0 auto; padding:0 6vw;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 6vw; width:100%;}
   ::selection{background:var(--violet); color:#fff;}
   .grad-text{
     background:linear-gradient(100deg, var(--violet), var(--cyan) 50%, var(--orange));
@@ -59,10 +59,10 @@
   .eyebrow.c-violet{color:var(--violet);} .eyebrow.c-cyan{color:var(--cyan);} .eyebrow.c-orange{color:var(--orange);}
 
   /* NAV (DESKTOP) */
-  header{ position:fixed; top:16px; left:0; right:0; z-index:100; padding:0 3vw; }
+  header{ position:fixed; top:16px; left:0; width:100%; z-index:100; padding:0 3vw; }
   header .navbar{
     max-width:1180px; margin:0 auto; display:flex; align-items:center; justify-content:space-between;
-    padding:.75rem 1.6rem; border-radius:999px; gap:1rem; position:relative;
+    padding:.75rem 1.6rem; border-radius:999px; gap:1rem; position:relative; width:100%;
   }
   .logo{font-family:'Syne',sans-serif; font-weight:700; font-size:1.15rem; flex-shrink:0;}
   .logo span{color:var(--orange);}
@@ -74,9 +74,9 @@
   nav.links a:hover{color:#fff;}
   .nav-actions{display:flex; align-items:center; justify-content:flex-end; gap:.7rem; flex-shrink:0;}
 
-  /* HAMBURGER TOGGLE (DESKTOP-ல் மறைந்திருக்கும்) */
+  /* HAMBURGER TOGGLE */
   .menu-toggle{
-    display:none; background:none; border:none; color:#fff; font-size:1.25rem;
+    display:none; background:none; border:none; color:#fff; font-size:1.3rem;
     cursor:pointer; padding:0.4rem; z-index:110;
   }
 
@@ -104,9 +104,9 @@
   .btn:hover .arrow{transform:translateX(5px);}
 
   /* HERO */
-  .hero{ min-height:100vh; display:flex; align-items:center; padding-top:110px; position:relative; }
+  .hero{ min-height:100vh; display:flex; align-items:center; padding-top:110px; position:relative; overflow:hidden; }
   .kicker{ font-size:.95rem; color:var(--fg-dim); margin-bottom:1.2rem; }
-  .hero h1{ font-size:clamp(2.6rem,8vw,6.4rem); font-weight:800; line-height:.96; text-transform:uppercase; }
+  .hero h1{ font-size:clamp(2.6rem,8vw,6.4rem); font-weight:800; line-height:.96; text-transform:uppercase; word-break:break-word; }
   .hero .role{ font-size:clamp(1.15rem,2.6vw,1.7rem); font-weight:600; margin-top:1.3rem; }
   .hero p.lede{ max-width:540px; color:var(--fg-dim); font-size:1.05rem; margin:1.6rem 0 2.2rem; }
   .cta-row{display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:2.6rem; align-items:center;}
@@ -134,7 +134,7 @@
     background:rgba(124,92,255,.12);
   }
 
-  section{ padding:8rem 0; position:relative; }
+  section{ padding:8rem 0; position:relative; overflow:hidden; }
   .grid-12{display:grid; grid-template-columns:repeat(12,1fr); gap:2.2rem;}
   .section-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:2rem; margin-bottom:4rem; flex-wrap:wrap;}
   .section-head h2{font-size:clamp(1.8rem,4vw,2.8rem); font-weight:700;}
@@ -180,6 +180,7 @@
   .service-card p{color:var(--fg-dim); font-size:.92rem;}
 
   /* SKILLS */
+  .skills-container{ grid-column:span 8; display:grid; grid-template-columns:1fr 1fr; gap:3rem; }
   .skill-row{ display:flex; justify-content:space-between; align-items:center; padding:1rem 0; border-bottom:1px solid var(--border);}
   .skill-row:last-child{border-bottom:none;}
   .bar-wrap{display:flex; align-items:center; gap:.7rem;}
@@ -269,68 +270,74 @@
   .reveal.in{opacity:1; transform:translateY(0);}
 
   /* ========================================================
-     MOBILE RESPONSIVE ENHANCEMENTS (FOR PHONES ONLY)
+     MOBILE RESPONSIVE FIX (PERFECT SCREEN FIT)
      ======================================================== */
   @media (max-width: 860px){
-    header{ top:10px; padding:0 4vw; }
+    body{ width: 100vw; }
+    .wrap{ padding: 0 5vw; }
+
+    header{ top: 8px; padding: 0 3vw; }
     header .navbar{
-      padding:.6rem 1.1rem;
-      border-radius:24px;
+      padding: .5rem .9rem;
+      border-radius: 999px;
     }
-    
-    .logo{ font-size:1.05rem; }
+    .logo{ font-size: 1rem; }
 
-    /* மொபைல் மெனு பட்டனை காட்டுதல் */
-    .menu-toggle{ display:block; }
+    .menu-toggle{ display: block; }
 
-    /* நேவிகேஷன் லிங்க்களை அழகான டிராப் டவுன் மெனுவாக மாற்றுதல் */
+    /* FULL WIDTH MOBILE MENU OVERLAY */
     nav.links{
-      display:none; /* ஆரம்பத்தில் மறைந்திருக்கும் */
-      position:absolute;
-      top:65px; left:0; right:0;
-      background:rgba(10, 10, 15, 0.95);
-      backdrop-filter:blur(25px);
-      -webkit-backdrop-filter:blur(25px);
-      border:1px solid var(--border);
-      border-radius:20px;
-      flex-direction:column;
-      padding:1.5rem 0;
-      gap:1.2rem;
-      box-shadow:0 20px 40px rgba(0,0,0,0.8);
+      display: none;
+      position: absolute;
+      top: 60px; left: 0; width: 100%;
+      background: rgba(10, 10, 15, 0.98);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      flex-direction: column;
+      padding: 1.2rem 0;
+      gap: 1rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+      z-index: 200;
     }
-    nav.links.active{ display:flex; } /* கிளிக் செய்யும்போது தோன்றும் */
-    nav.links a{ font-size:.9rem; font-weight:600; padding:.4rem 1rem; }
+    nav.links.active{ display: flex; }
+    nav.links a{ font-size: .95rem; font-weight: 600; padding: .4rem 1rem; }
 
-    /* நேவிகேஷன் பட்டன்கள் */
-    .nav-actions .btn-cv{ display:none; } /* டாப் பாரில் CV-ஐ மறைத்து Hero-ல் மட்டும் காட்டுதல் */
-    .nav-actions .btn-primary{ padding:.5rem .9rem; font-size:.74rem; }
+    .nav-actions .btn-cv{ display: none; }
+    .nav-actions .btn-primary{ padding: .42rem .75rem; font-size: .72rem; }
 
-    /* HERO & TYPOGRAPHY FIX */
-    .hero{ padding-top:100px; }
-    .hero .wrap{ padding-right:6vw; } /* சமூக பட்டன்களுடன் மோதாமல் இருக்க */
-    .hero h1{ font-size:clamp(2.3rem, 10vw, 3.2rem); }
-    .hero .role{ font-size:1rem; line-height:1.4; }
-    .hero p.lede{ font-size:.92rem; margin:1.2rem 0 1.8rem; }
-    .cta-row{ gap:.8rem; margin-bottom:2rem; }
-    .cta-row .btn{ width:100%; justify-content:center; }
+    /* HERO ADJUSTMENTS */
+    .hero{ padding-top: 85px; min-height: auto; padding-bottom: 3rem; }
+    .hero .wrap{ padding-right: 3.5rem; } /* Social Dock-க்காக இடம் */
+    .hero h1{ font-size: clamp(2.2rem, 8.5vw, 3rem); line-height: 1; }
+    .hero .role{ font-size: .95rem; margin-top: .8rem; }
+    .hero p.lede{ font-size: .88rem; margin: 1rem 0 1.5rem; }
+    .cta-row{ gap: .7rem; margin-bottom: 1.5rem; }
+    .cta-row .btn{ width: 100%; justify-content: center; padding: .8rem 1.2rem; }
 
     /* FLOATING DOCK */
     .social-dock{
-      right:6px;
-      padding:.5rem .25rem;
-      gap:.4rem;
-      border-radius:14px;
+      right: 4px;
+      padding: .4rem .2rem;
+      gap: .3rem;
+      border-radius: 12px;
     }
     .social-dock a{
-      width:32px;
-      height:32px;
-      font-size:.85rem;
+      width: 30px;
+      height: 30px;
+      font-size: .8rem;
     }
 
-    /* GRID FIXES (அனைத்தும் 1 Column ஆக மாறும்) */
-    .work-grid, .services-grid, .process-grid, .why-grid, .contact-grid{ grid-template-columns:1fr; }
-    .about-copy, .about-side{ grid-column:span 12; }
-    section{ padding:4.5rem 0; }
+    /* ALL GRIDS SINGLE COLUMN */
+    .work-grid, .services-grid, .process-grid, .why-grid, .contact-grid{ grid-template-columns: 1fr; gap: 1.2rem; }
+    .about-copy, .about-side{ grid-column: span 12; }
+    
+    /* SKILLS SECTION MOBILE FIX (1 COLUMN) */
+    .skills-container{ grid-column: span 12; grid-template-columns: 1fr; gap: 2rem; }
+    .skill-row .bar{ width: 100px; }
+
+    section{ padding: 3.5rem 0; }
   }
 </style>
 </head>
@@ -348,7 +355,7 @@
     <!-- LEFT -->
     <a href="#home" class="logo">HK<span>.</span></a>
     
-    <!-- CENTER (MOBILE HAMBURGER MENU) -->
+    <!-- CENTER (HAMBURGER DROPDOWN) -->
     <nav class="links" id="navLinks">
       <a href="#about" class="nav-item">About</a>
       <a href="#work" class="nav-item">Work</a>
@@ -502,7 +509,7 @@
       <h2 style="font-size:2rem; color:#fff;">My Design Toolkit</h2>
       <p style="color:var(--fg-dim); margin-top:1rem;">Always learning. Always experimenting. Always improving.</p>
     </div>
-    <div style="grid-column:span 8; display:grid; grid-template-columns:1fr 1fr; gap:3rem;" class="reveal">
+    <div class="skills-container reveal">
       <div>
         <p class="eyebrow" style="color:var(--fg-dim);">Design Tools</p>
         <div class="skill-row"><span>Adobe Illustrator</span><div class="bar-wrap"><div class="bar" data-target="75"><span style="width:0%"></span></div><span class="bar-pct">0%</span></div></div>
@@ -628,13 +635,14 @@
 </footer>
 
 <script>
-  // Mobile Hamburger Toggle
+  // Mobile Hamburger Menu Toggle
   const menuToggle = document.getElementById('menuToggle');
   const navLinks = document.getElementById('navLinks');
   const navItems = document.querySelectorAll('.nav-item');
 
   if(menuToggle && navLinks){
-    menuToggle.addEventListener('click', ()=>{
+    menuToggle.addEventListener('click', (e)=>{
+      e.stopPropagation();
       navLinks.classList.toggle('active');
       const icon = menuToggle.querySelector('i');
       if(navLinks.classList.contains('active')){
@@ -646,7 +654,6 @@
       }
     });
 
-    // மெனுவில் உள்ள ஐட்டத்தை கிளிக் செய்ததும் மெனு மூடப்பட
     navItems.forEach(item => {
       item.addEventListener('click', ()=>{
         navLinks.classList.remove('active');
@@ -654,6 +661,15 @@
         icon.classList.remove('fa-xmark');
         icon.classList.add('fa-bars');
       });
+    });
+
+    document.addEventListener('click', (e)=>{
+      if(!navLinks.contains(e.target) && !menuToggle.contains(e.target)){
+        navLinks.classList.remove('active');
+        const icon = menuToggle.querySelector('i');
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      }
     });
   }
 
