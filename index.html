@@ -268,7 +268,7 @@
   .pill-list span{ padding:.6rem 1.1rem; border-radius:999px; font-size:.88rem; color:#fff; background:rgba(255,255,255,0.08); font-weight:600; border:1px solid var(--border); transition:.3s;}
   .pill-list span:hover{border-color:var(--cyan); color:#fff;}
 
-  /* BIGGER & CRISP TOOL TICKER WITH VERIFIED OFFICIAL LOGOS */
+  /* TOOL TICKER WITH BIGGER OFFICIAL LOGOS */
   .ticker-wrap{
     margin-top:3.4rem; overflow:hidden; position:relative; padding:1.6rem 0;
     -webkit-mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
@@ -279,13 +279,13 @@
   @keyframes tickerScroll{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
   
   .tool-chip{
-    display:flex; align-items:center; gap:1.1rem; padding:1rem 1.8rem; border-radius:18px; white-space:nowrap;
+    display:flex; align-items:center; gap:1rem; padding:1rem 1.8rem; border-radius:18px; white-space:nowrap;
     background: rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.18);
   }
   .tool-img-icon{
-    width:38px; height:38px; border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0; overflow:hidden;
+    width:36px; height:36px; border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0; overflow:hidden;
   }
-  .tool-img-icon img{
+  .tool-img-icon img, .tool-img-icon svg{
     width:100%; height:100%; object-fit:contain;
   }
   .tool-chip span.tname{font-size:1.1rem; color:#fff; font-weight:700; font-family:'Syne', sans-serif;}
@@ -645,7 +645,7 @@
           <span class="concept-tag">Personal Concept · 04</span>
           <h3>Print Design Collection</h3>
           <p>A set of brochures, flyers, posters and packaging built to practice grid systems, print-ready layout and typographic hierarchy.</p>
-          <p class="tools">InDesign · Illustrator</p>
+          <p class="tools">Lightroom · Illustrator</p>
           <a href="#" class="view-link">View Project <span class="arrow">→</span></a>
         </div>
       </article>
@@ -707,7 +707,7 @@
       </div>
     </div>
 
-    <!-- INFINITE TOOL TICKER WITH VERIFIED OFFICIAL ICONS -->
+    <!-- INFINITE TOOL TICKER WITH EXACT OFFICIAL LOGOS -->
     <div style="grid-column:span 12;" class="reveal">
       <div class="ticker-wrap">
         <div class="ticker-track" id="tickerTrack">
@@ -728,12 +728,12 @@
             <span class="tname">Adobe Illustrator</span>
           </div>
 
-          <!-- Adobe InDesign -->
+          <!-- Adobe Lightroom (Official Lr) -->
           <div class="tool-chip glass">
             <span class="tool-img-icon">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_InDesign_CC_icon.svg" alt="InDesign" loading="lazy">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Adobe_Photoshop_Lightroom_CC_logo.svg" alt="Lightroom" loading="lazy">
             </span>
-            <span class="tname">Adobe InDesign</span>
+            <span class="tname">Adobe Lightroom</span>
           </div>
 
           <!-- Figma -->
@@ -744,10 +744,20 @@
             <span class="tname">Figma</span>
           </div>
 
-          <!-- CorelDRAW Hot Air Balloon Logo -->
+          <!-- CorelDRAW (Exact Official Green Balloon Logo) -->
           <div class="tool-chip glass">
-            <span class="tool-img-icon" style="background:#00a651; border-radius:8px; padding:3px;">
-              <img src="https://cdn.worldvectorlogo.com/logos/coreldraw-1.svg" alt="CorelDRAW" loading="lazy" style="filter: brightness(0) invert(1);">
+            <span class="tool-img-icon">
+              <svg viewBox="0 0 100 100" style="width:100%; height:100%;">
+                <rect width="100" height="100" rx="22" fill="#00c853"/>
+                <!-- Balloon Envelope -->
+                <path d="M50 14 C32 14 20 25 20 42 C20 57 36 73 47 78.5 L47 81.5 L53 81.5 L53 78.5 C64 73 80 57 80 42 C80 25 68 14 50 14 Z" fill="#ffffff"/>
+                <!-- Green Ribs / Inner Pattern -->
+                <path d="M50 14 C47 24 45 44 45 78 C47.5 78.8 50 79 50 79 C50 79 52.5 78.8 55 78 C55 44 53 24 50 14 Z" fill="#00c853"/>
+                <path d="M37 18 C30 28 28 46 33 69 C36 72 39 75 42 77 C38 54 39 32 44 21 Z" fill="#00c853"/>
+                <path d="M63 18 C70 28 72 46 67 69 C64 72 61 75 58 77 C62 54 61 32 56 21 Z" fill="#00c853"/>
+                <!-- Basket -->
+                <path d="M46 83.5 L54 83.5 L53 87.5 L47 87.5 Z" fill="#ffffff"/>
+              </svg>
             </span>
             <span class="tname">CorelDRAW</span>
           </div>
@@ -777,9 +787,9 @@
 
           <div class="tool-chip glass">
             <span class="tool-img-icon">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_InDesign_CC_icon.svg" alt="InDesign" loading="lazy">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Adobe_Photoshop_Lightroom_CC_logo.svg" alt="Lightroom" loading="lazy">
             </span>
-            <span class="tname">Adobe InDesign</span>
+            <span class="tname">Adobe Lightroom</span>
           </div>
 
           <div class="tool-chip glass">
@@ -790,8 +800,15 @@
           </div>
 
           <div class="tool-chip glass">
-            <span class="tool-img-icon" style="background:#00a651; border-radius:8px; padding:3px;">
-              <img src="https://cdn.worldvectorlogo.com/logos/coreldraw-1.svg" alt="CorelDRAW" loading="lazy" style="filter: brightness(0) invert(1);">
+            <span class="tool-img-icon">
+              <svg viewBox="0 0 100 100" style="width:100%; height:100%;">
+                <rect width="100" height="100" rx="22" fill="#00c853"/>
+                <path d="M50 14 C32 14 20 25 20 42 C20 57 36 73 47 78.5 L47 81.5 L53 81.5 L53 78.5 C64 73 80 57 80 42 C80 25 68 14 50 14 Z" fill="#ffffff"/>
+                <path d="M50 14 C47 24 45 44 45 78 C47.5 78.8 50 79 50 79 C50 79 52.5 78.8 55 78 C55 44 53 24 50 14 Z" fill="#00c853"/>
+                <path d="M37 18 C30 28 28 46 33 69 C36 72 39 75 42 77 C38 54 39 32 44 21 Z" fill="#00c853"/>
+                <path d="M63 18 C70 28 72 46 67 69 C64 72 61 75 58 77 C62 54 61 32 56 21 Z" fill="#00c853"/>
+                <path d="M46 83.5 L54 83.5 L53 87.5 L47 87.5 Z" fill="#ffffff"/>
+              </svg>
             </span>
             <span class="tname">CorelDRAW</span>
           </div>
