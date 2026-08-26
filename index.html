@@ -177,23 +177,10 @@
   .btn .arrow{transition:transform .35s cubic-bezier(.2,.8,.2,1);}
   .btn:hover .arrow{transform:translateX(5px);}
 
-  /* HERO & CINEMATIC SHIMMER NAME EFFECT */
+  /* HERO (NORMAL BOLD CLEAN NAME) */
   .hero{ min-height:100vh; display:flex; align-items:center; padding-top:110px; position:relative; overflow:hidden; }
   .kicker{ font-size:1.05rem; color:var(--fg-dim); margin-bottom:1.2rem; font-weight:600; }
-  
-  .hero h1{
-    font-size:clamp(2.6rem,8vw,6.4rem); font-weight:800; line-height:.96; text-transform:uppercase; word-break:break-word;
-    background: linear-gradient(90deg, #ffffff 0%, #a78bfa 35%, #ffffff 50%, #00f5d4 65%, #ffffff 100%);
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: cinematicShimmer 4s linear infinite;
-  }
-  @keyframes cinematicShimmer {
-    0% { background-position: 200% center; }
-    100% { background-position: 0% center; }
-  }
-
+  .hero h1{ font-size:clamp(2.6rem,8vw,6.4rem); font-weight:800; line-height:.96; text-transform:uppercase; word-break:break-word; color:#fff; }
   .hero .role{ font-size:clamp(1.15rem,2.6vw,1.7rem); font-weight:700; margin-top:1.3rem; }
   .hero p.lede{ max-width:540px; color:var(--fg-dim); font-size:1.1rem; margin:1.6rem 0 2.2rem; font-weight:500; }
   .cta-row{display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:2.6rem; align-items:center;}
