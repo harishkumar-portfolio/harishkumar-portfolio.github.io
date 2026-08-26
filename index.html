@@ -177,7 +177,7 @@
   .btn .arrow{transition:transform .35s cubic-bezier(.2,.8,.2,1);}
   .btn:hover .arrow{transform:translateX(5px);}
 
-  /* HERO (NORMAL BOLD CLEAN NAME) */
+  /* HERO */
   .hero{ min-height:100vh; display:flex; align-items:center; padding-top:110px; position:relative; overflow:hidden; }
   .kicker{ font-size:1.05rem; color:var(--fg-dim); margin-bottom:1.2rem; font-weight:600; }
   .hero h1{ font-size:clamp(2.6rem,8vw,6.4rem); font-weight:800; line-height:.96; text-transform:uppercase; word-break:break-word; color:#fff; }
@@ -268,7 +268,7 @@
   .pill-list span{ padding:.6rem 1.1rem; border-radius:999px; font-size:.88rem; color:#fff; background:rgba(255,255,255,0.08); font-weight:600; border:1px solid var(--border); transition:.3s;}
   .pill-list span:hover{border-color:var(--cyan); color:#fff;}
 
-  /* TOOL TICKER */
+  /* TOOL TICKER & OFFICIAL LOGOS */
   .ticker-wrap{
     margin-top:3.4rem; overflow:hidden; position:relative; padding:1.6rem 0;
     -webkit-mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
@@ -277,14 +277,17 @@
   .ticker-track{ display:flex; width:max-content; gap:1.2rem; animation:tickerScroll 26s linear infinite; }
   .ticker-wrap:hover .ticker-track{ animation-play-state:paused; }
   @keyframes tickerScroll{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
+  
   .tool-chip{
-    display:flex; align-items:center; gap:.7rem; padding:.8rem 1.3rem; border-radius:14px; white-space:nowrap;
+    display:flex; align-items:center; gap:.85rem; padding:.8rem 1.4rem; border-radius:16px; white-space:nowrap;
   }
-  .tool-icon{
-    width:34px; height:34px; border-radius:9px; display:flex; align-items:center; justify-content:center;
-    font-family:'Syne'; font-weight:700; font-size:.78rem; color:#0a0a0f; flex-shrink:0;
+  .tool-svg-icon{
+    width:28px; height:28px; display:flex; align-items:center; justify-content:center; flex-shrink:0;
   }
-  .tool-chip span.tname{font-size:.88rem; color:#fff; font-weight:600;}
+  .tool-svg-icon svg{
+    width:100%; height:100%; object-fit:contain;
+  }
+  .tool-chip span.tname{font-size:.9rem; color:#fff; font-weight:600;}
 
   /* PROCESS + WHY */
   .ripple-grid{ display:grid; gap:1.6rem; }
@@ -699,22 +702,102 @@
       </div>
     </div>
 
-    <!-- INFINITE TOOL TICKER -->
+    <!-- INFINITE TOOL TICKER WITH OFFICIAL LOGOS -->
     <div style="grid-column:span 12;" class="reveal">
       <div class="ticker-wrap">
         <div class="ticker-track" id="tickerTrack">
-          <div class="tool-chip glass"><span class="tool-icon" style="background:#31A8FF;">Ps</span><span class="tname">Adobe Photoshop</span></div>
-          <div class="tool-chip glass"><span class="tool-icon" style="background:#FF9A00;">Ai</span><span class="tname">Adobe Illustrator</span></div>
-          <div class="tool-chip glass"><span class="tool-icon" style="background:#1B1B1B; color:#fff;">Cd</span><span class="tname">CorelDRAW</span></div>
-          <div class="tool-chip glass"><span class="tool-icon" style="background:#A259FF;">Fi</span><span class="tname">Figma</span></div>
-          <div class="tool-chip glass"><span class="tool-icon" style="background:#FF3366;">Id</span><span class="tname">Adobe InDesign</span></div>
-          <div class="tool-chip glass"><span class="tool-icon" style="background:linear-gradient(135deg,#7C5CFF,#31E7E0);">AI</span><span class="tname">AI Workflow Tools</span></div>
-          <div class="tool-chip glass"><span class="tool-icon" style="background:#31A8FF;">Ps</span><span class="tname">Adobe Photoshop</span></div>
-          <div class="tool-chip glass"><span class="tool-icon" style="background:#FF9A00;">Ai</span><span class="tname">Adobe Illustrator</span></div>
-          <div class="tool-chip glass"><span class="tool-icon" style="background:#1B1B1B; color:#fff;">Cd</span><span class="tname">CorelDRAW</span></div>
-          <div class="tool-chip glass"><span class="tool-icon" style="background:#A259FF;">Fi</span><span class="tname">Figma</span></div>
-          <div class="tool-chip glass"><span class="tool-icon" style="background:#FF3366;">Id</span><span class="tname">Adobe InDesign</span></div>
-          <div class="tool-chip glass"><span class="tool-icon" style="background:linear-gradient(135deg,#7C5CFF,#31E7E0);">AI</span><span class="tname">AI Workflow Tools</span></div>
+          
+          <!-- Photoshop -->
+          <div class="tool-chip glass">
+            <span class="tool-svg-icon">
+              <svg viewBox="0 0 256 256"><rect width="256" height="256" rx="55" fill="#001e36"/><path d="M68 64h44c26 0 42 13 42 34 0 23-17 35-42 35H94v59H68V64zm26 48h17c11 0 17-5 17-14s-6-13-17-13H94v27zm70 41c10-8 23-11 36-11 16 0 25 7 25 18v6c-6-2-14-3-22-3-20 0-33 9-33 24 0 13 10 22 24 22 13 0 23-6 28-15v13h22v-51c0-23-15-33-41-33-16 0-30 4-41 12l2 18zm42 22c0 11-8 19-19 19-8 0-13-4-13-11 0-8 6-12 18-12 5 0 10 1 14 4z" fill="#31a8ff"/></svg>
+            </span>
+            <span class="tname">Adobe Photoshop</span>
+          </div>
+
+          <!-- Illustrator -->
+          <div class="tool-chip glass">
+            <span class="tool-svg-icon">
+              <svg viewBox="0 0 256 256"><rect width="256" height="256" rx="55" fill="#330000"/><path d="M62 192l38-128h28l38 128h-26l-8-30H92l-8 30H62zm36-51h28l-14-53-14 53zm84 51V94h23v14c6-10 16-16 27-16 4 0 7 0 10 2l-3 23c-4-1-8-2-12-2-12 0-21 8-22 23v54h-23zm12-118c-8 0-14-6-14-14s6-14 14-14 14 6 14 14-6 14-14 14z" fill="#ff9a00"/></svg>
+            </span>
+            <span class="tname">Adobe Illustrator</span>
+          </div>
+
+          <!-- CorelDRAW -->
+          <div class="tool-chip glass">
+            <span class="tool-svg-icon">
+              <svg viewBox="0 0 256 256"><path d="M128 16C66.1 16 16 66.1 16 128s50.1 112 112 112 112-50.1 112-112S189.9 16 128 16zm-12.8 178.6c-27.4-4.8-49.8-27.2-54.6-54.6-2.1-12 .3-24.3 6.6-34.5l68.7 68.7c-6.2 13-10.4 18.3-20.7 20.4zm76-47.3L122.5 78.6c10.2-6.3 22.5-8.7 34.5-6.6 27.4 4.8 49.8 27.2 54.6 54.6 2.1 12-.3 24.3-6.6 34.5l-13.8-13.8z" fill="#22C55E"/></svg>
+            </span>
+            <span class="tname">CorelDRAW</span>
+          </div>
+
+          <!-- Figma -->
+          <div class="tool-chip glass">
+            <span class="tool-svg-icon">
+              <svg viewBox="0 0 256 384"><path d="M128 128a64 64 0 1 0 0-128H64a64 64 0 0 0 0 128h64z" fill="#F24E1E"/><path d="M128 0h64a64 64 0 1 1 0 128h-64V0z" fill="#FF7262"/><path d="M128 128h64a64 64 0 1 1 0 128h-64V128z" fill="#1ABCFE"/><path d="M128 256a64 64 0 1 1-64-64h64v64z" fill="#0ACF83"/><path d="M64 256a64 64 0 1 0 64 64v-64H64z" fill="#A259FF"/></svg>
+            </span>
+            <span class="tname">Figma</span>
+          </div>
+
+          <!-- InDesign -->
+          <div class="tool-chip glass">
+            <span class="tool-svg-icon">
+              <svg viewBox="0 0 256 256"><rect width="256" height="256" rx="55" fill="#49021f"/><path d="M68 64h24v128H68V64zm72 43c13-9 29-14 47-14 36 0 57 24 57 57 0 35-23 57-59 57-16 0-31-4-45-13V64h24v43h-2zm24 75c8 6 18 9 27 9 21 0 33-14 33-35 0-20-12-34-33-34-9 0-19 3-27 9v60z" fill="#ff3366"/></svg>
+            </span>
+            <span class="tname">Adobe InDesign</span>
+          </div>
+
+          <!-- AI Tools -->
+          <div class="tool-chip glass">
+            <span class="tool-svg-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="url(#aiGrad)" stroke-width="2"><defs><linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#00F5D4"/></linearGradient></defs><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            </span>
+            <span class="tname">AI Workflow Tools</span>
+          </div>
+
+          <!-- REPEAT FOR INFINITE SCROLL -->
+          <div class="tool-chip glass">
+            <span class="tool-svg-icon">
+              <svg viewBox="0 0 256 256"><rect width="256" height="256" rx="55" fill="#001e36"/><path d="M68 64h44c26 0 42 13 42 34 0 23-17 35-42 35H94v59H68V64zm26 48h17c11 0 17-5 17-14s-6-13-17-13H94v27zm70 41c10-8 23-11 36-11 16 0 25 7 25 18v6c-6-2-14-3-22-3-20 0-33 9-33 24 0 13 10 22 24 22 13 0 23-6 28-15v13h22v-51c0-23-15-33-41-33-16 0-30 4-41 12l2 18zm42 22c0 11-8 19-19 19-8 0-13-4-13-11 0-8 6-12 18-12 5 0 10 1 14 4z" fill="#31a8ff"/></svg>
+            </span>
+            <span class="tname">Adobe Photoshop</span>
+          </div>
+
+          <div class="tool-chip glass">
+            <span class="tool-svg-icon">
+              <svg viewBox="0 0 256 256"><rect width="256" height="256" rx="55" fill="#330000"/><path d="M62 192l38-128h28l38 128h-26l-8-30H92l-8 30H62zm36-51h28l-14-53-14 53zm84 51V94h23v14c6-10 16-16 27-16 4 0 7 0 10 2l-3 23c-4-1-8-2-12-2-12 0-21 8-22 23v54h-23zm12-118c-8 0-14-6-14-14s6-14 14-14 14 6 14 14-6 14-14 14z" fill="#ff9a00"/></svg>
+            </span>
+            <span class="tname">Adobe Illustrator</span>
+          </div>
+
+          <div class="tool-chip glass">
+            <span class="tool-svg-icon">
+              <svg viewBox="0 0 256 256"><path d="M128 16C66.1 16 16 66.1 16 128s50.1 112 112 112 112-50.1 112-112S189.9 16 128 16zm-12.8 178.6c-27.4-4.8-49.8-27.2-54.6-54.6-2.1-12 .3-24.3 6.6-34.5l68.7 68.7c-6.2 13-10.4 18.3-20.7 20.4zm76-47.3L122.5 78.6c10.2-6.3 22.5-8.7 34.5-6.6 27.4 4.8 49.8 27.2 54.6 54.6 2.1 12-.3 24.3-6.6 34.5l-13.8-13.8z" fill="#22C55E"/></svg>
+            </span>
+            <span class="tname">CorelDRAW</span>
+          </div>
+
+          <div class="tool-chip glass">
+            <span class="tool-svg-icon">
+              <svg viewBox="0 0 256 384"><path d="M128 128a64 64 0 1 0 0-128H64a64 64 0 0 0 0 128h64z" fill="#F24E1E"/><path d="M128 0h64a64 64 0 1 1 0 128h-64V0z" fill="#FF7262"/><path d="M128 128h64a64 64 0 1 1 0 128h-64V128z" fill="#1ABCFE"/><path d="M128 256a64 64 0 1 1-64-64h64v64z" fill="#0ACF83"/><path d="M64 256a64 64 0 1 0 64 64v-64H64z" fill="#A259FF"/></svg>
+            </span>
+            <span class="tname">Figma</span>
+          </div>
+
+          <div class="tool-chip glass">
+            <span class="tool-svg-icon">
+              <svg viewBox="0 0 256 256"><rect width="256" height="256" rx="55" fill="#49021f"/><path d="M68 64h24v128H68V64zm72 43c13-9 29-14 47-14 36 0 57 24 57 57 0 35-23 57-59 57-16 0-31-4-45-13V64h24v43h-2zm24 75c8 6 18 9 27 9 21 0 33-14 33-35 0-20-12-34-33-34-9 0-19 3-27 9v60z" fill="#ff3366"/></svg>
+            </span>
+            <span class="tname">Adobe InDesign</span>
+          </div>
+
+          <div class="tool-chip glass">
+            <span class="tool-svg-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="url(#aiGrad)" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            </span>
+            <span class="tname">AI Workflow Tools</span>
+          </div>
+
         </div>
       </div>
     </div>
