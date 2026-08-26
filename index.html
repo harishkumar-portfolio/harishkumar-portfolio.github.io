@@ -20,7 +20,24 @@
     --cyan:#00F5D4;
     --orange:#FF7A45;
   }
-  *{margin:0;padding:0;box-sizing:border-box;}
+  
+  /* NO COPY / NO SELECT SECURITY */
+  *{
+    margin:0; padding:0; box-sizing:border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
+
+  input, textarea {
+    -webkit-user-select: auto !important;
+    -moz-user-select: auto !important;
+    -ms-user-select: auto !important;
+    user-select: auto !important;
+  }
+
   html{scroll-behavior:smooth; overflow-x:hidden; width:100%;}
   body{
     background:var(--bg); color:var(--fg); font-family:'Plus Jakarta Sans',sans-serif;
@@ -29,11 +46,8 @@
   h1,h2,h3,h4{font-family:'Syne',sans-serif; letter-spacing:-0.02em; color:#fff;}
   a{color:inherit; text-decoration:none;}
   .wrap{max-width:1180px; margin:0 auto; padding:0 6vw; width:100%;}
-  ::selection{background:var(--violet); color:#fff;}
 
-  /* ========================================================
-     PREMIUM 2.5s PRELOADER / SPLASH SCREEN
-     ======================================================== */
+  /* PRELOADER */
   #preloader {
     position: fixed; inset: 0; background: #07070b; z-index: 99999;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -163,10 +177,23 @@
   .btn .arrow{transition:transform .35s cubic-bezier(.2,.8,.2,1);}
   .btn:hover .arrow{transform:translateX(5px);}
 
-  /* HERO */
+  /* HERO & CINEMATIC SHIMMER NAME EFFECT */
   .hero{ min-height:100vh; display:flex; align-items:center; padding-top:110px; position:relative; overflow:hidden; }
   .kicker{ font-size:1.05rem; color:var(--fg-dim); margin-bottom:1.2rem; font-weight:600; }
-  .hero h1{ font-size:clamp(2.6rem,8vw,6.4rem); font-weight:800; line-height:.96; text-transform:uppercase; word-break:break-word; }
+  
+  .hero h1{
+    font-size:clamp(2.6rem,8vw,6.4rem); font-weight:800; line-height:.96; text-transform:uppercase; word-break:break-word;
+    background: linear-gradient(90deg, #ffffff 0%, #a78bfa 35%, #ffffff 50%, #00f5d4 65%, #ffffff 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: cinematicShimmer 4s linear infinite;
+  }
+  @keyframes cinematicShimmer {
+    0% { background-position: 200% center; }
+    100% { background-position: 0% center; }
+  }
+
   .hero .role{ font-size:clamp(1.15rem,2.6vw,1.7rem); font-weight:700; margin-top:1.3rem; }
   .hero p.lede{ max-width:540px; color:var(--fg-dim); font-size:1.1rem; margin:1.6rem 0 2.2rem; font-weight:500; }
   .cta-row{display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:2.6rem; align-items:center;}
@@ -372,7 +399,7 @@
   .reveal{opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1);}
   .reveal.in{opacity:1; transform:translateY(0);}
 
-  /* MOBILE RESPONSIVE FIX */
+  /* MOBILE RESPONSIVE */
   @media (max-width: 860px){
     body{ width: 100vw; }
     .wrap{ padding: 0 5vw; }
@@ -484,7 +511,7 @@
 </head>
 <body>
 
-<!-- PRELOADER (2.5s TIMED PRELOADER) -->
+<!-- PRELOADER -->
 <div id="preloader">
   <div class="preloader-box">
     <div class="spinner-wrap">
@@ -535,7 +562,7 @@
   <div class="wrap">
     <div class="reveal">
       <p class="kicker">Hey, I'm</p>
-      <h1>HARISH<br>KUMAR<span class="grad-text">.</span></h1>
+      <h1>HARISH<br>KUMAR</h1>
       <p class="role grad-text">Graphic Design • Branding • Print • Social Media</p>
       <p class="lede">Helping design studios, print agencies, and digital brands build standout visual identities.</p>
       <div class="cta-row">
@@ -804,14 +831,33 @@
 </footer>
 
 <script>
-  // Preloader Logic (Strict 2.4s Smooth Loading Animation)
+  // SECURITY SCRIPT: DISABLE RIGHT-CLICK, COPY, DRAG & INSPECT SHORTCUTS
+  document.addEventListener('contextmenu', (e) => e.preventDefault());
+  document.addEventListener('dragstart', (e) => e.preventDefault());
+  document.addEventListener('copy', (e) => {
+    if (!['input', 'textarea'].includes(document.activeElement.tagName.toLowerCase())) {
+      e.preventDefault();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (
+      (e.ctrlKey && (e.key === 's' || e.key === 'u' || e.key === 'p')) ||
+      (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
+      e.key === 'F12'
+    ) {
+      e.preventDefault();
+    }
+  });
+
+  // Preloader Logic (2.4s Smooth Loading)
   window.addEventListener('DOMContentLoaded', () => {
     const preloader = document.getElementById('preloader');
     const loadPct = document.getElementById('loadPct');
     const loadBar = document.getElementById('loadBar');
     
     let progress = 0;
-    const duration = 2400; // 2.4 வினாடிகள்
+    const duration = 2400;
     const intervalTime = 40;
     const step = 100 / (duration / intervalTime);
 
