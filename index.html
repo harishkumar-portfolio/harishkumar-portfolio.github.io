@@ -80,6 +80,7 @@
   .preloader-bar-bg { width: 180px; height: 4px; background: rgba(255,255,255,0.08); border-radius: 99px; overflow: hidden; }
   .preloader-bar-fill { width: 0%; height: 100%; background: var(--cyan); border-radius: 99px; box-shadow: 0 0 12px var(--cyan); }
 
+  /* AURORA & NOISE */
   .aurora{ position:fixed; inset:0; z-index:-2; overflow:hidden; background:var(--bg); }
   .orb{ position:absolute; border-radius:50%; filter:blur(110px); opacity:.55; will-change:transform; }
   .orb-1{ width:520px; height:520px; background:var(--violet); top:-10%; left:-8%; animation:drift1 22s ease-in-out infinite; }
@@ -133,7 +134,7 @@
   .btn .arrow{transition:transform .35s cubic-bezier(.2,.8,.2,1);}
   .btn:hover .arrow{transform:translateX(5px);}
 
-  /* HERO & DUO-TONE NAME */
+  /* HERO & APPLE SHIMMER DUO-TONE NAME */
   .hero{ min-height:100vh; display:flex; align-items:center; padding-top:110px; position:relative; overflow:hidden; }
   .kicker{ font-size:1.05rem; color:var(--fg-dim); margin-bottom:1.1rem; font-weight:600; }
   
@@ -152,12 +153,47 @@
     text-shadow: 0 0 35px rgba(0, 245, 212, 0.45);
   }
   
+  /* TYPEWRITER WRAPPER & CURSOR */
+  .typewriter-box {
+    font-size: clamp(1rem, 2.2vw, 1.35rem);
+    font-weight: 700;
+    color: #fff;
+    margin-top: 1.2rem;
+    min-height: 2rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+  .type-prefix {
+    color: var(--fg-dim);
+    font-weight: 500;
+  }
+  .type-dynamic {
+    color: var(--cyan);
+    font-family: 'Syne', sans-serif;
+    letter-spacing: -0.01em;
+  }
+  .type-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1.25em;
+    background: var(--cyan);
+    margin-left: 2px;
+    animation: blink 0.8s infinite;
+    box-shadow: 0 0 8px var(--cyan);
+  }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
   /* ROLE BADGES */
   .role-badges{
     display: flex;
     flex-wrap: wrap;
     gap: 0.6rem;
-    margin-top: 1.4rem;
+    margin-top: 1.1rem;
   }
   .role-badge{
     background: rgba(255, 255, 255, 0.08);
@@ -362,7 +398,7 @@
   .scroll-top-btn.visible{ opacity:1; visibility:visible; transform:translateY(0); }
   .scroll-top-btn:hover{ transform:translateY(-5px) scale(1.08); box-shadow:0 14px 30px rgba(0,245,212,0.6); }
 
-  /* EXTREME ADD-ONS: GLOW CURSOR & LIGHTBOX */
+  /* GLOW CURSOR & LIGHTBOX */
   @media (hover: hover) and (pointer: fine) {
     .cursor-glow {
       position: fixed;
@@ -462,8 +498,9 @@
     .hero{ padding-top: 85px; min-height: auto; padding-bottom: 3rem; }
     .hero .wrap{ padding-right: 3.5rem; }
     .hero h1{ font-size: clamp(2.4rem, 8.5vw, 3.2rem); line-height: 1.02; letter-spacing: -0.03em; }
+    .typewriter-box{ font-size: 0.9rem; margin-top: 0.8rem; min-height: 1.8rem; }
     .hero p.lede{ font-size: .95rem; margin: 1.2rem 0 1.5rem; }
-    .role-badges{ gap: 0.4rem; margin-top: 1rem; }
+    .role-badges{ gap: 0.4rem; margin-top: 0.8rem; }
     .role-badge{ font-size: 0.75rem; padding: 0.35rem 0.75rem; }
     .cta-row{ gap: .7rem; margin-bottom: 1.5rem; }
     .cta-row .btn{ width: 100%; justify-content: center; padding: .8rem 1.2rem; }
@@ -542,6 +579,12 @@
       <p class="kicker">Hey, I'm</p>
       <h1>HARISH<br><span class="accent-name">KUMAR</span></h1>
       
+      <!-- DYNAMIC TYPEWRITER EFFECT -->
+      <div class="typewriter-box">
+        <span class="type-prefix">Specialized in</span>
+        <span class="type-dynamic" id="typeDynamic"></span><span class="type-cursor"></span>
+      </div>
+
       <!-- HIGH READABILITY ROLE PILL BADGES -->
       <div class="role-badges">
         <span class="role-badge">Graphic Designer</span>
@@ -1157,6 +1200,45 @@
       if (e.target === lightboxModal) lightboxModal.classList.remove('active');
     });
   }
+
+  /* DYNAMIC TYPEWRITER SCRIPT */
+  const words = [
+    "Visual Brand Identities.",
+    "High-Impact Print & Prepress.",
+    "High-Converting Social Creatives.",
+    "Clean Responsive Web Layouts."
+  ];
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const typeElement = document.getElementById("typeDynamic");
+
+  function typeEffect() {
+    if (!typeElement) return;
+    const currentWord = words[wordIndex];
+    
+    if (isDeleting) {
+      typeElement.textContent = currentWord.substring(0, charIndex - 1);
+      charIndex--;
+    } else {
+      typeElement.textContent = currentWord.substring(0, charIndex + 1);
+      charIndex++;
+    }
+
+    let typeSpeed = isDeleting ? 40 : 80;
+
+    if (!isDeleting && charIndex === currentWord.length) {
+      typeSpeed = 2200;
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+      typeSpeed = 400;
+    }
+
+    setTimeout(typeEffect, typeSpeed);
+  }
+  typeEffect();
 </script>
 </body>
 </html>
