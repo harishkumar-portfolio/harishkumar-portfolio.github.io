@@ -133,7 +133,7 @@
   .btn .arrow{transition:transform .35s cubic-bezier(.2,.8,.2,1);}
   .btn:hover .arrow{transform:translateX(5px);}
 
-  /* HERO & INTERNATIONAL NAME TYPOGRAPHY */
+  /* HERO & DUO-TONE NAME */
   .hero{ min-height:100vh; display:flex; align-items:center; padding-top:110px; position:relative; overflow:hidden; }
   .kicker{ font-size:1.05rem; color:var(--fg-dim); margin-bottom:1.1rem; font-weight:600; }
   
@@ -152,7 +152,7 @@
     text-shadow: 0 0 35px rgba(0, 245, 212, 0.45);
   }
   
-  /* ROLE BADGES (HIGH CONTRAST & READABLE) */
+  /* ROLE BADGES */
   .role-badges{
     display: flex;
     flex-wrap: wrap;
@@ -219,26 +219,34 @@
   .info-card .label{font-size:.78rem; letter-spacing:.15em; text-transform:uppercase; color:var(--cyan); margin-bottom:.35rem; font-weight:700;}
   .info-card .value{font-weight:600; color:#fff;}
 
-  /* WORK (4 ASHLEE SUITE CARDS) */
+  /* WORK (4 ASHLEE CARDS WITH 3D TILT) */
   .work-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:1.6rem; }
-  .project-card{ overflow:hidden; transition:transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .45s; }
-  .project-card:hover{ transform:translateY(-8px); box-shadow:0 24px 60px -24px rgba(0,245,212,.3); }
+  .project-card{
+    overflow:hidden;
+    transition:transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .45s;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  .project-card:hover{ box-shadow:0 24px 60px -24px rgba(0,245,212,.3); }
   .project-visual{
     aspect-ratio:16/10; margin:14px; border-radius:16px; position:relative; overflow:hidden;
     background:#111119; display:flex; align-items:center; justify-content:center;
   }
-  .project-visual img{ width:100%; height:100%; object-fit:cover; transition:transform .6s cubic-bezier(.2,.8,.2,1); }
+  .project-visual img{
+    width:100%; height:100%; object-fit:cover; transition:transform .6s cubic-bezier(.2,.8,.2,1);
+    cursor: zoom-in;
+  }
   .project-card:hover .project-visual img{ transform:scale(1.05); }
   .project-body{ padding:.4rem 1.6rem 1.8rem;}
   .concept-tag{ font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; color:var(--cyan); font-weight:700; display:block; margin-bottom:.6rem;}
   .project-body h3{font-size:1.25rem; margin-bottom:.5rem; color:#fff;}
   .project-body p{color:var(--fg-dim); font-size:.95rem; font-weight:500;}
   .tools{font-size:.75rem; letter-spacing:.08em; text-transform:uppercase; color:var(--cyan); font-weight:700; margin-bottom:1rem; margin-top:0.6rem;}
-  .view-link{ font-size:.85rem; font-weight:600; display:inline-flex; align-items:center; gap:.4rem; color:#fff;}
+  .view-link{ font-size:.85rem; font-weight:600; display:inline-flex; align-items:center; gap:.4rem; color:#fff; cursor:pointer;}
   .view-link .arrow{transition:transform .3s;}
   .project-card:hover .view-link .arrow{transform:translateX(5px);}
 
-  /* SERVICES - COMPREHENSIVE 4-DOMAIN GRID */
+  /* SERVICES - 4 COMPREHENSIVE DOMAINS */
   .services-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1.6rem;}
   .service-card{ padding:2.2rem; transition:transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s, border-color .4s; }
   .service-card:hover{ transform:translateY(-6px); box-shadow:0 24px 50px -22px rgba(0,245,212,.35); border-color:rgba(0,245,212,.4); }
@@ -249,7 +257,7 @@
   .service-card h3{font-size:1.3rem; margin-bottom:.8rem; color:#fff;}
   .service-card p{color:var(--fg-dim); font-size:.92rem; font-weight:500; line-height:1.65;}
 
-  /* SKILLS & FIXED PROPORTIONAL PERCENTAGES */
+  /* SKILLS & FIXED EQUAL PERCENTAGES */
   .skills-header-area{ grid-column:span 4; }
   .skills-container{ grid-column:span 8; display:grid; grid-template-columns:1fr 1fr; gap:3rem; }
   .skill-row{ display:flex; justify-content:space-between; align-items:center; padding:1.05rem 0; border-bottom:1px solid var(--border);}
@@ -270,7 +278,7 @@
     letter-spacing: 0;
   }
 
-  /* BALANCED 2-COLUMN COMPETENCY GRID */
+  /* 2x3 BALANCED GRID */
   .pill-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:0.75rem; }
   .pill-item{
     padding:.75rem 1rem; border-radius:14px; font-size:.85rem; color:#fff;
@@ -279,7 +287,7 @@
   }
   .pill-item:hover{border-color:var(--cyan); color:#fff; background:rgba(0,245,212,0.08);}
 
-  /* REFRESHED SVG TOOL TICKER */
+  /* TICKER */
   .ticker-wrap{
     margin-top:3.4rem; overflow:hidden; position:relative; padding:1.6rem 0;
     -webkit-mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
@@ -353,6 +361,61 @@
   }
   .scroll-top-btn.visible{ opacity:1; visibility:visible; transform:translateY(0); }
   .scroll-top-btn:hover{ transform:translateY(-5px) scale(1.08); box-shadow:0 14px 30px rgba(0,245,212,0.6); }
+
+  /* EXTREME ADD-ONS: GLOW CURSOR & LIGHTBOX */
+  @media (hover: hover) and (pointer: fine) {
+    .cursor-glow {
+      position: fixed;
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle, rgba(0, 245, 212, 0.14), transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      transition: width 0.3s, height 0.3s;
+    }
+  }
+
+  .lightbox-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(7, 7, 11, 0.88);
+    backdrop-filter: blur(20px);
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.35s ease;
+    padding: 2rem;
+  }
+  .lightbox-modal.active { opacity: 1; visibility: visible; }
+  .lightbox-img {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 245, 212, 0.4);
+    box-shadow: 0 0 50px rgba(0, 245, 212, 0.3);
+    transform: scale(0.9);
+    transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .lightbox-modal.active .lightbox-img { transform: scale(1); }
+  .lightbox-close {
+    position: absolute;
+    top: 25px; right: 25px;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    color: #fff;
+    width: 45px; height: 45px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: 0.3s;
+  }
+  .lightbox-close:hover { border-color: var(--cyan); color: var(--cyan); }
 
   footer{ padding:3rem 0; }
   footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;}
@@ -545,7 +608,7 @@
           <h3>ASHLEE — Logo &amp; Product Packaging</h3>
           <p>Complete brand identity system including primary/secondary logo variations, typography hierarchy, color swatches, and 3D cosmetic bottle mockups.</p>
           <p class="tools">Illustrator · Photoshop</p>
-          <a href="#" class="view-link">View Case Study <span class="arrow">→</span></a>
+          <a class="view-link">View Case Study <span class="arrow">→</span></a>
         </div>
       </article>
 
@@ -559,7 +622,7 @@
           <h3>ASHLEE — UI Design &amp; Web Layout</h3>
           <p>Multi-device responsive landing page architecture featuring interactive appointment booking flows, structured UI elements, and modern typography.</p>
           <p class="tools">Figma · HTML5 · CSS3</p>
-          <a href="#" class="view-link">View UI Concept <span class="arrow">→</span></a>
+          <a class="view-link">View UI Concept <span class="arrow">→</span></a>
         </div>
       </article>
 
@@ -573,7 +636,7 @@
           <h3>ASHLEE — Social Media Ad Creatives</h3>
           <p>High-conversion promotional story ads, carousel beauty tips, and scroll-stopping editorial banners tailored for multi-platform engagement.</p>
           <p class="tools">Photoshop · Figma · Canva</p>
-          <a href="#" class="view-link">View Campaign <span class="arrow">→</span></a>
+          <a class="view-link">View Campaign <span class="arrow">→</span></a>
         </div>
       </article>
 
@@ -587,7 +650,7 @@
           <h3>ASHLEE — Large-Format &amp; Subway Ads</h3>
           <p>Print-ready vector artwork in CMYK mode at 300 DPI with accurate bleed, trim, and safe margin specifications for event banners, signage, and menu stands.</p>
           <p class="tools">Illustrator · CorelDRAW · Prepress</p>
-          <a href="#" class="view-link">View Print Suite <span class="arrow">→</span></a>
+          <a class="view-link">View Print Suite <span class="arrow">→</span></a>
         </div>
       </article>
 
@@ -629,7 +692,7 @@
         <p>Scroll-stopping promotional creatives, Instagram carousel sets, high-converting story ads, banner campaigns, photo manipulation, and editorial layout compositions.</p>
       </div>
 
-      <!-- SERVICE 4 (FRONT-END & WEB ASSETS) -->
+      <!-- SERVICE 4 -->
       <div class="service-card glass reveal">
         <div class="service-icon"><i class="fa-solid fa-code"></i></div>
         <h3>Front-End &amp; Web Assets</h3>
@@ -867,9 +930,19 @@
   </div>
 </section>
 
+<!-- SCROLL TO TOP -->
 <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
   <i class="fa-solid fa-arrow-up"></i>
 </button>
+
+<!-- GLOW CURSOR CONTAINER -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- LIGHTBOX MODAL CONTAINER -->
+<div class="lightbox-modal" id="lightboxModal">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close Preview"><i class="fa-solid fa-xmark"></i></button>
+  <img src="" alt="Full Preview" class="lightbox-img" id="lightboxImg">
+</div>
 
 <footer>
   <div class="wrap">
@@ -1043,6 +1116,47 @@
     btn.style.opacity = '0.7';
     setTimeout(()=>{ btn.innerHTML = original; btn.style.opacity = '1'; form.reset(); }, 2200);
   });
+
+  /* GLOW CURSOR JS */
+  const cursorGlow = document.getElementById('cursorGlow');
+  if (cursorGlow && window.matchMedia('(hover: hover)').matches) {
+    window.addEventListener('mousemove', (e) => {
+      cursorGlow.style.left = e.clientX + 'px';
+      cursorGlow.style.top = e.clientY + 'px';
+    });
+  }
+
+  /* 3D TILT JS */
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      card.style.transform = `perspective(1000px) rotateX(${-y * 0.04}deg) rotateY(${x * 0.04}deg) translateY(-8px)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)';
+    });
+  });
+
+  /* LIGHTBOX MODAL JS */
+  const lightboxModal = document.getElementById('lightboxModal');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  document.querySelectorAll('.project-visual img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightboxModal.classList.add('active');
+    });
+  });
+
+  if (lightboxClose) {
+    lightboxClose.addEventListener('click', () => lightboxModal.classList.remove('active'));
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal) lightboxModal.classList.remove('active');
+    });
+  }
 </script>
 </body>
 </html>
