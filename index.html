@@ -7,7 +7,7 @@
 <meta name="description" content="Harish Kumar — Graphic Designer specializing in Print & Prepress, Digital Branding, and Front-End & Web Assets. Open to opportunities in India and Dubai.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
   :root{
@@ -42,7 +42,7 @@
     background:var(--bg); color:var(--fg); font-family:'Plus Jakarta Sans',sans-serif;
     line-height:1.7; overflow-x:hidden; width:100%; position:relative;
   }
-  h1,h2,h3,h4{font-family:'Space Grotesk', 'Plus Jakarta Sans', sans-serif; letter-spacing:-0.03em; color:#fff;}
+  h1,h2,h3,h4{font-family:'Syne',sans-serif; letter-spacing:-0.03em; color:#fff;}
   a{color:inherit; text-decoration:none;}
   .wrap{max-width:1180px; margin:0 auto; padding:0 6vw; width:100%;}
 
@@ -69,7 +69,7 @@
     background: rgba(0, 245, 212, 0.12);
     border: 1px solid var(--border); backdrop-filter: blur(10px);
     display: flex; align-items: center; justify-content: center;
-    font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.35rem; color: #fff;
+    font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.35rem; color: #fff;
     box-shadow: 0 0 30px rgba(0,245,212,0.3);
   }
   .preloader-logo span { color: var(--cyan); }
@@ -79,13 +79,6 @@
   }
   .preloader-bar-bg { width: 180px; height: 4px; background: rgba(255,255,255,0.08); border-radius: 99px; overflow: hidden; }
   .preloader-bar-fill { width: 0%; height: 100%; background: var(--cyan); border-radius: 99px; box-shadow: 0 0 12px var(--cyan); }
-
-  .grad-text{
-    background:linear-gradient(100deg, var(--violet), var(--cyan) 50%, var(--orange));
-    -webkit-background-clip:text; background-clip:text; color:transparent;
-    background-size:200% auto; animation:gradShift 8s ease infinite;
-  }
-  @keyframes gradShift{0%,100%{background-position:0% 50%;} 50%{background-position:100% 50%;}}
 
   .aurora{ position:fixed; inset:0; z-index:-2; overflow:hidden; background:var(--bg); }
   .orb{ position:absolute; border-radius:50%; filter:blur(110px); opacity:.55; will-change:transform; }
@@ -112,7 +105,7 @@
     max-width:1180px; margin:0 auto; display:flex; align-items:center; justify-content:space-between;
     padding:.75rem 1.6rem; border-radius:999px; gap:1rem; position:relative; width:100%;
   }
-  .logo{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.15rem; flex-shrink:0;}
+  .logo{font-family:'Syne',sans-serif; font-weight:800; font-size:1.2rem; flex-shrink:0;}
   .logo span{color:var(--cyan);}
   nav.links{
     display:flex; justify-content:center; align-items:center; gap:2rem; 
@@ -121,11 +114,7 @@
   nav.links a{position:relative; transition:color .3s; white-space:nowrap;}
   nav.links a:hover{color:#fff;}
   .nav-actions{display:flex; align-items:center; justify-content:flex-end; gap:.7rem; flex-shrink:0;}
-
-  .menu-toggle{
-    display:none; background:none; border:none; color:#fff; font-size:1.3rem;
-    cursor:pointer; padding:0.4rem; z-index:110;
-  }
+  .menu-toggle{ display:none; background:none; border:none; color:#fff; font-size:1.3rem; cursor:pointer; padding:0.4rem; z-index:110; }
 
   /* BUTTONS */
   .btn{
@@ -144,22 +133,50 @@
   .btn .arrow{transition:transform .35s cubic-bezier(.2,.8,.2,1);}
   .btn:hover .arrow{transform:translateX(5px);}
 
-  /* HERO & CLEAN TYPOGRAPHY */
+  /* HERO & INTERNATIONAL NAME TYPOGRAPHY */
   .hero{ min-height:100vh; display:flex; align-items:center; padding-top:110px; position:relative; overflow:hidden; }
-  .kicker{ font-size:1.05rem; color:var(--fg-dim); margin-bottom:1.2rem; font-weight:600; }
+  .kicker{ font-size:1.05rem; color:var(--fg-dim); margin-bottom:1.1rem; font-weight:600; }
   
   .hero h1{
-    font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
-    font-size: clamp(2.8rem, 8vw, 5.8rem);
-    font-weight: 700;
-    line-height: 1.05;
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(3rem, 8.5vw, 6.2rem);
+    font-weight: 800;
+    line-height: 0.95;
     letter-spacing: -0.04em;
     text-transform: uppercase;
     color: #FFFFFF;
     word-break: break-word;
   }
+  .hero h1 span.accent-name{
+    color: var(--cyan);
+    text-shadow: 0 0 35px rgba(0, 245, 212, 0.45);
+  }
   
-  .hero .role{ font-size:clamp(0.95rem,2vw,1.3rem); font-weight:700; margin-top:1.3rem; letter-spacing:0.01em; line-height:1.5; }
+  /* ROLE BADGES (HIGH CONTRAST & READABLE) */
+  .role-badges{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1.4rem;
+  }
+  .role-badge{
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(0, 245, 212, 0.35);
+    color: #FFFFFF;
+    padding: 0.42rem 0.95rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    backdrop-filter: blur(12px);
+    transition: transform .25s, border-color .25s, background .25s;
+  }
+  .role-badge:hover{
+    border-color: var(--cyan);
+    background: rgba(0, 245, 212, 0.12);
+    transform: translateY(-2px);
+  }
+
   .hero p.lede{ max-width:620px; color:var(--fg-dim); font-size:1.05rem; margin:1.6rem 0 2.2rem; font-weight:500; line-height:1.8; }
   .cta-row{display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:2.6rem; align-items:center;}
   .status-pill{
@@ -221,16 +238,16 @@
   .view-link .arrow{transition:transform .3s;}
   .project-card:hover .view-link .arrow{transform:translateX(5px);}
 
-  /* SERVICES */
-  .services-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1.6rem;}
-  .service-card{ padding:2.3rem; transition:transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s, border-color .4s; }
+  /* SERVICES - COMPREHENSIVE 4-DOMAIN GRID */
+  .services-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1.6rem;}
+  .service-card{ padding:2.2rem; transition:transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s, border-color .4s; }
   .service-card:hover{ transform:translateY(-6px); box-shadow:0 24px 50px -22px rgba(0,245,212,.35); border-color:rgba(0,245,212,.4); }
   .service-icon{
     width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center;
     background:rgba(0,245,212,0.12); border:1px solid rgba(0,245,212,0.25); margin-bottom:1.4rem; font-size:1.2rem; color:var(--cyan);
   }
-  .service-card h3{font-size:1.35rem; margin-bottom:.8rem; color:#fff;}
-  .service-card p{color:var(--fg-dim); font-size:.95rem; font-weight:500;}
+  .service-card h3{font-size:1.3rem; margin-bottom:.8rem; color:#fff;}
+  .service-card p{color:var(--fg-dim); font-size:.92rem; font-weight:500; line-height:1.65;}
 
   /* SKILLS & FIXED PROPORTIONAL PERCENTAGES */
   .skills-header-area{ grid-column:span 4; }
@@ -243,7 +260,7 @@
   .bar span{display:block; height:100%; width:0%; background:var(--cyan); border-radius:99px; box-shadow:0 0 10px rgba(0,245,212,0.4); transition:width 1.4s cubic-bezier(.2,.8,.2,1);}
   
   .bar-pct{
-    font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
     font-size: 0.95rem;
     font-weight: 700;
     color: #FFFFFF;
@@ -254,24 +271,11 @@
   }
 
   /* BALANCED 2-COLUMN COMPETENCY GRID */
-  .pill-grid{
-    display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:0.75rem;
-  }
+  .pill-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:0.75rem; }
   .pill-item{
-    padding:.75rem 1rem;
-    border-radius:14px;
-    font-size:.85rem;
-    color:#fff;
-    background:rgba(255,255,255,0.06);
-    font-weight:600;
-    border:1px solid var(--border);
-    text-align:center;
-    transition:.3s;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    padding:.75rem 1rem; border-radius:14px; font-size:.85rem; color:#fff;
+    background:rgba(255,255,255,0.06); font-weight:600; border:1px solid var(--border);
+    text-align:center; transition:.3s; display:flex; align-items:center; justify-content:center;
   }
   .pill-item:hover{border-color:var(--cyan); color:#fff; background:rgba(0,245,212,0.08);}
 
@@ -293,7 +297,7 @@
     width:32px; height:32px; border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0; overflow:hidden;
   }
   .tool-img-icon img, .tool-img-icon svg{ width:100%; height:100%; object-fit:contain; }
-  .tool-chip span.tname{font-size:1rem; color:#fff; font-weight:700; font-family:'Space Grotesk', sans-serif;}
+  .tool-chip span.tname{font-size:1rem; color:#fff; font-weight:700; font-family:'Syne', sans-serif;}
 
   /* PROCESS + WHY */
   .ripple-grid{ display:grid; gap:1.6rem; }
@@ -306,7 +310,7 @@
     border-color:rgba(0,245,212, calc(0.1 + var(--r) * 0.5));
     transition:transform .5s cubic-bezier(.2,.8,.2,1), box-shadow .5s, border-color .5s;
   }
-  .process-step .num{font-family:'Space Grotesk'; font-size:1.4rem; font-weight:700; margin-bottom:1rem; color:var(--cyan);}
+  .process-step .num{font-family:'Syne'; font-size:1.4rem; font-weight:700; margin-bottom:1rem; color:var(--cyan);}
   .process-step h3{font-size:1.05rem; margin-bottom:.5rem; color:#fff;}
   .process-step p{color:var(--fg-dim); font-size:.88rem; font-weight:500;}
   .why-card h3{font-size:1rem; margin-bottom:.5rem; color:#fff;}
@@ -352,7 +356,7 @@
 
   footer{ padding:3rem 0; }
   footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;}
-  footer .fname{font-family:'Space Grotesk'; font-weight:700; color:#fff;}
+  footer .fname{font-family:'Syne'; font-weight:700; color:#fff;}
   footer .sub{color:var(--fg-dim); font-size:.85rem; font-weight:500;}
   .foot-social{display:flex; gap:.8rem;}
   .foot-social a{
@@ -394,9 +398,10 @@
 
     .hero{ padding-top: 85px; min-height: auto; padding-bottom: 3rem; }
     .hero .wrap{ padding-right: 3.5rem; }
-    .hero h1{ font-size: clamp(2.4rem, 8.5vw, 3.2rem); line-height: 1.05; letter-spacing: -0.03em; }
-    .hero .role{ font-size: .88rem; margin-top: .8rem; }
-    .hero p.lede{ font-size: .95rem; margin: 1rem 0 1.5rem; }
+    .hero h1{ font-size: clamp(2.4rem, 8.5vw, 3.2rem); line-height: 1.02; letter-spacing: -0.03em; }
+    .hero p.lede{ font-size: .95rem; margin: 1.2rem 0 1.5rem; }
+    .role-badges{ gap: 0.4rem; margin-top: 1rem; }
+    .role-badge{ font-size: 0.75rem; padding: 0.35rem 0.75rem; }
     .cta-row{ gap: .7rem; margin-bottom: 1.5rem; }
     .cta-row .btn{ width: 100%; justify-content: center; padding: .8rem 1.2rem; }
 
@@ -433,7 +438,7 @@
     </div>
     <div class="preloader-text">
       <span>Loading Portfolio</span>
-      <span id="loadPct" style="color:var(--cyan); font-family:'Space Grotesk';">0%</span>
+      <span id="loadPct" style="color:var(--cyan); font-family:'Syne';">0%</span>
     </div>
     <div class="preloader-bar-bg">
       <div class="preloader-bar-fill" id="loadBar"></div>
@@ -472,9 +477,18 @@
   <div class="wrap">
     <div class="reveal">
       <p class="kicker">Hey, I'm</p>
-      <h1>HARISH<br>KUMAR</h1>
-      <p class="role grad-text">Graphic Designer | Print &amp; Prepress | Digital Branding | Front-End &amp; Web Assets</p>
+      <h1>HARISH<br><span class="accent-name">KUMAR</span></h1>
+      
+      <!-- HIGH READABILITY ROLE PILL BADGES -->
+      <div class="role-badges">
+        <span class="role-badge">Graphic Designer</span>
+        <span class="role-badge">Print &amp; Prepress</span>
+        <span class="role-badge">Digital Branding</span>
+        <span class="role-badge">Front-End &amp; Web Assets</span>
+      </div>
+
       <p class="lede">Detail-oriented Graphic Designer with hands-on production expertise across print-ready artwork, brand identity systems, digital marketing campaigns, and responsive web assets.</p>
+      
       <div class="cta-row">
         <a href="#work" class="btn btn-primary magnetic">View My Work <span class="arrow">→</span></a>
         <a href="#contact" class="btn btn-ghost magnetic">Get In Touch <span class="arrow">→</span></a>
@@ -581,35 +595,52 @@
   </div>
 </section>
 
+<!-- COMPREHENSIVE 4-DOMAIN SERVICES SECTION -->
 <section id="services">
   <div class="wrap">
     <div class="section-head reveal">
       <div>
-        <span class="eyebrow c-orange">03 — Technical Competencies</span>
+        <span class="eyebrow c-orange">03 — What I Deliver</span>
         <h2 style="color:#fff;">Production-Ready Design<br>&amp; Digital Solutions</h2>
       </div>
+      <p>From tactile print-ready production files to responsive front-end web layouts — engineered for high visual impact.</p>
     </div>
+    
     <div class="services-grid">
+      
+      <!-- SERVICE 1 -->
       <div class="service-card glass reveal">
         <div class="service-icon"><i class="fa-solid fa-swatchbook"></i></div>
-        <h3>Brand Identity &amp; Logo</h3>
-        <p>Logo design, brand style guides, vector graphics, typography hierarchy, and corporate color theory.</p>
+        <h3>Brand Identity &amp; Systems</h3>
+        <p>Complete visual identity packages including primary/secondary logos, comprehensive brand guidelines, color palettes, vector typography hierarchies, and commercial mockups.</p>
       </div>
+
+      <!-- SERVICE 2 -->
       <div class="service-card glass reveal">
         <div class="service-icon"><i class="fa-solid fa-print"></i></div>
-        <h3>Print &amp; Prepress Artwork</h3>
-        <p>CMYK workflows, 300 DPI resolution, bleed &amp; trim setup, large-format signage, and packaging mockups.</p>
+        <h3>Print &amp; Prepress Production</h3>
+        <p>Commercial print-ready files engineered in CMYK mode at 300 DPI with precise bleed, trim, and safe margin setups — covering large-format signage, lightboxes, brochures, and packaging.</p>
       </div>
+
+      <!-- SERVICE 3 -->
+      <div class="service-card glass reveal">
+        <div class="service-icon"><i class="fa-solid fa-bullhorn"></i></div>
+        <h3>Digital Marketing &amp; Social Ads</h3>
+        <p>Scroll-stopping promotional creatives, Instagram carousel sets, high-converting story ads, banner campaigns, photo manipulation, and editorial layout compositions.</p>
+      </div>
+
+      <!-- SERVICE 4 (FRONT-END & WEB ASSETS) -->
       <div class="service-card glass reveal">
         <div class="service-icon"><i class="fa-solid fa-code"></i></div>
-        <h3>Digital &amp; Web Assets</h3>
-        <p>Social media ad creatives, photo retouching, responsive UI development (HTML5/CSS3), and modern web styling.</p>
+        <h3>Front-End &amp; Web Assets</h3>
+        <p>Translating visual concepts and Figma prototypes into responsive web layouts using clean HTML5, CSS3, Tailwind styling, web asset optimization, and live deployment on GitHub Pages.</p>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- REFINED SKILLS SECTION WITH EQUALIZED PERCENTAGES & 2x3 BALANCED GRID -->
+<!-- SKILLS SECTION -->
 <section id="skills">
   <div class="wrap grid-12">
     <div class="skills-header-area reveal">
