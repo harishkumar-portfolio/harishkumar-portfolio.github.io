@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Harish Kumar | Graphic Designer | Print, Digital & Web</title>
-<meta name="description" content="Harish Kumar — Graphic Designer focused on print, branding, digital campaigns, and web assets. Open to opportunities in India and Dubai.">
+<title>Harish Kumar | Graphic Designer | Print, Digital & Front-End</title>
+<meta name="description" content="Harish Kumar — Graphic Designer specializing in Print & Prepress, Digital Branding, and Front-End & Web Assets. Open to opportunities in India and Dubai.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
@@ -40,7 +40,7 @@
   html{scroll-behavior:smooth; overflow-x:hidden; width:100%;}
   body{
     background:var(--bg); color:var(--fg); font-family:'Plus Jakarta Sans',sans-serif;
-    line-height:1.65; overflow-x:hidden; width:100%; position:relative;
+    line-height:1.7; overflow-x:hidden; width:100%; position:relative;
   }
   h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif; letter-spacing:-0.03em; color:#fff;}
   a{color:inherit; text-decoration:none;}
@@ -134,15 +134,15 @@
   .btn .arrow{transition:transform .35s cubic-bezier(.2,.8,.2,1);}
   .btn:hover .arrow{transform:translateX(5px);}
 
-  /* HERO: REFINED BOLD HEADING (-8% SIZE & TIGHT LINE SPACING) */
-  .hero{ min-height:100vh; display:flex; align-items:center; padding-top:105px; padding-bottom:3.5rem; position:relative; overflow:hidden; }
-  .kicker{ font-size:1rem; color:var(--fg-dim); margin-bottom:0.9rem; font-weight:600; letter-spacing:0.02em; }
+  /* HERO & PURE SOLID WHITE LUXURY NAME */
+  .hero{ min-height:100vh; display:flex; align-items:center; padding-top:110px; position:relative; overflow:hidden; }
+  .kicker{ font-size:1.05rem; color:var(--fg-dim); margin-bottom:1.1rem; font-weight:600; letter-spacing:0.02em; }
   
   .hero h1{
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: clamp(2.6rem, 6.8vw, 4.8rem);
+    font-size: clamp(2.8rem, 7.5vw, 5.4rem);
     font-weight: 800;
-    line-height: 0.98;
+    line-height: 1.05;
     letter-spacing: -0.04em;
     text-transform: uppercase;
     color: #FFFFFF;
@@ -150,20 +150,20 @@
     text-shadow: 0 4px 30px rgba(0,0,0,0.5);
   }
   
-  /* REFINED SKILL TAGS (COMPACT PADDING & PROPORTIONAL FONT) */
+  /* ROLE BADGES */
   .role-badges{
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1.3rem;
+    gap: 0.65rem;
+    margin-top: 1.6rem;
   }
   .role-badge{
     background: rgba(255, 255, 255, 0.07);
     border: 1px solid rgba(255, 255, 255, 0.18);
     color: #FFFFFF;
-    padding: 0.35rem 0.85rem;
+    padding: 0.45rem 1.05rem;
     border-radius: 999px;
-    font-size: 0.78rem;
+    font-size: 0.85rem;
     font-weight: 600;
     letter-spacing: 0.01em;
     backdrop-filter: blur(12px);
@@ -175,18 +175,14 @@
     transform: translateY(-2px);
   }
 
-  /* SHORTENED DESCRIPTION */
-  .hero p.lede{ max-width:580px; color:var(--fg-dim); font-size:1.02rem; margin:1.3rem 0 1.8rem; font-weight:500; line-height:1.65; }
-  
-  .cta-row{display:flex; gap:0.9rem; flex-wrap:wrap; margin-bottom:1.6rem; align-items:center;}
-  
-  /* COMPACT OPPORTUNITY PILL */
+  .hero p.lede{ max-width:620px; color:var(--fg-dim); font-size:1.05rem; margin:1.6rem 0 2.2rem; font-weight:500; line-height:1.8; }
+  .cta-row{display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:2.6rem; align-items:center;}
   .status-pill{
-    display:inline-flex; align-items:center; gap:.55rem; font-size:.76rem; letter-spacing:.08em;
-    text-transform:uppercase; color:#fff; padding:.42rem 0.95rem .42rem .75rem; font-weight:600; border-radius:999px;
+    display:inline-flex; align-items:center; gap:.65rem; font-size:.82rem; letter-spacing:.08em;
+    text-transform:uppercase; color:#fff; padding:.6rem 1.2rem 0.6rem .8rem; font-weight:600;
   }
-  .dot{width:7px; height:7px; border-radius:50%; background:var(--cyan); position:relative; box-shadow:0 0 10px var(--cyan);}
-  .dot::after{content:''; position:absolute; inset:-4px; border-radius:50%; border:1px solid var(--cyan); animation:pulse 2s infinite;}
+  .dot{width:8px; height:8px; border-radius:50%; background:var(--cyan); position:relative; box-shadow:0 0 12px var(--cyan);}
+  .dot::after{content:''; position:absolute; inset:-5px; border-radius:50%; border:1px solid var(--cyan); animation:pulse 2s infinite;}
   @keyframes pulse{0%{transform:scale(.6); opacity:1;} 100%{transform:scale(2); opacity:0;}}
 
   /* FLOATING VERTICAL SOCIAL DOCK */
@@ -206,22 +202,22 @@
   }
 
   /* SECTIONS */
-  section{ padding:7rem 0; position:relative; overflow:hidden; border-bottom:1px solid rgba(255,255,255,0.08); }
+  section{ padding:8rem 0; position:relative; overflow:hidden; border-bottom:1px solid rgba(255,255,255,0.08); }
   .grid-12{display:grid; grid-template-columns:repeat(12,1fr); gap:2.2rem;}
-  .section-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:2rem; margin-bottom:3.5rem; flex-wrap:wrap;}
-  .section-head h2{font-size:clamp(1.8rem,4vw,2.6rem); font-weight:700;}
+  .section-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:2rem; margin-bottom:4rem; flex-wrap:wrap;}
+  .section-head h2{font-size:clamp(1.8rem,4vw,2.8rem); font-weight:700;}
   .section-head p{color:var(--fg-dim); max-width:340px; font-weight:500;}
 
   /* ABOUT */
-  .about-copy{grid-column:span 8; color:var(--fg-dim); font-size:1.05rem; font-weight:500;}
+  .about-copy{grid-column:span 8; color:var(--fg-dim); font-size:1.1rem; font-weight:500;}
   .about-copy p{margin-bottom:1.4rem;}
   .about-side{grid-column:span 4; display:flex; flex-direction:column; gap:1rem;}
-  .info-card{ padding:1.3rem; transition:transform .35s, box-shadow .35s; }
+  .info-card{ padding:1.4rem; transition:transform .35s, box-shadow .35s; }
   .info-card:hover{ transform:translateY(-3px); box-shadow:0 0 0 1px rgba(0,245,212,.35), 0 18px 34px -18px rgba(0,245,212,.4); }
-  .info-card .label{font-size:.75rem; letter-spacing:.15em; text-transform:uppercase; color:var(--cyan); margin-bottom:.35rem; font-weight:700;}
+  .info-card .label{font-size:.78rem; letter-spacing:.15em; text-transform:uppercase; color:var(--cyan); margin-bottom:.35rem; font-weight:700;}
   .info-card .value{font-weight:600; color:#fff;}
 
-  /* WORK */
+  /* WORK (4 ASHLEE CARDS WITH 3D TILT) */
   .work-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:1.6rem; }
   .project-card{
     overflow:hidden;
@@ -248,21 +244,21 @@
   .view-link .arrow{transition:transform .3s;}
   .project-card:hover .view-link .arrow{transform:translateX(5px);}
 
-  /* SERVICES */
+  /* SERVICES - 4 COMPREHENSIVE DOMAINS */
   .services-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1.6rem;}
   .service-card{ padding:2.2rem; transition:transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s, border-color .4s; }
   .service-card:hover{ transform:translateY(-6px); box-shadow:0 24px 50px -22px rgba(0,245,212,.35); border-color:rgba(0,245,212,.4); }
   .service-icon{
-    width:50px; height:50px; border-radius:14px; display:flex; align-items:center; justify-content:center;
-    background:rgba(0,245,212,0.12); border:1px solid rgba(0,245,212,0.25); margin-bottom:1.3rem; font-size:1.15rem; color:var(--cyan);
+    width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center;
+    background:rgba(0,245,212,0.12); border:1px solid rgba(0,245,212,0.25); margin-bottom:1.4rem; font-size:1.2rem; color:var(--cyan);
   }
-  .service-card h3{font-size:1.25rem; margin-bottom:.7rem; color:#fff;}
+  .service-card h3{font-size:1.3rem; margin-bottom:.8rem; color:#fff;}
   .service-card p{color:var(--fg-dim); font-size:.92rem; font-weight:500; line-height:1.65;}
 
-  /* SKILLS */
+  /* SKILLS & FIXED EQUAL PERCENTAGES */
   .skills-header-area{ grid-column:span 4; }
   .skills-container{ grid-column:span 8; display:grid; grid-template-columns:1fr 1fr; gap:3rem; }
-  .skill-row{ display:flex; justify-content:space-between; align-items:center; padding:1rem 0; border-bottom:1px solid var(--border);}
+  .skill-row{ display:flex; justify-content:space-between; align-items:center; padding:1.05rem 0; border-bottom:1px solid var(--border);}
   .skill-row:last-child{border-bottom:none;}
   .skill-row span{ color:var(--fg); font-weight:600; font-size:0.95rem; }
   .bar-wrap{display:flex; align-items:center; gap:.8rem;}
@@ -280,6 +276,7 @@
     letter-spacing: 0;
   }
 
+  /* 2x3 BALANCED GRID */
   .pill-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:0.75rem; }
   .pill-item{
     padding:.75rem 1rem; border-radius:14px; font-size:.85rem; color:#fff;
@@ -290,7 +287,7 @@
 
   /* TICKER */
   .ticker-wrap{
-    margin-top:3.2rem; overflow:hidden; position:relative; padding:1.5rem 0;
+    margin-top:3.4rem; overflow:hidden; position:relative; padding:1.6rem 0;
     -webkit-mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
     mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
   }
@@ -299,44 +296,44 @@
   @keyframes tickerScroll{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
   
   .tool-chip{
-    display:flex; align-items:center; gap:0.85rem; padding:0.85rem 1.5rem; border-radius:16px; white-space:nowrap;
+    display:flex; align-items:center; gap:0.9rem; padding:0.9rem 1.6rem; border-radius:18px; white-space:nowrap;
     background: rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.18);
   }
   .tool-img-icon{
-    width:30px; height:30px; border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0; overflow:hidden;
+    width:32px; height:32px; border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0; overflow:hidden;
   }
   .tool-img-icon img, .tool-img-icon svg{ width:100%; height:100%; object-fit:contain; }
-  .tool-chip span.tname{font-size:0.95rem; color:#fff; font-weight:700; font-family:'Space Grotesk', sans-serif;}
+  .tool-chip span.tname{font-size:1rem; color:#fff; font-weight:700; font-family:'Space Grotesk', sans-serif;}
 
   /* PROCESS + WHY */
   .ripple-grid{ display:grid; gap:1.6rem; }
   .process-grid{ grid-template-columns:repeat(5,1fr); }
   .why-grid{ grid-template-columns:repeat(5,1fr); }
   .ripple-card{
-    padding:1.4rem; --r:0;
+    padding:1.5rem; --r:0;
     transform:translateY(calc(var(--r) * -8px)) scale(calc(1 + var(--r) * 0.02));
     box-shadow:0 calc(var(--r) * 26px) calc(var(--r) * 50px) calc(var(--r) * -20px) rgba(0,245,212, calc(var(--r) * 0.4));
     border-color:rgba(0,245,212, calc(0.1 + var(--r) * 0.5));
     transition:transform .5s cubic-bezier(.2,.8,.2,1), box-shadow .5s, border-color .5s;
   }
-  .process-step .num{font-family:'Space Grotesk'; font-size:1.35rem; font-weight:700; margin-bottom:0.9rem; color:var(--cyan);}
-  .process-step h3{font-size:1.02rem; margin-bottom:.45rem; color:#fff;}
-  .process-step p{color:var(--fg-dim); font-size:.86rem; font-weight:500;}
-  .why-card h3{font-size:0.98rem; margin-bottom:.45rem; color:#fff;}
+  .process-step .num{font-family:'Space Grotesk'; font-size:1.4rem; font-weight:700; margin-bottom:1rem; color:var(--cyan);}
+  .process-step h3{font-size:1.05rem; margin-bottom:.5rem; color:#fff;}
+  .process-step p{color:var(--fg-dim); font-size:.88rem; font-weight:500;}
+  .why-card h3{font-size:1rem; margin-bottom:.5rem; color:#fff;}
   .why-card p{color:var(--fg-dim); font-size:.85rem; font-weight:500;}
 
   /* CONTACT */
   .contact-grid{display:grid; grid-template-columns:1fr 1.2fr; gap:2.4rem;}
-  .badge-row{display:flex; flex-direction:column; gap:.85rem; margin-top:1.5rem;}
-  .badge{ display:flex; align-items:center; gap:1.1rem; padding:1rem 1.2rem; transition:.35s; border-radius:16px; }
+  .badge-row{display:flex; flex-direction:column; gap:.9rem; margin-top:1.6rem;}
+  .badge{ display:flex; align-items:center; gap:1.2rem; padding:1.1rem 1.3rem; transition:.35s; border-radius:16px; }
   .badge:hover{ transform:translateX(8px); border-color:rgba(0,245,212,0.5); box-shadow:0 10px 30px -16px rgba(0,245,212,0.5); }
   .badge .icon{
-    width:44px; height:44px; border-radius:12px; display:flex; align-items:center; justify-content:center; flex-shrink:0;
-    background:rgba(0,245,212,0.12); border:1px solid rgba(0,245,212,0.25); font-size:1.1rem; color:var(--cyan);
+    width:46px; height:46px; border-radius:12px; display:flex; align-items:center; justify-content:center; flex-shrink:0;
+    background:rgba(0,245,212,0.12); border:1px solid rgba(0,245,212,0.25); font-size:1.15rem; color:var(--cyan);
   }
   .badge .meta{ display:flex; flex-direction:column; gap:0.15rem; }
-  .badge .meta .label{font-size:0.95rem; font-weight:700; color:#ffffff;}
-  .badge .meta .value{font-size:0.84rem; color:var(--fg-dim); font-weight:500;}
+  .badge .meta .label{font-size:1rem; font-weight:700; color:#ffffff;}
+  .badge .meta .value{font-size:0.86rem; color:var(--fg-dim); font-weight:500;}
 
   /* CONTACT FORM */
   .contact-form{ padding:2rem; }
@@ -355,9 +352,9 @@
 
   /* SCROLL TO TOP */
   .scroll-top-btn{
-    position:fixed; bottom:25px; right:25px; width:46px; height:46px; border-radius:50%;
+    position:fixed; bottom:25px; right:25px; width:48px; height:48px; border-radius:50%;
     background:var(--cyan); color:#07070b; border:none; display:flex; align-items:center; justify-content:center;
-    font-size:1.15rem; cursor:pointer; opacity:0; visibility:hidden; transform:translateY(20px);
+    font-size:1.2rem; cursor:pointer; opacity:0; visibility:hidden; transform:translateY(20px);
     transition:all .35s cubic-bezier(.2,.8,.2,1); z-index:999; box-shadow:0 10px 25px rgba(0,245,212,0.4);
   }
   .scroll-top-btn.visible{ opacity:1; visibility:visible; transform:translateY(0); }
@@ -367,8 +364,8 @@
   @media (hover: hover) and (pointer: fine) {
     .cursor-glow {
       position: fixed;
-      width: 260px;
-      height: 260px;
+      width: 280px;
+      height: 280px;
       background: radial-gradient(circle, rgba(0, 245, 212, 0.14), transparent 70%);
       border-radius: 50%;
       pointer-events: none;
@@ -409,7 +406,7 @@
     background: var(--glass);
     border: 1px solid var(--border);
     color: #fff;
-    width: 44px; height: 44px;
+    width: 45px; height: 45px;
     border-radius: 50%;
     font-size: 1.2rem;
     cursor: pointer;
@@ -431,7 +428,7 @@
   .reveal{opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1);}
   .reveal.in{opacity:1; transform:translateY(0);}
 
-  /* REFINED RESPONSIVE SPACING & MOBILE LAYOUT */
+  /* RESPONSIVE */
   @media (max-width: 860px){
     body{ width: 100vw; }
     .wrap{ padding: 0 5vw; }
@@ -460,18 +457,14 @@
     .nav-actions .btn-cv{ display: none; }
     .nav-actions .btn-primary{ padding: .45rem .85rem; font-size: .75rem; }
 
-    .hero{ padding-top: 80px; min-height: auto; padding-bottom: 2.2rem; }
+    .hero{ padding-top: 85px; min-height: auto; padding-bottom: 3rem; }
     .hero .wrap{ padding-right: 3.5rem; }
-    .hero h1{ font-size: clamp(2.1rem, 7.5vw, 2.7rem); line-height: 1.02; letter-spacing: -0.03em; }
-    .hero p.lede{ font-size: .92rem; margin: 1rem 0 1.2rem; line-height: 1.55; }
-    
-    .role-badges{ gap: 0.35rem; margin-top: 0.85rem; }
-    .role-badge{ font-size: 0.72rem; padding: 0.28rem 0.65rem; }
-    
-    .cta-row{ gap: .6rem; margin-bottom: 0.9rem; }
-    .cta-row .btn{ width: 100%; justify-content: center; padding: .75rem 1.1rem; font-size: 0.82rem; }
-    
-    .status-pill{ padding: 0.35rem 0.75rem 0.35rem 0.65rem; font-size: 0.7rem; }
+    .hero h1{ font-size: clamp(2.3rem, 8vw, 3rem); line-height: 1.05; letter-spacing: -0.03em; }
+    .hero p.lede{ font-size: .95rem; margin: 1.2rem 0 1.5rem; }
+    .role-badges{ gap: 0.4rem; margin-top: 1rem; }
+    .role-badge{ font-size: 0.75rem; padding: 0.35rem 0.75rem; }
+    .cta-row{ gap: .7rem; margin-bottom: 1.5rem; }
+    .cta-row .btn{ width: 100%; justify-content: center; padding: .8rem 1.2rem; }
 
     .social-dock{ right: 4px; padding: .4rem .2rem; gap: .3rem; border-radius: 12px; }
     .social-dock a{ width: 30px; height: 30px; font-size: .8rem; }
@@ -491,7 +484,7 @@
     .tool-img-icon{ width:28px; height:28px; }
     .tool-chip span.tname{ font-size:0.9rem; }
 
-    section{ padding: 3rem 0; }
+    section{ padding: 3.5rem 0; }
   }
 </style>
 </head>
@@ -547,24 +540,21 @@
       <p class="kicker">Hey, I'm</p>
       <h1>HARISH<br>KUMAR</h1>
       
-      <!-- CLEANER 4 SKILL TAGS -->
+      <!-- HIGH READABILITY ROLE PILL BADGES -->
       <div class="role-badges">
         <span class="role-badge">Graphic Designer</span>
         <span class="role-badge">Print &amp; Prepress</span>
         <span class="role-badge">Digital Branding</span>
-        <span class="role-badge">Web Assets</span>
+        <span class="role-badge">Front-End &amp; Web Assets</span>
       </div>
 
-      <!-- SHORTENED PUNCHY DESCRIPTION -->
-      <p class="lede">Graphic Designer focused on print, branding, digital campaigns, and web assets.</p>
+      <p class="lede">Detail-oriented Graphic Designer with hands-on production expertise across print-ready artwork, brand identity systems, digital marketing campaigns, and responsive web assets.</p>
       
       <div class="cta-row">
         <a href="#work" class="btn btn-primary magnetic">View My Work <span class="arrow">→</span></a>
         <a href="#contact" class="btn btn-ghost magnetic">Get In Touch <span class="arrow">→</span></a>
         <a href="resume.pdf" download="Harish_Kumar_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-cv magnetic"><i class="fas fa-file-pdf"></i> Download CV</a>
       </div>
-
-      <!-- COMPACT OPPORTUNITY CARD -->
       <span class="status-pill glass"><span class="dot"></span> Open to Opportunities — India &amp; Dubai</span>
     </div>
   </div>
@@ -679,24 +669,28 @@
     
     <div class="services-grid">
       
+      <!-- SERVICE 1 -->
       <div class="service-card glass reveal">
         <div class="service-icon"><i class="fa-solid fa-swatchbook"></i></div>
         <h3>Brand Identity &amp; Systems</h3>
         <p>Complete visual identity packages including primary/secondary logos, comprehensive brand guidelines, color palettes, vector typography hierarchies, and commercial mockups.</p>
       </div>
 
+      <!-- SERVICE 2 -->
       <div class="service-card glass reveal">
         <div class="service-icon"><i class="fa-solid fa-print"></i></div>
         <h3>Print &amp; Prepress Production</h3>
         <p>Commercial print-ready files engineered in CMYK mode at 300 DPI with precise bleed, trim, and safe margin setups — covering large-format signage, lightboxes, brochures, and packaging.</p>
       </div>
 
+      <!-- SERVICE 3 -->
       <div class="service-card glass reveal">
         <div class="service-icon"><i class="fa-solid fa-bullhorn"></i></div>
         <h3>Digital Marketing &amp; Social Ads</h3>
         <p>Scroll-stopping promotional creatives, Instagram carousel sets, high-converting story ads, banner campaigns, photo manipulation, and editorial layout compositions.</p>
       </div>
 
+      <!-- SERVICE 4 -->
       <div class="service-card glass reveal">
         <div class="service-icon"><i class="fa-solid fa-code"></i></div>
         <h3>Front-End &amp; Web Assets</h3>
@@ -752,6 +746,7 @@
         </div>
       </div>
 
+      <!-- BALANCED 6-ITEM GRID (3 Left + 3 Right) -->
       <div>
         <p class="eyebrow" style="color:var(--cyan);">Core Competencies</p>
         <div class="pill-grid">
@@ -765,7 +760,7 @@
       </div>
     </div>
 
-    <!-- TICKER -->
+    <!-- REFRESHED TOOL TICKER WITH HTML5, CSS3, JS, TAILWIND, FIGMA & GITHUB -->
     <div style="grid-column:span 12;" class="reveal">
       <div class="ticker-wrap">
         <div class="ticker-track" id="tickerTrack">
@@ -806,11 +801,11 @@
           </div>
 
           <div class="tool-chip glass">
-            <span class="tool-img-icon"><i class="fa-brands fa-github" style="font-size:1.6rem; color:#fff;"></i></span>
+            <span class="tool-img-icon"><i class="fa-brands fa-github" style="font-size:1.8rem; color:#fff;"></i></span>
             <span class="tname">GitHub</span>
           </div>
 
-          <!-- REPEAT TRACK -->
+          <!-- REPEAT TRACK FOR INFINITE SCROLL -->
           <div class="tool-chip glass">
             <span class="tool-img-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" alt="Photoshop" loading="lazy"></span>
             <span class="tname">Adobe Photoshop</span>
@@ -847,7 +842,7 @@
           </div>
 
           <div class="tool-chip glass">
-            <span class="tool-img-icon"><i class="fa-brands fa-github" style="font-size:1.6rem; color:#fff;"></i></span>
+            <span class="tool-img-icon"><i class="fa-brands fa-github" style="font-size:1.8rem; color:#fff;"></i></span>
             <span class="tname">GitHub</span>
           </div>
 
@@ -951,7 +946,7 @@
   <div class="wrap">
     <div>
       <p class="fname">Harish Kumar</p>
-      <p class="sub">Graphic Designer | Print &amp; Prepress | Digital Branding | Web Assets</p>
+      <p class="sub">Graphic Designer | Print &amp; Prepress | Digital Branding | Front-End &amp; Web Assets</p>
     </div>
     <div class="foot-social">
       <a class="glass" href="https://wa.me/916384651054" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
