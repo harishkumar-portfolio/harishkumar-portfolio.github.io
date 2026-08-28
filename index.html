@@ -1,573 +1,1146 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#24101f">
-<title>ASHLEE — Unisex Salon & Spa</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Harish Kumar | Graphic Designer | Print, Digital & Front-End</title>
+<meta name="description" content="Harish Kumar — Graphic Designer specializing in Print & Prepress, Digital Branding, and Front-End & Web Assets. Open to opportunities in India and Dubai.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
-:root{--plum:#4b2141;--deep:#24101f;--mauve:#7d4a66;--rose:#bfa3b5;--beige:#eadfd6;--cream:#fbf7f3;--gold:#d8b889;--ink:#2c1b27;--line:rgba(75,33,65,.18);--radius:24px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif;overflow-x:hidden}
-a{text-decoration:none;color:inherit}.serif{font-family:"Playfair Display",serif}
-.container{width:min(1180px,calc(100% - 48px));margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:11px;font-weight:600}
-.btn{display:inline-flex;align-items:center;gap:12px;padding:14px 22px;border-radius:999px;border:1px solid transparent;font-size:12px;font-weight:600;letter-spacing:.04em;cursor:pointer;transition:.45s cubic-bezier(.2,.8,.2,1)}
-.btn-dark{background:var(--plum);color:#fff}.btn-light{background:var(--cream);color:var(--plum)}.btn-outline{border-color:rgba(255,255,255,.55);color:#fff;background:transparent}
-.btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(36,16,31,.18)}.btn .arrow{transition:.35s}.btn:hover .arrow{transform:translateX(4px)}
-header{position:fixed;z-index:30;top:0;left:0;right:0;padding:18px 0;color:#fff;transition:.4s}header.scrolled{background:rgba(36,16,31,.9);backdrop-filter:blur(18px);padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:24px}.logo{font-family:"Playfair Display",serif;font-size:30px;letter-spacing:-.06em;line-height:.8}.logo small{display:block;font:600 7px "DM Sans";letter-spacing:.14em;margin-left:3px;margin-top:7px}.links{display:flex;gap:26px;font-size:11px;text-transform:uppercase;letter-spacing:.08em}.links a{opacity:.8;position:relative}.links a:after{content:"";position:absolute;left:0;bottom:-8px;width:0;height:1px;background:#fff;transition:.35s}.links a:hover:after{width:100%}.nav-actions{display:flex;align-items:center;gap:10px}.phone{font-size:11px;border:1px solid rgba(255,255,255,.35);padding:11px 15px;border-radius:999px}.menu{display:none;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4);width:42px;height:42px;border-radius:50%;font-size:18px}
-.hero{min-height:92vh;position:relative;display:grid;place-items:center;color:#fff;overflow:hidden;background:#21101d}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(26,8,23,.82) 0%,rgba(26,8,23,.44) 43%,rgba(26,8,23,.18) 100%),url("assets/ashlee-hero-luxury-salon-interior.webp") center/cover;transform:scale(1.04);animation:heroZoom 14s ease-out both}
-@keyframes heroZoom{to{transform:scale(1)}}.hero-content{position:relative;z-index:2;width:min(1180px,calc(100% - 48px));padding-top:90px}.hero-copy{max-width:610px}.hero h1{font-size:clamp(58px,7.5vw,104px);line-height:.88;font-weight:400;margin:20px 0}.hero p{max-width:410px;line-height:1.7;color:rgba(255,255,255,.8)}.hero-ctas{display:flex;gap:12px;margin-top:28px}.scroll{position:absolute;bottom:28px;left:50%;z-index:3;width:44px;height:44px;border:1px solid rgba(255,255,255,.5);border-radius:50%;display:grid;place-items:center;animation:bob 2s infinite}.scroll:after{content:"↓";font-size:16px}@keyframes bob{50%{transform:translateY(7px)}}
-.social-rail{position:absolute;right:18px;top:50%;z-index:4;display:flex;flex-direction:column;gap:9px}.social-rail span{width:38px;height:38px;border:1px solid rgba(255,255,255,.35);border-radius:50%;display:grid;place-items:center;font-size:11px}
-.pillars{background:var(--cream);padding:28px 0;border-bottom:1px solid var(--line)}.pillar-grid{display:grid;grid-template-columns:repeat(4,1fr)}.pillar{padding:8px 28px;border-right:1px solid var(--line);display:flex;gap:16px;align-items:center}.pillar:last-child{border:0}.orb{width:52px;height:52px;border-radius:50%;background:var(--beige);display:grid;place-items:center;font-size:24px;flex:0 0 auto}.pillar h4{margin:0 0 5px;font:500 15px "Playfair Display"}.pillar p{margin:0;font-size:10px;line-height:1.45;color:#6d5b66}
-section{padding:110px 0}.dark{background:var(--deep);color:#fff}.section-head{text-align:center;max-width:700px;margin:0 auto 48px}.section-head h2{font-size:clamp(38px,5vw,60px);font-weight:400;line-height:1;margin:12px 0}.section-head p{color:#8d7b87;line-height:1.7}.dark .section-head p{color:#bcaab6}
-.services{background:var(--deep);color:#fff}.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.service{border:1px solid rgba(255,255,255,.14);border-radius:20px;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));transition:.5s}.service:hover{transform:translateY(-8px);border-color:rgba(216,184,137,.5)}.service-img{height:245px;overflow:hidden}.service-img img{width:100%;height:100%;object-fit:cover;transition:.7s}.service:hover img{transform:scale(1.07)}.service-body{padding:22px}.service h3{font:500 23px "Playfair Display";margin:0 0 8px}.service p{font-size:12px;line-height:1.6;color:#b9a8b2;min-height:40px}.service a{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#e8d3ba}
-.offer{padding:28px 0}.offer-card{border-radius:28px;min-height:320px;overflow:hidden;position:relative;background:linear-gradient(100deg,#3c1734,#6a3556)}.offer-card:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(46,11,39,.94),rgba(46,11,39,.2)),url("assets/ashlee-offer-20-percent-first-visit.webp") center/cover}.offer-copy{position:relative;z-index:2;padding:58px;max-width:650px;color:#fff}.offer-copy h2{font-size:clamp(56px,7vw,88px);margin:8px 0;font-weight:400;line-height:.9}.offer-copy p{font-size:13px;color:#eadfe5}.offer-copy .btn{margin-top:14px}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}.panel{border-radius:24px;background:#fff;padding:30px;border:1px solid var(--line)}.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.gallery-grid img{width:100%;aspect-ratio:4/3;height:auto;object-fit:cover;object-position:center;border-radius:12px;transition:.5s;cursor:zoom-in}.gallery-grid img:hover{transform:scale(.985);filter:saturate(1.06)}.panel h3{font:500 32px "Playfair Display";margin:0 0 20px}.filters{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:16px}.filter{border:1px solid var(--line);background:transparent;border-radius:999px;padding:8px 14px;font-size:9px;text-transform:uppercase;letter-spacing:.08em;cursor:pointer;transition:.3s}.filter:hover,.filter.active{background:var(--plum);color:#fff;border-color:var(--plum)}
-.form{display:grid;grid-template-columns:1fr 1fr;gap:11px}.form input,.form select,.form textarea{width:100%;border:1px solid var(--line);background:#fbf7f3;border-radius:12px;padding:13px;font:12px "DM Sans";outline:none}.form textarea{grid-column:1/-1;min-height:92px;resize:vertical}.form .full{grid-column:1/-1}
-.experience{background:var(--beige)}.experience-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}.experience-image{height:560px;border-radius:28px;overflow:hidden}.experience-image img{width:100%;height:100%;object-fit:cover}.experience-copy h2{font:400 clamp(45px,5vw,72px) "Playfair Display";line-height:.95;margin:15px 0 24px}.experience-copy p{line-height:1.8;color:#6d5b66}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:30px}.stat{border-top:1px solid var(--line);padding-top:15px}.stat b{font:500 35px "Playfair Display"}.stat span{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#6d5b66;margin-top:4px}
-.products{background:#f6ede7}.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.product{background:#fff;border-radius:20px;padding:14px;border:1px solid var(--line);transition:.5s}.product:hover{transform:translateY(-7px)}.product img{width:100%;height:310px;object-fit:cover;border-radius:15px}.product h3{font:500 22px "Playfair Display";margin:15px 5px 4px}.product p{font-size:11px;color:#7d6b76;margin:0 5px 14px}
-.testimonials{background:var(--deep);color:#fff}.quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.quote{padding:28px;border:1px solid rgba(255,255,255,.12);border-radius:20px}.stars{letter-spacing:.18em;font-size:11px}.quote p{font:400 20px "Playfair Display";line-height:1.45;color:#f2e8ee}.quote small{color:#bba9b5}
-.contact{background:#f4ebe5}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}.contact-card{padding:42px;border-radius:26px;background:var(--plum);color:#fff}.contact-card h2{font:400 55px "Playfair Display";line-height:1;margin:12px 0 24px}.contact-item{padding:15px 0;border-top:1px solid rgba(255,255,255,.16)}.contact-item span{display:block;color:#bda9b7;font-size:10px;text-transform:uppercase;letter-spacing:.14em;margin-bottom:5px}.map{border-radius:26px;min-height:430px;background:radial-gradient(circle at 60% 40%,rgba(216,184,137,.28),transparent 28%),linear-gradient(135deg,#eee1d8,#d6c0c9);position:relative;overflow:hidden}.map:before,.map:after{content:"";position:absolute;inset:-30%;border:1px solid rgba(75,33,65,.12);transform:rotate(28deg)}.map:after{transform:rotate(-20deg);inset:-25%}.pin{position:absolute;left:54%;top:45%;width:56px;height:56px;border-radius:50%;background:var(--plum);color:#fff;display:grid;place-items:center;box-shadow:0 20px 45px rgba(75,33,65,.28)}
-footer{background:#1b0c18;color:#fff;padding:70px 0 24px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.3fr;gap:40px}.footer h4{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#cbb5c2}.footer a,.footer p{display:block;color:#aa98a5;font-size:11px;line-height:2}.footer .logo{font-size:38px}.copyright{border-top:1px solid rgba(255,255,255,.1);margin-top:48px;padding-top:18px;display:flex;justify-content:space-between;color:#75636f;font-size:10px}
-.reveal{opacity:0;transform:translateY(28px);transition:1s cubic-bezier(.2,.8,.2,1)}.reveal.show{opacity:1;transform:none}
-.cursor{position:fixed;z-index:100;pointer-events:none;width:10px;height:10px;border-radius:50%;background:#fff;mix-blend-mode:difference;transform:translate(-50%,-50%);transition:width .25s,height .25s}.cursor.big{width:48px;height:48px}
-@media(max-width:900px){.links,.phone{display:none}.menu{display:grid;place-items:center}.service-grid{grid-template-columns:repeat(2,1fr)}.pillar-grid{grid-template-columns:repeat(2,1fr)}.pillar{border-bottom:1px solid var(--line)}.experience-grid,.contact-grid,.split{grid-template-columns:1fr}.product-grid,.quote-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){body{cursor:auto}.cursor-dot,.cursor-ring,.cursor-label{display:none}.footer-logo{width:138px}.container,.hero-content{width:min(100% - 28px,1180px)}section{padding:75px 0}.hero{min-height:88vh}.hero h1{font-size:58px}.hero-ctas{flex-direction:column;align-items:flex-start}.pillar-grid,.service-grid,.product-grid,.quote-grid,.footer-grid{grid-template-columns:1fr}.pillar{border-right:0}.offer-copy{padding:34px}.offer-copy h2{font-size:60px}.gallery-grid img{aspect-ratio:4/3;height:auto}.form{grid-template-columns:1fr}.form textarea,.form .full{grid-column:auto}.experience-image{height:380px}.contact-card{padding:30px}.contact-card h2{font-size:46px}.copyright{flex-direction:column;gap:8px}.social-rail{display:none}.cursor{display:none}}
+  :root{
+    --bg:#07070b;
+    --fg:#FFFFFF;
+    --fg-dim:#E2E8F0;
+    --border:rgba(255,255,255,0.15);
+    --glass:rgba(255,255,255,0.05);
+    --violet:#8B5CF6;
+    --cyan:#00F5D4;
+    --orange:#FF7A45;
+  }
+  
+  *{
+    margin:0; padding:0; box-sizing:border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
 
-/* ===== ASHLEE PREMIUM UI ===== */
-:root{
-  --plum:#562F54;--deep:#24101f;--mauve:#CDB1BD;
-  --cream:#E2D2C7;--ivory:#F7F3EF;--ink:#2c1b27;
-  --line:rgba(86,47,84,.16);--radius:24px;
-}
-body{cursor:none}
-.brand-mark{display:block;width:128px}
-.brand-mark img{display:block;width:100%;height:auto}
-.footer-logo{display:block;width:150px;margin-bottom:18px}
-.footer-logo img{display:block;width:100%;height:auto}
-.btn{position:relative;overflow:hidden}
-.btn:before{content:"";position:absolute;inset:0;transform:translateY(105%);background:rgba(255,255,255,.14);transition:transform .5s cubic-bezier(.2,.8,.2,1);border-radius:inherit}
-.btn:hover:before{transform:translateY(0)}
-.btn span,.btn .arrow{position:relative;z-index:2}
-.cursor-dot,.cursor-ring,.cursor-label{position:fixed;left:0;top:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%)}
-.cursor-dot{width:6px;height:6px;border-radius:50%;background:#fff;mix-blend-mode:difference;opacity:0}
-.cursor-ring{width:42px;height:42px;border:1px solid rgba(255,255,255,.65);border-radius:50%;mix-blend-mode:difference;opacity:0;transition:width .35s cubic-bezier(.2,.8,.2,1),height .35s cubic-bezier(.2,.8,.2,1),background .35s ease}
-.cursor-label{font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:#fff;opacity:0;transition:opacity .2s ease}
-.cursor-active .cursor-ring{width:66px;height:66px;background:var(--plum);border-color:var(--plum);mix-blend-mode:normal}
-.cursor-active .cursor-label{opacity:1}
-.quote{position:relative;overflow:hidden;transition:transform .55s cubic-bezier(.2,.8,.2,1),border-color .45s ease,box-shadow .45s ease}
-.quote:before{content:"";position:absolute;inset:-35%;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(205,177,189,.18),transparent 22%);opacity:0;transition:opacity .3s ease;pointer-events:none}
-.quote:hover{transform:translateY(-8px);border-color:rgba(205,177,189,.38);box-shadow:0 25px 60px rgba(0,0,0,.18)}
-.quote:hover:before{opacity:1}
-.contact-visual{min-height:430px;border-radius:26px;position:relative;overflow:hidden;background:#24101f;color:#fff;display:flex;align-items:flex-end;padding:38px}
-.contact-visual:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(36,16,31,.08),rgba(36,16,31,.82)),url("assets/ashlee-gallery-salon-interior.webp") center/cover;opacity:.68;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
-.contact-visual:hover:before{transform:scale(1.04)}
-.contact-visual-content{position:relative;z-index:2;max-width:470px}
-.contact-visual h3{font:400 44px/1 "Playfair Display";margin:10px 0 14px}
-.contact-visual p{margin:0;color:rgba(255,255,255,.76);line-height:1.7;font-size:12px}
-.contact-visual .mini-line{width:48px;height:1px;background:var(--mauve);margin:18px 0}
-.socials{display:flex;gap:10px;margin-top:22px}
-.social-btn{width:42px;height:42px;border:1px solid rgba(255,255,255,.18);border-radius:50%;display:grid!important;place-items:center;transition:.4s cubic-bezier(.2,.8,.2,1)!important}
-.social-btn svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.7}
-.social-btn .fill{fill:currentColor;stroke:none}
-.social-btn:hover{background:var(--mauve);color:var(--deep);border-color:var(--mauve);transform:translateY(-4px)!important}
+  input, textarea {
+    -webkit-user-select: auto !important;
+    -moz-user-select: auto !important;
+    -ms-user-select: auto !important;
+    user-select: auto !important;
+  }
 
+  html{scroll-behavior:smooth; overflow-x:hidden; width:100%;}
+  body{
+    background:var(--bg); color:var(--fg); font-family:'Plus Jakarta Sans',sans-serif;
+    line-height:1.7; overflow-x:hidden; width:100%; position:relative;
+  }
+  h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif; letter-spacing:-0.03em; color:#fff;}
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 6vw; width:100%;}
 
-/* ===== ASHLEE MOTION EXPERIENCE ===== */
-html{scroll-behavior:smooth}
-body{cursor:none}
-/* Scroll reveal: elegant lift + blur + scale */
-.reveal{opacity:0;transform:translate3d(0,42px,0) scale(.985);filter:blur(5px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform 1s cubic-bezier(.2,.8,.2,1),filter .9s ease;will-change:opacity,transform,filter}
-.reveal.show{opacity:1;transform:none;filter:blur(0)}
-/* Section headings arrive like a cinematic title card */
-.section-head.reveal{transform:translate3d(0,55px,0) scale(.97);filter:blur(7px)}
-.section-head.reveal.show{transform:none;filter:blur(0)}
-/* Beauty Meets Excellence: complete visual journey */
-#about{position:relative;overflow:hidden;background:linear-gradient(120deg,#f3e7df 0%,#eadfd6 48%,#f7f3ef 100%)}
-#about:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-220px;top:80px;background:radial-gradient(circle,rgba(125,74,102,.16),transparent 68%);filter:blur(8px);animation:aboutGlow 9s ease-in-out infinite alternate;pointer-events:none}
-#about:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 0 42%,rgba(255,255,255,.22) 50%,transparent 58%);transform:translateX(-120%);animation:aboutSweep 9s ease-in-out infinite;pointer-events:none}
-#about .container{position:relative;z-index:2}
-#about .experience-grid{perspective:1200px}
-#about .experience-image{transform:translateX(-45px) rotateY(7deg);opacity:0;filter:blur(6px);transition:1.2s cubic-bezier(.2,.8,.2,1);box-shadow:0 30px 80px rgba(75,33,65,.16)}
-#about .experience-image.show{transform:none;opacity:1;filter:none}
-#about .experience-image:after{content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.35);border-radius:28px;pointer-events:none}
-#about .experience-image img{transition:transform 1.4s cubic-bezier(.2,.8,.2,1),filter 1s ease}
-#about .experience-image:hover img{transform:scale(1.06);filter:saturate(1.08)}
-#about .experience-copy{transform:translateX(45px);opacity:0;filter:blur(5px);transition:1.1s .15s cubic-bezier(.2,.8,.2,1)}
-#about .experience-copy.show{transform:none;opacity:1;filter:none}
-#about .stats .stat{transition:transform .45s ease,border-color .45s ease}
-#about .stats .stat:hover{transform:translateY(-5px);border-color:rgba(86,47,84,.4)}
-@keyframes aboutGlow{from{transform:translate3d(0,0,0) scale(.92)}to{transform:translate3d(-50px,30px,0) scale(1.08)}}
-@keyframes aboutSweep{0%,35%{transform:translateX(-120%)}65%,100%{transform:translateX(120%)}}
-/* Three-image detail cards: lift, depth and gentle floating */
-#booking .panel:first-child{overflow:visible}
-#booking .panel:first-child .gallery-grid{perspective:1100px}
-#booking .panel:first-child .gallery-grid img{position:relative;box-shadow:0 12px 28px rgba(44,27,39,.10);transform:translateY(0) rotateX(0) rotateY(0) scale(1);transition:transform .65s cubic-bezier(.2,.8,.2,1),box-shadow .65s ease,filter .65s ease}
-#booking .panel:first-child .gallery-grid img:nth-child(1){animation:floatCard1 5.4s ease-in-out infinite}
-#booking .panel:first-child .gallery-grid img:nth-child(2){animation:floatCard2 6.2s ease-in-out .35s infinite}
-#booking .panel:first-child .gallery-grid img:nth-child(3){animation:floatCard3 5.8s ease-in-out .7s infinite}
-#booking .panel:first-child .gallery-grid img:nth-child(n+4){transition-delay:.03s}
-#booking .panel:first-child .gallery-grid img:hover{z-index:3;transform:translateY(-14px) rotateX(3deg) rotateY(-3deg) scale(1.045)!important;box-shadow:0 28px 55px rgba(75,33,65,.25);filter:saturate(1.12) contrast(1.02)}
-@keyframes floatCard1{0%,100%{transform:translateY(0) rotate(-.3deg)}50%{transform:translateY(-8px) rotate(.3deg)}}
-@keyframes floatCard2{0%,100%{transform:translateY(-2px) rotate(.25deg)}50%{transform:translateY(7px) rotate(-.25deg)}}
-@keyframes floatCard3{0%,100%{transform:translateY(0) rotate(.2deg)}50%{transform:translateY(-6px) rotate(-.35deg)}}
-/* Gallery = cinematic visual journey */
-#gallery{position:relative;overflow:hidden;background:radial-gradient(circle at 12% 10%,rgba(125,74,102,.18),transparent 28%),var(--deep)}
-#gallery .section-head{position:relative}
-#gallery .section-head:after{content:"";display:block;width:0;height:1px;margin:20px auto 0;background:var(--mauve);transition:width 1s .35s ease}
-#gallery .section-head.show:after{width:82px}
-#gallery .panel{background:rgba(255,255,255,.035);border-color:rgba(255,255,255,.12);backdrop-filter:blur(8px);transform:translateY(40px) scale(.98);opacity:0;transition:transform 1s .12s cubic-bezier(.2,.8,.2,1),opacity 1s .12s ease,box-shadow .5s ease}
-#gallery .panel.show{transform:none;opacity:1;box-shadow:0 35px 100px rgba(0,0,0,.18)}
-#gallery .gallery-grid{perspective:1200px}
-#gallery .gallery-grid img{opacity:0;transform:translateY(35px) scale(.94) rotateX(8deg);filter:saturate(.7) blur(1px);transition:opacity .7s ease,transform .8s cubic-bezier(.2,.8,.2,1),filter .8s ease,box-shadow .5s ease}
-#gallery .panel.show .gallery-grid img{opacity:1;transform:none;filter:none}
-#gallery .panel.show .gallery-grid img:nth-child(1){transition-delay:.10s}
-#gallery .panel.show .gallery-grid img:nth-child(2){transition-delay:.18s}
-#gallery .panel.show .gallery-grid img:nth-child(3){transition-delay:.26s}
-#gallery .panel.show .gallery-grid img:nth-child(4){transition-delay:.34s}
-#gallery .panel.show .gallery-grid img:nth-child(5){transition-delay:.42s}
-#gallery .panel.show .gallery-grid img:nth-child(6){transition-delay:.50s}
-#gallery .gallery-grid img:hover{transform:translateY(-9px) scale(1.025)!important;box-shadow:0 22px 55px rgba(0,0,0,.32);filter:saturate(1.12) brightness(1.05)!important;z-index:2}
-/* Filter buttons feel tactile */
-#gallery .filter{position:relative;overflow:hidden}
-#gallery .filter:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.16),transparent);transform:translateX(-120%);transition:transform .6s ease}
-#gallery .filter:hover:before{transform:translateX(120%)}
-/* Testimonials / What Our Clients Say */
-.testimonials{position:relative;overflow:hidden}
-.testimonials .quote{transform-style:preserve-3d;will-change:transform}
-.testimonials .quote:hover{transform:translateY(-12px) rotateX(2deg) rotateY(-2deg) scale(1.015)}
-.testimonials .quote .stars{display:inline-block;transition:transform .45s ease;transform-origin:left center}
-.testimonials .quote:hover .stars{transform:scale(1.12) translateX(2px)}
-.testimonials .quote p{transition:transform .45s ease,color .45s ease}
-.testimonials .quote:hover p{transform:translateY(-3px);color:#fff}
-/* Popup/lightbox enhancement */
-.lightbox{opacity:0;transition:opacity .45s ease;backdrop-filter:blur(0);}
-.lightbox.open{display:flex;opacity:1;backdrop-filter:blur(14px)}
-.lightbox img{transform:scale(.88) translateY(20px);opacity:0;transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .45s ease}
-.lightbox.open img{transform:none;opacity:1}
-.lightbox-close{transition:transform .35s ease,background .35s ease}
-.lightbox-close:hover{transform:rotate(90deg) scale(1.08);background:rgba(255,255,255,.16)}
-/* Cursor: magnetic halo + label */
-.cursor-ring{box-shadow:0 0 0 1px rgba(205,177,189,.08),0 0 30px rgba(205,177,189,.10);}
-.cursor-active .cursor-ring{box-shadow:0 0 0 1px rgba(255,255,255,.18),0 0 45px rgba(205,177,189,.25)}
-.cursor-dot{transition:transform .2s ease,opacity .2s ease}
-/* Small cursor trail dots */
-.cursor-trail{position:fixed;left:0;top:0;width:5px;height:5px;border-radius:50%;background:var(--mauve);pointer-events:none;z-index:9998;opacity:.35;transform:translate(-50%,-50%);mix-blend-mode:screen}
-@media(max-width:600px){body{cursor:auto}.cursor-dot,.cursor-ring,.cursor-label,.cursor-trail{display:none}#about .experience-image,#about .experience-copy{transform:none;filter:none}.reveal{filter:none;transform:translateY(24px) scale(.99)}#booking .panel:first-child .gallery-grid img{animation:none!important}.lightbox.open{backdrop-filter:blur(10px)}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.001ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.001ms!important}}
+  /* PRELOADER */
+  #preloader {
+    position: fixed; inset: 0; background: #07070b; z-index: 99999;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    transition: opacity 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0.7s ease;
+  }
+  #preloader.fade-out { opacity: 0; visibility: hidden; pointer-events: none; }
+  .preloader-box { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; position: relative; }
+  .spinner-wrap { position: relative; width: 95px; height: 95px; display: flex; align-items: center; justify-content: center; }
+  .spinner-ring {
+    position: absolute; inset: 0; border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.06);
+    border-top-color: var(--cyan);
+    border-right-color: var(--violet);
+    animation: preloaderSpin 1.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+    box-shadow: 0 0 25px rgba(0,245,212,0.35);
+  }
+  @keyframes preloaderSpin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+  .preloader-logo {
+    width: 72px; height: 72px; border-radius: 50%;
+    background: rgba(0, 245, 212, 0.12);
+    border: 1px solid var(--border); backdrop-filter: blur(10px);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.35rem; color: #fff;
+    box-shadow: 0 0 30px rgba(0,245,212,0.3);
+  }
+  .preloader-logo span { color: var(--cyan); }
+  .preloader-text {
+    font-size: 0.95rem; font-weight: 600; letter-spacing: 0.08em; color: var(--fg-dim);
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .preloader-bar-bg { width: 180px; height: 4px; background: rgba(255,255,255,0.08); border-radius: 99px; overflow: hidden; }
+  .preloader-bar-fill { width: 0%; height: 100%; background: var(--cyan); border-radius: 99px; box-shadow: 0 0 12px var(--cyan); }
 
+  /* AURORA & NOISE */
+  .aurora{ position:fixed; inset:0; z-index:-2; overflow:hidden; background:var(--bg); }
+  .orb{ position:absolute; border-radius:50%; filter:blur(110px); opacity:.55; will-change:transform; }
+  .orb-1{ width:520px; height:520px; background:var(--violet); top:-10%; left:-8%; animation:drift1 22s ease-in-out infinite; }
+  .orb-2{ width:460px; height:460px; background:var(--cyan); top:20%; right:-10%; animation:drift2 26s ease-in-out infinite; }
+  .orb-3{ width:480px; height:480px; background:var(--orange); bottom:-15%; left:20%; animation:drift3 24s ease-in-out infinite; }
+  @keyframes drift1{ 0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(80px,60px) scale(1.15);} }
+  @keyframes drift2{ 0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(-70px,80px) scale(1.1);} }
+  @keyframes drift3{ 0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(60px,-70px) scale(1.2);} }
+  .noise{ position:fixed; inset:0; z-index:-1; opacity:.035; pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
 
-/* ===== ASHLEE PREMIUM MOTION SYSTEM ===== */
-html{scroll-behavior:smooth}
-body{cursor:none}
-@media (hover:none),(pointer:coarse){body{cursor:auto}}
-/* universal scroll reveal */
-.motion-reveal{opacity:0;transform:translate3d(0,70px,0) scale(.97);filter:blur(8px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform 1s cubic-bezier(.16,1,.3,1),filter .9s ease;will-change:opacity,transform}
-.motion-reveal.is-visible{opacity:1;transform:none;filter:none}
-.motion-left{transform:translate3d(-80px,0,0) scale(.98)}
-.motion-right{transform:translate3d(80px,0,0) scale(.98)}
-.motion-scale{transform:scale(.88);}
-.motion-reveal.is-visible.motion-scale{transform:scale(1)}
-/* section heading cinematic entrance */
-.section-head.motion-reveal .eyebrow{transform:translateY(16px);opacity:0;transition:transform .7s .08s ease,opacity .7s .08s ease}
-.section-head.motion-reveal h2{transform:translateY(25px);opacity:0;transition:transform .9s .16s cubic-bezier(.16,1,.3,1),opacity .8s .16s ease}
-.section-head.motion-reveal p{transform:translateY(20px);opacity:0;transition:transform .8s .28s ease,opacity .8s .28s ease}
-.section-head.motion-reveal.is-visible .eyebrow,.section-head.motion-reveal.is-visible h2,.section-head.motion-reveal.is-visible p{transform:none;opacity:1}
-/* premium service cards */
-.service,.product,.quote{transform-style:preserve-3d;will-change:transform;transition:transform .6s cubic-bezier(.16,1,.3,1),box-shadow .6s ease,border-color .4s ease}
-.service:before,.product:before,.quote:before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.16),transparent 42%);transition:opacity .4s ease}
-.service,.product,.quote{position:relative;overflow:hidden}
-.service:hover,.product:hover{transform:translateY(-12px) rotateX(2deg) rotateY(-2deg) scale(1.015);box-shadow:0 28px 60px rgba(36,16,31,.22)}
-.service:hover:before,.product:hover:before,.quote:hover:before{opacity:1}
-.service-img img,.product img{transition:transform .9s cubic-bezier(.16,1,.3,1),filter .6s ease}
-.service:hover .service-img img,.product:hover img{transform:scale(1.09);filter:saturate(1.1) contrast(1.04)}
-/* three detail image cards: floating 3D */
-#booking .panel:first-child .gallery-grid{perspective:1400px}
-#booking .panel:first-child .gallery-grid img{position:relative;transform-style:preserve-3d;box-shadow:0 14px 30px rgba(44,27,39,.12);animation:ashleeFloat 5s ease-in-out infinite;will-change:transform,box-shadow;transition:transform .45s cubic-bezier(.16,1,.3,1),box-shadow .45s ease,filter .45s ease}
-#booking .panel:first-child .gallery-grid img:nth-child(2){animation-delay:-1.2s}
-#booking .panel:first-child .gallery-grid img:nth-child(3){animation-delay:-2.3s}
-#booking .panel:first-child .gallery-grid img:nth-child(4){animation-delay:-3.1s}
-#booking .panel:first-child .gallery-grid img:nth-child(5){animation-delay:-4s}
-#booking .panel:first-child .gallery-grid img:nth-child(6){animation-delay:-.6s}
-@keyframes ashleeFloat{0%,100%{transform:translateY(0) rotateX(0) rotateY(0)}50%{transform:translateY(-7px) rotateX(1deg) rotateY(-1deg)}}
-#booking .panel:first-child .gallery-grid img:hover{animation-play-state:paused;transform:translateY(-16px) rotateX(5deg) rotateY(-6deg) scale(1.055)!important;box-shadow:0 35px 65px rgba(75,33,65,.28);filter:saturate(1.13)}
-/* gallery: full cinematic journey */
-#gallery{isolation:isolate}
-#gallery:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 15% 25%,rgba(205,177,189,.10),transparent 25%),radial-gradient(circle at 85% 75%,rgba(216,184,137,.08),transparent 25%)}
-#gallery .panel{transform:translateY(70px) scale(.96);opacity:0;filter:blur(7px);transition:transform 1s cubic-bezier(.16,1,.3,1),opacity .9s ease,filter .9s ease,box-shadow .6s ease}
-#gallery .panel.is-visible{transform:none;opacity:1;filter:none;box-shadow:0 35px 100px rgba(0,0,0,.24)}
-#gallery .gallery-grid{perspective:1300px}
-#gallery .gallery-grid img{opacity:0;transform:translateY(55px) scale(.9) rotateX(12deg);filter:blur(5px) saturate(.65);transition:opacity .8s ease,transform 1s cubic-bezier(.16,1,.3,1),filter .9s ease,box-shadow .5s ease}
-#gallery .panel.is-visible .gallery-grid img{opacity:1;transform:none;filter:none}
-#gallery .panel.is-visible .gallery-grid img:nth-child(1){transition-delay:.08s}#gallery .panel.is-visible .gallery-grid img:nth-child(2){transition-delay:.16s}#gallery .panel.is-visible .gallery-grid img:nth-child(3){transition-delay:.24s}#gallery .panel.is-visible .gallery-grid img:nth-child(4){transition-delay:.32s}#gallery .panel.is-visible .gallery-grid img:nth-child(5){transition-delay:.40s}#gallery .panel.is-visible .gallery-grid img:nth-child(6){transition-delay:.48s}
-#gallery .gallery-grid img:hover{transform:translateY(-12px) rotateX(3deg) rotateY(-3deg) scale(1.035)!important;box-shadow:0 28px 60px rgba(0,0,0,.36);z-index:4;filter:saturate(1.15) brightness(1.05)!important}
-/* Where Beauty Meets Excellence — dramatic split reveal */
-#about .section-head{position:relative}
-#about .section-head:after{content:"";display:block;width:0;height:1px;margin:22px auto 0;background:var(--plum);transition:width 1.1s .35s cubic-bezier(.16,1,.3,1)}
-#about .section-head.is-visible:after{width:100px}
-#about .experience-grid{perspective:1400px}
-#about .experience-image{transform:translate3d(-100px,40px,0) rotateY(7deg) scale(.94);opacity:0;filter:blur(7px);transition:transform 1.2s cubic-bezier(.16,1,.3,1),opacity .9s ease,filter 1s ease;box-shadow:0 30px 70px rgba(75,33,65,.16)}
-#about .experience-copy{transform:translate3d(100px,30px,0) scale(.96);opacity:0;filter:blur(7px);transition:transform 1.1s .14s cubic-bezier(.16,1,.3,1),opacity .9s .14s ease,filter 1s .14s ease}
-#about .experience-image.is-visible,#about .experience-copy.is-visible{transform:none;opacity:1;filter:none}
-#about .experience-image:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 20%,rgba(255,255,255,.18) 48%,transparent 72%);transform:translateX(-120%);transition:transform 1.2s .65s ease;pointer-events:none}
-#about .experience-image.is-visible:after{transform:translateX(120%)}
-/* testimonials: depth + spotlight */
-.testimonials .quote-grid{perspective:1300px}
-.testimonials .quote{opacity:0;transform:translateY(60px) rotateX(10deg) scale(.94);filter:blur(5px);transition:opacity .8s ease,transform .9s cubic-bezier(.16,1,.3,1),filter .8s ease,box-shadow .5s ease}
-.testimonials .quote.is-visible{opacity:1;transform:none;filter:none}
-.testimonials .quote:nth-child(2){transition-delay:.12s}.testimonials .quote:nth-child(3){transition-delay:.24s}
-.testimonials .quote:hover{transform:translateY(-14px) rotateX(3deg) rotateY(-4deg) scale(1.02)!important;box-shadow:0 30px 70px rgba(0,0,0,.28)}
-/* cursor */
-.cursor-dot,.cursor-ring,.cursor-label{display:block;position:fixed;left:0;top:0;pointer-events:none;z-index:99999;transform:translate(-50%,-50%)}
-.cursor-dot{width:7px;height:7px;border-radius:50%;background:#fff;mix-blend-mode:difference;opacity:0}
-.cursor-ring{width:44px;height:44px;border:1px solid rgba(255,255,255,.7);border-radius:50%;mix-blend-mode:difference;opacity:0;transition:width .35s cubic-bezier(.16,1,.3,1),height .35s cubic-bezier(.16,1,.3,1),border-color .3s ease,background .3s ease}
-.cursor-label{font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;opacity:0;white-space:nowrap;transition:opacity .2s ease}
-body.cursor-active .cursor-ring{width:72px;height:72px;border-color:rgba(255,255,255,.85);background:rgba(86,47,84,.24);mix-blend-mode:normal}
-body.cursor-active .cursor-label{opacity:1}
-.cursor-trail{position:fixed;left:0;top:0;width:4px;height:4px;border-radius:50%;background:var(--mauve);pointer-events:none;z-index:99998;opacity:.35;transform:translate(-50%,-50%);mix-blend-mode:screen}
-@media(max-width:700px){.cursor-dot,.cursor-ring,.cursor-label,.cursor-trail{display:none}body{cursor:auto}.motion-reveal,#about .experience-image,#about .experience-copy{transform:none;filter:none}.motion-reveal{opacity:1}#gallery .panel,#gallery .gallery-grid img,.testimonials .quote{opacity:1;transform:none;filter:none;transition:none}#booking .panel:first-child .gallery-grid img{animation:none}}
-@media(prefers-reduced-motion:reduce){.motion-reveal,#gallery .panel,#gallery .gallery-grid img,#about .experience-image,#about .experience-copy,.testimonials .quote{opacity:1!important;transform:none!important;filter:none!important;transition:none!important;animation:none!important}}
+  .glass{
+    background:var(--glass); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+    border:1px solid var(--border); border-radius:20px;
+  }
+
+  .eyebrow{ font-size:.78rem; letter-spacing:.22em; text-transform:uppercase; font-weight:700; margin-bottom:1.1rem; display:inline-block; }
+  .eyebrow.c-violet{color:#A78BFA;} .eyebrow.c-cyan{color:#2DD4BF;} .eyebrow.c-orange{color:#FB923C;}
+
+  /* NAV */
+  header{ position:fixed; top:16px; left:0; width:100%; z-index:100; padding:0 3vw; }
+  header .navbar{
+    max-width:1180px; margin:0 auto; display:flex; align-items:center; justify-content:space-between;
+    padding:.75rem 1.6rem; border-radius:999px; gap:1rem; position:relative; width:100%;
+  }
+  .logo{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.2rem; flex-shrink:0;}
+  .logo span{color:var(--cyan);}
+  nav.links{
+    display:flex; justify-content:center; align-items:center; gap:2rem; 
+    font-size:.85rem; letter-spacing:.06em; text-transform:uppercase; color:#E2E8F0; font-weight:600;
+  }
+  nav.links a{position:relative; transition:color .3s; white-space:nowrap;}
+  nav.links a:hover{color:#fff;}
+  .nav-actions{display:flex; align-items:center; justify-content:flex-end; gap:.7rem; flex-shrink:0;}
+  .menu-toggle{ display:none; background:none; border:none; color:#fff; font-size:1.3rem; cursor:pointer; padding:0.4rem; z-index:110; }
+
+  /* BUTTONS */
+  .btn{
+    position:relative; display:inline-flex; align-items:center; gap:.55rem;
+    padding:.95rem 1.8rem; border-radius:999px; font-size:.85rem; font-weight:700;
+    letter-spacing:.02em; cursor:pointer; white-space:nowrap; border:1px solid transparent;
+    transition:transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .35s, background .35s;
+  }
+  .btn-primary{ color:#07070b; background:var(--cyan); box-shadow:0 0 20px rgba(0,245,212,0.3); }
+  .btn-primary:hover{ background:#2effdc; box-shadow:0 10px 30px rgba(0,245,212,0.5); transform:translateY(-2px); }
+  .btn-ghost{ border-color:var(--border); color:#fff; background:var(--glass); backdrop-filter:blur(10px); }
+  .btn-ghost:hover{ background:rgba(255,255,255,.09); border-color:rgba(255,255,255,.28); transform:translateY(-2px); }
+  .btn-cv{ border-color:var(--border); color:#fff; background:var(--glass); backdrop-filter:blur(10px); padding:.8rem 1.3rem; font-size:.8rem; }
+  .btn-cv:hover{ border-color:var(--cyan); box-shadow:0 8px 24px -10px rgba(0,245,212,.5); background:rgba(0,245,212,.08); }
+  .btn-cv.small{ padding:.65rem 1.1rem; font-size:.76rem; border-radius:999px; }
+  .btn .arrow{transition:transform .35s cubic-bezier(.2,.8,.2,1);}
+  .btn:hover .arrow{transform:translateX(5px);}
+
+  /* HERO & PURE SOLID WHITE LUXURY NAME */
+  .hero{ min-height:100vh; display:flex; align-items:center; padding-top:110px; position:relative; overflow:hidden; }
+  .kicker{ font-size:1.05rem; color:var(--fg-dim); margin-bottom:1.1rem; font-weight:600; letter-spacing:0.02em; }
+  
+  .hero h1{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(2.8rem, 7.5vw, 5.4rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    word-break: break-word;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+  }
+  
+  /* ROLE BADGES */
+  .role-badges{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: 1.6rem;
+  }
+  .role-badge{
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #FFFFFF;
+    padding: 0.45rem 1.05rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    backdrop-filter: blur(12px);
+    transition: transform .25s, border-color .25s, background .25s;
+  }
+  .role-badge:hover{
+    border-color: var(--cyan);
+    background: rgba(0, 245, 212, 0.12);
+    transform: translateY(-2px);
+  }
+
+  .hero p.lede{ max-width:620px; color:var(--fg-dim); font-size:1.05rem; margin:1.6rem 0 2.2rem; font-weight:500; line-height:1.8; }
+  .cta-row{display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:2.6rem; align-items:center;}
+  .status-pill{
+    display:inline-flex; align-items:center; gap:.65rem; font-size:.82rem; letter-spacing:.08em;
+    text-transform:uppercase; color:#fff; padding:.6rem 1.2rem 0.6rem .8rem; font-weight:600;
+  }
+  .dot{width:8px; height:8px; border-radius:50%; background:var(--cyan); position:relative; box-shadow:0 0 12px var(--cyan);}
+  .dot::after{content:''; position:absolute; inset:-5px; border-radius:50%; border:1px solid var(--cyan); animation:pulse 2s infinite;}
+  @keyframes pulse{0%{transform:scale(.6); opacity:1;} 100%{transform:scale(2); opacity:0;}}
+
+  /* FLOATING VERTICAL SOCIAL DOCK */
+  .social-dock{
+    position:absolute; right:2.4vw; top:50%; transform:translateY(-50%);
+    display:flex; flex-direction:column; gap:.7rem; padding:.9rem .6rem; z-index:20;
+  }
+  .social-dock a{
+    width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    color:#fff; font-size:1.05rem; transition:transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s, border-color .3s, background .3s;
+  }
+  .social-dock a:hover{
+    transform:translateX(-10px) scale(1.08);
+    box-shadow:0 0 22px rgba(0,245,212,.4), 0 0 0 1px rgba(0,245,212,.4) inset;
+    border-color:rgba(0,245,212,.6);
+    background:rgba(0,245,212,.12);
+  }
+
+  /* SECTIONS */
+  section{ padding:8rem 0; position:relative; overflow:hidden; border-bottom:1px solid rgba(255,255,255,0.08); }
+  .grid-12{display:grid; grid-template-columns:repeat(12,1fr); gap:2.2rem;}
+  .section-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:2rem; margin-bottom:4rem; flex-wrap:wrap;}
+  .section-head h2{font-size:clamp(1.8rem,4vw,2.8rem); font-weight:700;}
+  .section-head p{color:var(--fg-dim); max-width:340px; font-weight:500;}
+
+  /* ABOUT */
+  .about-copy{grid-column:span 8; color:var(--fg-dim); font-size:1.1rem; font-weight:500;}
+  .about-copy p{margin-bottom:1.4rem;}
+  .about-side{grid-column:span 4; display:flex; flex-direction:column; gap:1rem;}
+  .info-card{ padding:1.4rem; transition:transform .35s, box-shadow .35s; }
+  .info-card:hover{ transform:translateY(-3px); box-shadow:0 0 0 1px rgba(0,245,212,.35), 0 18px 34px -18px rgba(0,245,212,.4); }
+  .info-card .label{font-size:.78rem; letter-spacing:.15em; text-transform:uppercase; color:var(--cyan); margin-bottom:.35rem; font-weight:700;}
+  .info-card .value{font-weight:600; color:#fff;}
+
+  /* WORK */
+  .work-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:1.6rem; }
+  .project-card{
+    overflow:hidden;
+    transition:transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .45s;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  .project-card:hover{ box-shadow:0 24px 60px -24px rgba(0,245,212,.3); }
+  .project-visual{
+    aspect-ratio:16/10; margin:14px; border-radius:16px; position:relative; overflow:hidden;
+    background:#111119; display:flex; align-items:center; justify-content:center;
+  }
+  .project-visual img{
+    width:100%; height:100%; object-fit:cover; transition:transform .6s cubic-bezier(.2,.8,.2,1);
+    cursor: zoom-in;
+  }
+  .project-card:hover .project-visual img{ transform:scale(1.05); }
+  .project-body{ padding:.4rem 1.6rem 1.8rem;}
+  .concept-tag{ font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; color:var(--cyan); font-weight:700; display:block; margin-bottom:.6rem;}
+  .project-body h3{font-size:1.25rem; margin-bottom:.5rem; color:#fff;}
+  .project-body p{color:var(--fg-dim); font-size:.95rem; font-weight:500;}
+  .tools{font-size:.75rem; letter-spacing:.08em; text-transform:uppercase; color:var(--cyan); font-weight:700; margin-bottom:1rem; margin-top:0.6rem;}
+  .view-link{ font-size:.85rem; font-weight:600; display:inline-flex; align-items:center; gap:.4rem; color:#fff; cursor:pointer;}
+  .view-link .arrow{transition:transform .3s;}
+  .project-card:hover .view-link .arrow{transform:translateX(5px);}
+
+  /* SERVICES */
+  .services-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1.6rem;}
+  .service-card{ padding:2.2rem; transition:transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s, border-color .4s; }
+  .service-card:hover{ transform:translateY(-6px); box-shadow:0 24px 50px -22px rgba(0,245,212,.35); border-color:rgba(0,245,212,.4); }
+  .service-icon{
+    width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center;
+    background:rgba(0,245,212,0.12); border:1px solid rgba(0,245,212,0.25); margin-bottom:1.4rem; font-size:1.2rem; color:var(--cyan);
+  }
+  .service-card h3{font-size:1.3rem; margin-bottom:.8rem; color:#fff;}
+  .service-card p{color:var(--fg-dim); font-size:.92rem; font-weight:500; line-height:1.65;}
+
+  /* SKILLS */
+  .skills-header-area{ grid-column:span 4; }
+  .skills-container{ grid-column:span 8; display:grid; grid-template-columns:1fr 1fr; gap:3rem; }
+  .skill-row{ display:flex; justify-content:space-between; align-items:center; padding:1.05rem 0; border-bottom:1px solid var(--border);}
+  .skill-row:last-child{border-bottom:none;}
+  .skill-row span{ color:var(--fg); font-weight:600; font-size:0.95rem; }
+  .bar-wrap{display:flex; align-items:center; gap:.8rem;}
+  .bar{width:130px; height:7px; background:rgba(255,255,255,0.12); border-radius:99px; overflow:hidden;}
+  .bar span{display:block; height:100%; width:0%; background:var(--cyan); border-radius:99px; box-shadow:0 0 10px rgba(0,245,212,0.4); transition:width 1.4s cubic-bezier(.2,.8,.2,1);}
+  
+  .bar-pct{
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    width: 2.8rem;
+    text-align: right;
+    font-variant-numeric: tabular-nums lining-nums;
+    letter-spacing: 0;
+  }
+
+  .pill-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:0.75rem; }
+  .pill-item{
+    padding:.75rem 1rem; border-radius:14px; font-size:.85rem; color:#fff;
+    background:rgba(255,255,255,0.06); font-weight:600; border:1px solid var(--border);
+    text-align:center; transition:.3s; display:flex; align-items:center; justify-content:center;
+  }
+  .pill-item:hover{border-color:var(--cyan); color:#fff; background:rgba(0,245,212,0.08);}
+
+  /* TICKER */
+  .ticker-wrap{
+    margin-top:3.4rem; overflow:hidden; position:relative; padding:1.6rem 0;
+    -webkit-mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  }
+  .ticker-track{ display:flex; width:max-content; gap:1.4rem; animation:tickerScroll 26s linear infinite; }
+  .ticker-wrap:hover .ticker-track{ animation-play-state:paused; }
+  @keyframes tickerScroll{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
+  
+  .tool-chip{
+    display:flex; align-items:center; gap:0.9rem; padding:0.9rem 1.6rem; border-radius:18px; white-space:nowrap;
+    background: rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.18);
+  }
+  .tool-img-icon{
+    width:32px; height:32px; border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0; overflow:hidden;
+  }
+  .tool-img-icon img, .tool-img-icon svg{ width:100%; height:100%; object-fit:contain; }
+  .tool-chip span.tname{font-size:1rem; color:#fff; font-weight:700; font-family:'Space Grotesk', sans-serif;}
+
+  /* PROCESS + WHY */
+  .ripple-grid{ display:grid; gap:1.6rem; }
+  .process-grid{ grid-template-columns:repeat(5,1fr); }
+  .why-grid{ grid-template-columns:repeat(5,1fr); }
+  .ripple-card{
+    padding:1.5rem; --r:0;
+    transform:translateY(calc(var(--r) * -8px)) scale(calc(1 + var(--r) * 0.02));
+    box-shadow:0 calc(var(--r) * 26px) calc(var(--r) * 50px) calc(var(--r) * -20px) rgba(0,245,212, calc(var(--r) * 0.4));
+    border-color:rgba(0,245,212, calc(0.1 + var(--r) * 0.5));
+    transition:transform .5s cubic-bezier(.2,.8,.2,1), box-shadow .5s, border-color .5s;
+  }
+  .process-step .num{font-family:'Space Grotesk'; font-size:1.4rem; font-weight:700; margin-bottom:1rem; color:var(--cyan);}
+  .process-step h3{font-size:1.05rem; margin-bottom:.5rem; color:#fff;}
+  .process-step p{color:var(--fg-dim); font-size:.88rem; font-weight:500;}
+  .why-card h3{font-size:1rem; margin-bottom:.5rem; color:#fff;}
+  .why-card p{color:var(--fg-dim); font-size:.85rem; font-weight:500;}
+
+  /* CONTACT */
+  .contact-grid{display:grid; grid-template-columns:1fr 1.2fr; gap:2.4rem;}
+  .badge-row{display:flex; flex-direction:column; gap:.9rem; margin-top:1.6rem;}
+  .badge{ display:flex; align-items:center; gap:1.2rem; padding:1.1rem 1.3rem; transition:.35s; border-radius:16px; }
+  .badge:hover{ transform:translateX(8px); border-color:rgba(0,245,212,0.5); box-shadow:0 10px 30px -16px rgba(0,245,212,0.5); }
+  .badge .icon{
+    width:46px; height:46px; border-radius:12px; display:flex; align-items:center; justify-content:center; flex-shrink:0;
+    background:rgba(0,245,212,0.12); border:1px solid rgba(0,245,212,0.25); font-size:1.15rem; color:var(--cyan);
+  }
+  .badge .meta{ display:flex; flex-direction:column; gap:0.15rem; }
+  .badge .meta .label{font-size:1rem; font-weight:700; color:#ffffff;}
+  .badge .meta .value{font-size:0.86rem; color:var(--fg-dim); font-weight:500;}
+
+  /* CONTACT FORM */
+  .contact-form{ padding:2rem; }
+  .form-field{margin-bottom:1.1rem;}
+  .form-field label{display:block; font-size:.78rem; letter-spacing:.12em; text-transform:uppercase; color:var(--cyan); margin-bottom:.5rem; font-weight:700;}
+  .form-field input, .form-field textarea{
+    width:100%; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.2); border-radius:12px; padding:.9rem 1.1rem;
+    color:#fff; font-family:inherit; font-size:.95rem; transition:.3s; font-weight:500;
+  }
+  .form-field input::placeholder, .form-field textarea::placeholder {
+    color: #CBD5E1 !important;
+    opacity: 1 !important;
+    font-weight: 500;
+  }
+  .form-field input:focus, .form-field textarea:focus{ outline:none; border-color:var(--cyan); box-shadow:0 0 0 3px rgba(0,245,212,0.25); background:rgba(255,255,255,0.1); }
+
+  /* SCROLL TO TOP */
+  .scroll-top-btn{
+    position:fixed; bottom:25px; right:25px; width:48px; height:48px; border-radius:50%;
+    background:var(--cyan); color:#07070b; border:none; display:flex; align-items:center; justify-content:center;
+    font-size:1.2rem; cursor:pointer; opacity:0; visibility:hidden; transform:translateY(20px);
+    transition:all .35s cubic-bezier(.2,.8,.2,1); z-index:999; box-shadow:0 10px 25px rgba(0,245,212,0.4);
+  }
+  .scroll-top-btn.visible{ opacity:1; visibility:visible; transform:translateY(0); }
+  .scroll-top-btn:hover{ transform:translateY(-5px) scale(1.08); box-shadow:0 14px 30px rgba(0,245,212,0.6); }
+
+  /* GLOW CURSOR & LIGHTBOX */
+  @media (hover: hover) and (pointer: fine) {
+    .cursor-glow {
+      position: fixed;
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle, rgba(0, 245, 212, 0.14), transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      transition: width 0.3s, height 0.3s;
+    }
+  }
+
+  .lightbox-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(7, 7, 11, 0.88);
+    backdrop-filter: blur(20px);
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.35s ease;
+    padding: 2rem;
+  }
+  .lightbox-modal.active { opacity: 1; visibility: visible; }
+  .lightbox-img {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 245, 212, 0.4);
+    box-shadow: 0 0 50px rgba(0, 245, 212, 0.3);
+    transform: scale(0.9);
+    transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .lightbox-modal.active .lightbox-img { transform: scale(1); }
+  .lightbox-close {
+    position: absolute;
+    top: 25px; right: 25px;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    color: #fff;
+    width: 45px; height: 45px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: 0.3s;
+  }
+  .lightbox-close:hover { border-color: var(--cyan); color: var(--cyan); }
+
+  footer{ padding:3rem 0; }
+  footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;}
+  footer .fname{font-family:'Space Grotesk'; font-weight:700; color:#fff;}
+  footer .sub{color:var(--fg-dim); font-size:.85rem; font-weight:500;}
+  .foot-social{display:flex; gap:.8rem;}
+  .foot-social a{
+    width:38px; height:38px; border-radius:11px; display:flex; align-items:center; justify-content:center; transition:.3s; color:#fff;
+  }
+  .foot-social a:hover{ transform:translateY(-3px); border-color:var(--cyan); color:var(--cyan); }
+
+  .reveal{opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1);}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  /* RESPONSIVE */
+  @media (max-width: 860px){
+    body{ width: 100vw; }
+    .wrap{ padding: 0 5vw; }
+    header{ top: 8px; padding: 0 3vw; }
+    header .navbar{ padding: .5rem .9rem; border-radius: 999px; }
+    .logo{ font-size: 1rem; }
+    .menu-toggle{ display: block; }
+
+    nav.links{
+      display: none; position: absolute; top: 65px; left: 0; width: 100%;
+      background: rgba(15, 15, 26, 0.75); backdrop-filter: blur(28px); -webkit-backdrop-filter: blur(28px);
+      border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 22px; flex-direction: column;
+      padding: 1.2rem 0.8rem; gap: 0.4rem; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7); z-index: 200;
+      animation: menuSlideDown 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    @keyframes menuSlideDown { from { opacity: 0; transform: translateY(-12px) scale(0.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
+    nav.links.active{ display: flex; }
+    nav.links a{
+      font-size: 0.95rem; font-weight: 700; padding: 0.85rem 1.2rem; border-radius: 12px; color: #E2E8F0;
+      display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    nav.links a:last-child { border-bottom: none; }
+    nav.links a::after { content: '→'; font-size: 1rem; color: var(--cyan); opacity: 0.7; }
+    nav.links a:hover, nav.links a:active { background: rgba(0, 245, 212, 0.12); color: #FFFFFF; padding-left: 1.5rem; }
+
+    .nav-actions .btn-cv{ display: none; }
+    .nav-actions .btn-primary{ padding: .45rem .85rem; font-size: .75rem; }
+
+    .hero{ padding-top: 85px; min-height: auto; padding-bottom: 3rem; }
+    .hero .wrap{ padding-right: 3.5rem; }
+    .hero h1{ font-size: clamp(2.3rem, 8vw, 3rem); line-height: 1.05; letter-spacing: -0.03em; }
+    .hero p.lede{ font-size: .95rem; margin: 1.2rem 0 1.5rem; }
+    .role-badges{ gap: 0.4rem; margin-top: 1rem; }
+    .role-badge{ font-size: 0.75rem; padding: 0.35rem 0.75rem; }
+    .cta-row{ gap: .7rem; margin-bottom: 1.5rem; }
+    .cta-row .btn{ width: 100%; justify-content: center; padding: .8rem 1.2rem; }
+
+    .social-dock{ right: 4px; padding: .4rem .2rem; gap: .3rem; border-radius: 12px; }
+    .social-dock a{ width: 30px; height: 30px; font-size: .8rem; }
+
+    .work-grid, .services-grid, .process-grid, .why-grid, .contact-grid{ grid-template-columns: 1fr; gap: 1.2rem; }
+    .about-copy, .about-side{ grid-column: span 12; }
+    
+    .skills-header-area{ grid-column: span 12; margin-bottom: 1rem; }
+    .skills-header-area h2{ font-size: 1.8rem; line-height: 1.2; margin-bottom: 0.4rem; }
+    .skills-container{ grid-column: span 12; grid-template-columns: 1fr; gap: 2rem; }
+    .skill-row .bar{ width: 120px; }
+    .pill-grid{ grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
+    .pill-item{ font-size: 0.78rem; padding: 0.65rem 0.5rem; }
+
+    .scroll-top-btn{ bottom:20px; right:18px; width:42px; height:42px; font-size:1.05rem; }
+    .tool-chip{ padding:0.75rem 1.2rem; gap:0.7rem; }
+    .tool-img-icon{ width:28px; height:28px; }
+    .tool-chip span.tname{ font-size:0.9rem; }
+
+    section{ padding: 3.5rem 0; }
+  }
 </style>
 </head>
 <body>
-<div class="cursor-dot" id="cursorDot"></div><div class="cursor-ring" id="cursorRing"></div><div class="cursor-label" id="cursorLabel">View</div>
 
-<header id="header">
-  <div class="container nav">
-    <a class="brand-mark" href="#home" aria-label="ASHLEE Home"><img src="assets/ashlee-logo.png" alt="ASHLEE Unisex Salon & Spa"></a>
-    <nav class="links">
-      <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#products">Shop</a><a href="#contact">Contact</a>
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="preloader-box">
+    <div class="spinner-wrap">
+      <div class="spinner-ring"></div>
+      <div class="preloader-logo">HK<span>.</span></div>
+    </div>
+    <div class="preloader-text">
+      <span>Loading Portfolio</span>
+      <span id="loadPct" style="color:var(--cyan); font-family:'Space Grotesk';">0%</span>
+    </div>
+    <div class="preloader-bar-bg">
+      <div class="preloader-bar-fill" id="loadBar"></div>
+    </div>
+  </div>
+</div>
+
+<div class="aurora">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
+<div class="noise"></div>
+
+<header>
+  <div class="navbar glass">
+    <a href="#home" class="logo">HK<span>.</span></a>
+    
+    <nav class="links" id="navLinks">
+      <a href="#about" class="nav-item">About</a>
+      <a href="#work" class="nav-item">Work</a>
+      <a href="#services" class="nav-item">Services</a>
+      <a href="#skills" class="nav-item">Skills</a>
+      <a href="#contact" class="nav-item">Contact</a>
     </nav>
-    <div class="nav-actions"><a class="btn btn-light" href="#booking">Book Now <span class="arrow">↗</span></a><button class="menu" id="menuBtn">☰</button></div>
+    
+    <div class="nav-actions">
+      <a href="resume.pdf" download="Harish_Kumar_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-cv small magnetic"><i class="fas fa-file-pdf"></i> <span class="label-full">Download CV</span></a>
+      <a href="#contact" class="btn btn-primary magnetic">Get In Touch</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
   </div>
 </header>
 
-<main>
-<section class="hero" id="home">
-  <div class="hero-content">
-    <div class="hero-copy reveal">
-      <div class="eyebrow">Luxury • Beauty • Wellness</div>
-      <h1 class="serif">Beauty<br>Beyond Limits</h1>
-      <p>Where beauty, wellness and personal care become an experience.</p>
-      <div class="hero-ctas"><a class="btn btn-light" href="#booking">Book Your Escape <span class="arrow">→</span></a><a class="btn btn-outline" href="#services">Explore Services <span class="arrow">▶</span></a></div>
+<section id="home" class="hero">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="kicker">Hey, I'm</p>
+      <h1>HARISH<br>KUMAR</h1>
+      
+      <div class="role-badges">
+        <span class="role-badge">Graphic Designer</span>
+        <span class="role-badge">Print &amp; Prepress</span>
+        <span class="role-badge">Digital Branding</span>
+        <span class="role-badge">Front-End &amp; Web Assets</span>
+      </div>
+
+      <p class="lede">Detail-oriented Graphic Designer with hands-on production expertise across print-ready artwork, brand identity systems, digital marketing campaigns, and responsive web assets.</p>
+      
+      <div class="cta-row">
+        <a href="#work" class="btn btn-primary magnetic">View My Work <span class="arrow">→</span></a>
+        <a href="#contact" class="btn btn-ghost magnetic">Get In Touch <span class="arrow">→</span></a>
+        <a href="resume.pdf" download="Harish_Kumar_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-cv magnetic"><i class="fas fa-file-pdf"></i> Download CV</a>
+      </div>
+      <span class="status-pill glass"><span class="dot"></span> Open to Opportunities — India &amp; Dubai</span>
     </div>
   </div>
-  <a class="scroll" href="#services"></a>
+
+  <div class="social-dock glass">
+    <a href="https://wa.me/916384651054" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="https://www.linkedin.com/in/harish-kumar-b3790934b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="https://www.instagram.com/___njr__01" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    <a href="mailto:Harishkumar10njr2005@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+  </div>
 </section>
 
-<section class="pillars">
-<div class="container pillar-grid">
-  <div class="pillar reveal"><div class="orb">✿</div><div><h4>Luxury Experience</h4><p>World-class service in a premium setting.</p></div></div>
-  <div class="pillar reveal"><div class="orb">✦</div><div><h4>Expert Care</h4><p>Trained professionals for every service.</p></div></div>
-  <div class="pillar reveal"><div class="orb">◉</div><div><h4>Premium Products</h4><p>Only the finest products for you.</p></div></div>
-  <div class="pillar reveal"><div class="orb">❧</div><div><h4>Personalized For You</h4><p>Tailored treatments just for you.</p></div></div>
-</div></section>
-
-<section class="services dark" id="services">
-<div class="container">
-  <div class="section-head reveal"><div class="eyebrow">Signature care</div><h2 class="serif">Our Signature Services</h2><p>Thoughtfully crafted beauty and wellness rituals designed around you.</p></div>
-  <div class="service-grid">
-    <article class="service reveal"><div class="service-img"><img src="assets/ashlee-signature-hair-styling.webp" alt="ASHLEE hair care and styling"></div><div class="service-body"><h3>Hair Care & Styling</h3><p>Transform your look with our experts.</p><a href="#booking">View services →</a></div></article>
-    <article class="service reveal"><div class="service-img"><img src="assets/ashlee-signature-skin-facial.webp" alt="ASHLEE skin care and facial"></div><div class="service-body"><h3>Skin Care & Facial</h3><p>Rejuvenate your natural glow.</p><a href="#booking">View services →</a></div></article>
-    <article class="service reveal"><div class="service-img"><img src="assets/ashlee-signature-body-spa.webp" alt="ASHLEE body spa and massage"></div><div class="service-body"><h3>Body Spa & Massage</h3><p>Relax. Refresh. Revive.</p><a href="#booking">View services →</a></div></article>
-    <article class="service reveal"><div class="service-img"><img src="assets/ashlee-signature-nail-art.webp" alt="ASHLEE nail care and art"></div><div class="service-body"><h3>Nail Care & Art</h3><p>Luxury care for your hands & feet.</p><a href="#booking">View services →</a></div></article>
-  </div>
-</div></section>
-
-<section class="offer"><div class="container"><div class="offer-card reveal"><div class="offer-copy"><div class="eyebrow">Special offer</div><h2 class="serif">20% OFF</h2><p>ON YOUR FIRST VISIT</p><a class="btn btn-light" href="#booking">Claim Your Offer <span class="arrow">→</span></a></div></div></div></section>
-
 <section id="about">
-<div class="container">
- <div class="section-head reveal"><div class="eyebrow">The philosophy</div><h2 class="serif">Where Beauty Meets Excellence</h2><p>A refined environment where expert artistry, restorative rituals and thoughtful details come together.</p></div>
- <div class="experience-grid">
-   <div class="experience-image reveal"><img src="assets/ashlee-designed-for-your-escape.webp" alt="ASHLEE reception"></div>
-   <div class="experience-copy reveal"><div class="eyebrow">The ASHLEE experience</div><h2>Designed for your<br><em>escape.</em></h2><p>Every touchpoint is considered to make your visit feel calm, elevated and personal — from the first welcome to the final reveal.</p><a class="btn btn-dark" href="#booking">Discover ASHLEE <span class="arrow">→</span></a>
-   <div class="stats"><div class="stat"><b>10+</b><span>Years of experience</span></div><div class="stat"><b>20K+</b><span>Happy clients</span></div><div class="stat"><b>50+</b><span>Expert treatments</span></div><div class="stat"><b>5★</b><span>Guest experience</span></div></div></div>
- </div>
-</div></section>
-
-<section class="products" id="products">
-<div class="container">
- <div class="section-head reveal"><div class="eyebrow">Rituals at home</div><h2 class="serif">The ASHLEE Edit</h2><p>Premium care, presented with the same calm luxury as the salon experience.</p></div>
- <div class="product-grid">
-  <article class="product reveal"><img src="assets/ashlee-edit-radiant-cleanser.webp" alt="ASHLEE Radiant Cleanser"><h3>Radiant Cleanser</h3><p>Purifying gel cleanser · Portfolio concept</p></article>
-  <article class="product reveal"><img src="assets/ashlee-edit-signature-shampoo.webp" alt="ASHLEE Signature Shampoo"><h3>Signature Shampoo</h3><p>Everyday salon care · Portfolio concept</p></article>
-  <article class="product reveal"><img src="assets/ashlee-edit-radiant-conditioner.webp" alt="ASHLEE Radiant Conditioner"><h3>Radiant Conditioner</h3><p>Softening treatment · Portfolio concept</p></article>
- </div>
-</div></section>
-
-<section class="dark" id="gallery">
-<div class="container">
- <div class="section-head reveal"><div class="eyebrow">A visual journey</div><h2 class="serif">Our Gallery</h2><p>Spaces, rituals and details from the ASHLEE world.</p></div>
- <div class="panel reveal">
-  <div class="filters" role="tablist" aria-label="Gallery filters"><button class="filter active" data-filter="all" type="button">All</button><button class="filter" data-filter="salon" type="button">Salon</button><button class="filter" data-filter="spa" type="button">Spa</button><button class="filter" data-filter="beauty" type="button">Beauty</button></div>
-  <div class="gallery-grid" id="mainGallery">
-   <img data-category="salon" src="assets/ashlee-gallery-salon-interior.webp" alt="ASHLEE salon interior"><img data-category="beauty" src="assets/ashlee-gallery-styling.webp" alt="ASHLEE styling experience"><img data-category="beauty" src="assets/ashlee-gallery-hair-care.webp" alt="ASHLEE hair care">
-   <img data-category="spa" src="assets/ashlee-gallery-spa-treatment.webp" alt="ASHLEE spa treatment"><img data-category="beauty" src="assets/ashlee-gallery-nail-care.webp" alt="ASHLEE nail care"><img data-category="beauty" src="assets/ashlee-gallery-luxury-detail.webp" alt="ASHLEE luxury details">
+  <div class="wrap grid-12">
+    <div class="about-copy reveal">
+      <span class="eyebrow c-violet">01 — About</span>
+      <h2 style="font-size:clamp(1.8rem,3.6vw,2.6rem); margin-bottom:1.6rem; max-width:640px; color:#fff;">Design philosophy built on clarity, craft and quiet confidence.</h2>
+      <p>I turn ideas into visual concepts through branding, digital marketing campaigns, print-ready prepress, and responsive web interfaces.</p>
+      <p>Highly proficient in Adobe Creative Suite (Photoshop, Illustrator), CorelDRAW, and Figma, with strong command of CMYK color workflows, 300 DPI resolution standards, and bleed/trim setup for large-format signage.</p>
+    </div>
+    <div class="about-side reveal">
+      <div class="info-card glass"><div class="label">Design &amp; Prepress</div><div class="value">CMYK · 300 DPI · Bleed &amp; Margins</div></div>
+      <div class="info-card glass"><div class="label">Availability</div><div class="value">Open to Roles (India &amp; Dubai)</div></div>
+      <div class="info-card glass"><div class="label">Based In</div><div class="value">Pudukkottai, Tamil Nadu, India</div></div>
+      <div class="info-card glass"><div class="label">Primary Toolkit</div><div class="value">Photoshop · Illustrator · Figma · Web</div></div>
+    </div>
   </div>
- </div>
-</div></section>
+</section>
 
-<section id="booking">
-<div class="container split">
- <div class="panel reveal"><div class="eyebrow">Explore the space</div><h3>Beauty in every detail.</h3><div class="gallery-grid"><img src="assets/ashlee-beauty-detail-salon.webp" alt="ASHLEE salon details"><img src="assets/ashlee-beauty-detail-hair.webp" alt="ASHLEE hair details"><img src="assets/ashlee-beauty-detail-skin.webp" alt="ASHLEE skin details"><img src="assets/ashlee-beauty-detail-spa.webp" alt="ASHLEE spa details"><img src="assets/ashlee-beauty-detail-nails.webp" alt="ASHLEE nail details"><img src="assets/ashlee-beauty-detail-products.webp" alt="ASHLEE product details"></div></div>
- <div class="panel reveal"><div class="eyebrow">Your time, your escape</div><h3>Book Your Appointment</h3>
-  <form class="form" id="bookingForm">
-   <input placeholder="Full Name" required><input placeholder="Phone Number" required>
-   <select class="full"><option>Select Service</option><option>Hair Care & Styling</option><option>Skin Care & Facial</option><option>Body Spa & Massage</option><option>Nail Care & Art</option></select>
-   <input type="date"><select><option>Select Time</option><option>10:00 AM</option><option>12:00 PM</option><option>3:00 PM</option><option>6:00 PM</option></select>
-   <textarea placeholder="Special Request (Optional)"></textarea>
-   <button class="btn btn-dark full" type="submit">Confirm Booking <span class="arrow">→</span></button>
-  </form>
- </div>
-</div></section>
-
-<section class="testimonials">
-<div class="container">
- <div class="section-head reveal"><div class="eyebrow">Guest notes</div><h2 class="serif">What Our Clients Say</h2></div>
- <div class="quote-grid">
-  <article class="quote reveal"><div class="stars">★★★★★</div><p>“A beautiful experience from the moment you walk in. Every detail feels thoughtful.”</p><small>— Priya S.</small></article>
-  <article class="quote reveal"><div class="stars">★★★★★</div><p>“The perfect place for a reset. Calm, elegant and genuinely attentive.”</p><small>— Ananya R.</small></article>
-  <article class="quote reveal"><div class="stars">★★★★★</div><p>“Beautiful service, premium products and a space that makes you want to stay.”</p><small>— Kavitha M.</small></article>
- </div>
-</div></section>
-
-<section class="contact" id="contact">
-<div class="container contact-grid">
- <div class="contact-card reveal"><div class="eyebrow">Visit ASHLEE</div><h2 class="serif">Your escape<br>starts here.</h2>
-  <div class="contact-item"><span>Phone</span>+91 6384651054</div>
-  <div class="contact-item"><span>Email</span>harishkumar10njr2005@gmail.com</div>
-  <div class="contact-item"><span>Location</span>East 4th Street, Pudukkottai, Tamil Nadu</div>
-  <div style="margin-top:22px;display:flex;gap:8px;flex-wrap:wrap"><a class="btn btn-light" href="#contact">Call Us</a><a class="btn btn-outline" href="#contact">WhatsApp</a><a class="btn btn-outline" href="#contact">Get Directions</a></div>
- </div>
- <div class="contact-visual reveal">
-      <div class="contact-visual-content">
-        <div class="eyebrow">A refined destination</div>
-        <div class="mini-line"></div>
-        <h3>Your time.<br>Your escape.</h3>
-        <p>A calm, contemporary space designed for beauty, wellness and effortless relaxation.</p>
+<section id="work">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow c-cyan">02 — Selected Work</span>
+        <h2 style="color:#fff;">ASHLEE Brand &amp; Production Practice</h2>
       </div>
-    </div></div>
-</div></section>
-</main>
+      <p>A complete brand ecosystem created for ASHLEE Unisex Salon &amp; Spa — covering identity, UI layout, social ad campaigns, and print-ready prepress.</p>
+    </div>
 
-<footer class="footer">
-<div class="container">
- <div class="footer-grid">
-  <div><a class="footer-logo" href="#home" aria-label="ASHLEE Home"><img src="assets/ashlee-logo.png" alt="ASHLEE Unisex Salon & Spa"></a><p style="max-width:270px;margin-top:18px">Where beauty, wellness and personal care become an experience.</p><div class="socials" aria-label="Social media">
-<a class="social-btn" href="#" aria-label="Instagram" data-cursor="Open"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle class="fill" cx="17.5" cy="6.5" r="1.2"></circle></svg></a>
-<a class="social-btn" href="#" aria-label="Facebook" data-cursor="Open"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.6 1.7-1.6h1.8V3.8c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V10H7.2v3h2.8v8h3.5z"></path></svg></a>
-<a class="social-btn" href="#" aria-label="WhatsApp" data-cursor="Open"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M12 2.5a9.5 9.5 0 0 0-8.2 14.3L2.5 21.5l4.9-1.3A9.5 9.5 0 1 0 12 2.5zm0 17.2c-1.5 0-3-.4-4.3-1.3l-.3-.2-2.9.8.8-2.8-.2-.3A7.8 7.8 0 1 1 12 19.7zm4.3-5.8c-.2-.1-1.3-.7-1.5-.7-.2-.1-.4-.1-.6.1l-.7.9c-.1.1-.3.2-.5.1-.2-.1-.8-.3-1.1-.5-.1-.2 0-.3.1-.5l.4-.5c.1-.2.1-.3 0-.5l-.7-1.6c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s.9 2.5 1 2.6c.1.2 1.8 2.8 4.5 3.9.6.3 1.1.4 1.5.5.6.2 1.2.1 1.6.1.5-.1 1.3-.5 1.5-1 .2-.5.2-1 .2-1.1-.1-.1-.2-.2-.4-.3z"></path></svg></a>
-<a class="social-btn" href="#" aria-label="TikTok" data-cursor="Open"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M14.1 3h3.1c.2 1.5 1.1 2.8 2.5 3.6v3.2c-1.4 0-2.7-.4-3.8-1.1v6.4a5.2 5.2 0 1 1-4.5-5.1v3.2a2.1 2.1 0 1 0 1.4 2V3h1.3z"></path></svg></a>
-</div></div>
-  <div><h4>Quick Links</h4><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#products">Shop</a></div>
-  <div><h4>Services</h4><a href="#services">Hair Care & Styling</a><a href="#services">Skin Care & Facial</a><a href="#services">Body Spa & Massage</a><a href="#services">Nail Care & Art</a></div>
-  <div><h4>Contact</h4><a href="#contact">harishkumar10njr2005@gmail.com</a><a href="#contact">East 4th Street, Pudukkottai</a></div>
- </div>
- <div class="copyright"><span>© 2026 ASHLEE Unisex Salon & Spa — Portfolio Concept</span><span>Designed as a UI/UX showcase</span></div>
+    <div class="work-grid">
+      
+      <!-- CARD 1 -->
+      <article class="project-card glass reveal">
+        <div class="project-visual">
+          <img src="ashlee-packaging.png" alt="ASHLEE Luxury Salon & Spa Branding" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1000&auto=format&fit=crop';">
+        </div>
+        <div class="project-body">
+          <span class="concept-tag">Brand Identity Package · 01</span>
+          <h3>ASHLEE — Logo &amp; Product Packaging</h3>
+          <p>Complete brand identity system including primary/secondary logo variations, typography hierarchy, color swatches, and 3D cosmetic bottle mockups.</p>
+          <p class="tools">Illustrator · Photoshop</p>
+          <a class="view-link">View Case Study <span class="arrow">→</span></a>
+        </div>
+      </article>
+
+      <!-- CARD 2 (UPDATED WITH ASHLEE-TABLET.JPEG) -->
+      <article class="project-card glass reveal">
+        <div class="project-visual">
+          <a href="ashlee-project/index.html" target="_blank">
+            <img src="ashlee-tablet.jpeg" alt="ASHLEE Web Landing Page UI" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1000&auto=format&fit=crop';">
+          </a>
+        </div>
+        <div class="project-body">
+          <span class="concept-tag">Web Project · 02</span>
+          <h3>Ashlee Project Web</h3>
+          <p>A fully functional web development project built and integrated directly into your portfolio workflow.</p>
+          <p class="tools">HTML · CSS · JS</p>
+          <a href="ashlee-project/index.html" target="_blank" class="view-link">View Project <span class="arrow">→</span></a>
+        </div>
+      </article>
+
+      <!-- CARD 3 -->
+      <article class="project-card glass reveal">
+        <div class="project-visual">
+          <img src="ashlee-social.jpg" alt="ASHLEE Social Media Campaign" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1000&auto=format&fit=crop';">
+        </div>
+        <div class="project-body">
+          <span class="concept-tag">Digital Marketing Assets · 03</span>
+          <h3>ASHLEE — Social Media Ad Creatives</h3>
+          <p>High-conversion promotional story ads, carousel beauty tips, and scroll-stopping editorial banners tailored for multi-platform engagement.</p>
+          <p class="tools">Photoshop · Figma · Canva</p>
+          <a class="view-link">View Campaign <span class="arrow">→</span></a>
+        </div>
+      </article>
+
+      <!-- CARD 4 -->
+      <article class="project-card glass reveal">
+        <div class="project-visual">
+          <img src="ashlee-subway.png" alt="ASHLEE Print & Outdoor Ads" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop';">
+        </div>
+        <div class="project-body">
+          <span class="concept-tag">Commercial Print &amp; Large-Format · 04</span>
+          <h3>ASHLEE — Large-Format &amp; Subway Ads</h3>
+          <p>Print-ready vector artwork in CMYK mode at 300 DPI with accurate bleed, trim, and safe margin specifications for event banners, signage, and menu stands.</p>
+          <p class="tools">Illustrator · CorelDRAW · Prepress</p>
+          <a class="view-link">View Print Suite <span class="arrow">→</span></a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- COMPREHENSIVE 4-DOMAIN SERVICES SECTION -->
+<section id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow c-orange">03 — What I Deliver</span>
+        <h2 style="color:#fff;">Production-Ready Design<br>&amp; Digital Solutions</h2>
+      </div>
+      <p>From tactile print-ready production files to responsive front-end web layouts — engineered for high visual impact.</p>
+    </div>
+    
+    <div class="services-grid">
+      
+      <div class="service-card glass reveal">
+        <div class="service-icon"><i class="fa-solid fa-swatchbook"></i></div>
+        <h3>Brand Identity &amp; Systems</h3>
+        <p>Complete visual identity packages including primary/secondary logos, comprehensive brand guidelines, color palettes, vector typography hierarchies, and commercial mockups.</p>
+      </div>
+
+      <div class="service-card glass reveal">
+        <div class="service-icon"><i class="fa-solid fa-print"></i></div>
+        <h3>Print &amp; Prepress Production</h3>
+        <p>Commercial print-ready files engineered in CMYK mode at 300 DPI with precise bleed, trim, and safe margin setups — covering large-format signage, lightboxes, brochures, and packaging.</p>
+      </div>
+
+      <div class="service-card glass reveal">
+        <div class="service-icon"><i class="fa-solid fa-bullhorn"></i></div>
+        <h3>Digital Marketing &amp; Social Ads</h3>
+        <p>Scroll-stopping promotional creatives, Instagram carousel sets, high-converting story ads, banner campaigns, photo manipulation, and editorial layout compositions.</p>
+      </div>
+
+      <div class="service-card glass reveal">
+        <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+        <h3>Front-End &amp; Web Assets</h3>
+        <p>Translating visual concepts and Figma prototypes into responsive web layouts using clean HTML5, CSS3, Tailwind styling, web asset optimization, and live deployment on GitHub Pages.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS SECTION -->
+<section id="skills">
+  <div class="wrap grid-12">
+    <div class="skills-header-area reveal">
+      <span class="eyebrow c-violet">04 — Core Skills</span>
+      <h2 style="font-size:2.2rem; color:#fff;">Software &amp; Tools</h2>
+      <p style="color:var(--fg-dim); margin-top:0.8rem; font-weight:500;">Proficient across design software, prepress workflows, and front-end development.</p>
+    </div>
+    <div class="skills-container reveal">
+      <div>
+        <p class="eyebrow" style="color:var(--cyan);">Design &amp; Prepress</p>
+        
+        <div class="skill-row">
+          <span>Adobe Photoshop</span>
+          <div class="bar-wrap">
+            <div class="bar" data-target="85"><span style="width:0%"></span></div>
+            <span class="bar-pct">85%</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <span>Adobe Illustrator</span>
+          <div class="bar-wrap">
+            <div class="bar" data-target="85"><span style="width:0%"></span></div>
+            <span class="bar-pct">85%</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <span>CorelDRAW</span>
+          <div class="bar-wrap">
+            <div class="bar" data-target="65"><span style="width:0%"></span></div>
+            <span class="bar-pct">65%</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <span>Figma &amp; Front-End Web</span>
+          <div class="bar-wrap">
+            <div class="bar" data-target="55"><span style="width:0%"></span></div>
+            <span class="bar-pct">55%</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p class="eyebrow" style="color:var(--cyan);">Core Competencies</p>
+        <div class="pill-grid">
+          <div class="pill-item glass">CMYK Color Workflows</div>
+          <div class="pill-item glass">300 DPI Prepress Setup</div>
+          <div class="pill-item glass">Large-Format Signage</div>
+          <div class="pill-item glass">Photo Retouching</div>
+          <div class="pill-item glass">HTML5 &amp; CSS3 Layouts</div>
+          <div class="pill-item glass">Responsive UI Systems</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="grid-column:span 12;" class="reveal">
+      <div class="ticker-wrap">
+        <div class="ticker-track" id="tickerTrack">
+          
+          <div class="tool-chip glass">
+            <span class="tool-img-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" alt="Photoshop" loading="lazy"></span>
+            <span class="tname">Adobe Photoshop</span>
+          </div>
+
+          <div class="tool-chip glass">
+            <span class="tool-img-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" alt="Illustrator" loading="lazy"></span>
+            <span class="tname">Adobe Illustrator</span>
+          </div>
+
+          <div class="tool-chip glass">
+            <span class="tool-img-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma" loading="lazy"></span>
+            <span class="tname">Figma</span>
+          </div>
+
+          <div class="tool-chip glass">
+            <span class="tool-img-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5" loading="lazy"></span>
+            <span class="tname">HTML5</span>
+          </div>
+
+          <div class="tool-chip glass">
+            <span class="tool-img-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3" loading="lazy"></span>
+            <span class="tname">CSS3</span>
+          </div>
+
+          <div class="tool-chip glass">
+            <span class="tool-img-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" loading="lazy"></span>
+            <span class="tname">JavaScript</span>
+          </div>
+
+          <div class="tool-chip glass">
+            <span class="tool-img-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="Tailwind CSS" loading="lazy"></span>
+            <span class="tname">Tailwind CSS</span>
+          </div>
+
+          <div class="tool-chip glass">
+            <span class="tool-img-icon"><i class="fa-brands fa-github" style="font-size:1.8rem; color:#fff;"></i></span>
+            <span class="tname">GitHub</span>
+          </div>
+
+          <div class="tool-chip glass">
+            <span class="tool-img-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" alt="Photoshop" loading="lazy"></span>
+            <span class="tname">Adobe Photoshop</span>
+          </div>
+
+          <div class="tool-chip glass">
+            <span class="tool-img-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" alt="Illustrator" loading="lazy"></span>
+            <span class="tname">Adobe Illustrator</span>
+          </div>
+
+          <div class="tool-chip glass">
+            <span class="tool-img-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma" loading="lazy"></span>
+            <span class="tname">Figma</span>
+          </div>
+
+          <div class="tool-chip glass">
+            <span class="tool-img-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5" loading="lazy"></span>
+            <span class="tname">HTML5</span>
+          </div>
+
+          <div class="tool-chip glass">
+            <span class="tool-img-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3" loading="lazy"></span>
+            <span class="tname">CSS3</span>
+          </div>
+
+          <div class="tool-chip glass">
+            <span class="tool-img-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" loading="lazy"></span>
+            <span class="tname">JavaScript</span>
+          </div>
+
+          <div class="tool-chip glass">
+            <span class="tool-img-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="Tailwind CSS" loading="lazy"></span>
+            <span class="tname">Tailwind CSS</span>
+          </div>
+
+          <div class="tool-chip glass">
+            <span class="tool-img-icon"><i class="fa-brands fa-github" style="font-size:1.8rem; color:#fff;"></i></span>
+            <span class="tname">GitHub</span>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow c-cyan reveal">05 — Production Workflow</span>
+    <h2 class="reveal" style="font-size:2rem; margin-bottom:3rem; color:#fff;">Production &amp; Execution Standard</h2>
+    <div class="ripple-grid process-grid" id="processGrid">
+      <div class="process-step ripple-card glass reveal"><p class="num">01</p><h3>Brief &amp; Specs</h3><p>Dimensions, resolution, margins &amp; intent.</p></div>
+      <div class="process-step ripple-card glass reveal"><p class="num">02</p><h3>Visual Concept</h3><p>Grid layout, typography &amp; color swatches.</p></div>
+      <div class="process-step ripple-card glass reveal"><p class="num">03</p><h3>Vector &amp; Raster</h3><p>High-res assets, masks &amp; layer hierarchy.</p></div>
+      <div class="process-step ripple-card glass reveal"><p class="num">04</p><h3>Pre-Flight Check</h3><p>CMYK mode, 300 DPI, bleed &amp; trim safety.</p></div>
+      <div class="process-step ripple-card glass reveal"><p class="num">05</p><h3>Delivery</h3><p>Print-ready PDF / web responsive assets.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow c-orange reveal">06 — Key Strengths</span>
+    <h2 class="reveal" style="font-size:2rem; margin-bottom:3rem; color:#fff;">Why Work With Me?</h2>
+    <div class="ripple-grid why-grid" id="whyGrid">
+      <div class="why-card ripple-card glass reveal"><h3>Prepress Accuracy</h3><p>Zero color shifts, exact bleed and trim specs.</p></div>
+      <div class="why-card ripple-card glass reveal"><h3>Brand Systems</h3><p>Cohesive typography, grids and color rules.</p></div>
+      <div class="why-card ripple-card glass reveal"><h3>Design + Web</h3><p>Seamlessly bridging visual craft with UI code.</p></div>
+      <div class="why-card ripple-card glass reveal"><h3>Fast Execution</h3><p>Structured, clean and production-ready output.</p></div>
+      <div class="why-card ripple-card glass reveal"><h3>Dubai &amp; Remote Ready</h3><p>Ready to relocate or contribute globally.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="eyebrow c-cyan">07 — Contact</span>
+      <h2 style="font-size:2.2rem; margin-bottom:1rem; color:#fff;">Let's Connect &amp; Collaborate</h2>
+      <p style="color:var(--fg-dim); max-width:380px; font-weight:500;">Seeking entry-level Graphic Designer, Prepress Operator, or Front-End Web Assistant roles in India, Dubai, or remote.</p>
+
+      <div class="badge-row">
+        <a class="badge glass" href="https://wa.me/916384651054" target="_blank" rel="noopener noreferrer">
+          <span class="icon"><i class="fa-brands fa-whatsapp"></i></span>
+          <span class="meta">
+            <span class="label">WhatsApp</span>
+            <span class="value">Chat with me anytime</span>
+          </span>
+        </a>
+        <a class="badge glass" href="mailto:Harishkumar10njr2005@gmail.com">
+          <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+          <span class="meta">
+            <span class="label">Email</span>
+            <span class="value">Harishkumar10njr2005@gmail.com</span>
+          </span>
+        </a>
+        <a class="badge glass" href="https://www.linkedin.com/in/harish-kumar-b3790934b" target="_blank" rel="noopener noreferrer">
+          <span class="icon"><i class="fa-brands fa-linkedin-in"></i></span>
+          <span class="meta">
+            <span class="label">LinkedIn</span>
+            <span class="value">Let's connect professionally</span>
+          </span>
+        </a>
+        <a class="badge glass" href="https://www.instagram.com/___njr__01" target="_blank" rel="noopener noreferrer">
+          <span class="icon"><i class="fa-brands fa-instagram"></i></span>
+          <span class="meta">
+            <span class="label">Instagram</span>
+            <span class="value">Follow my creative journey</span>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <form class="reveal contact-form glass" id="contactForm">
+      <div class="form-field"><label>Name</label><input type="text" required placeholder="Your name"></div>
+      <div class="form-field"><label>Email</label><input type="email" required placeholder="you@email.com"></div>
+      <div class="form-field"><label>Message</label><textarea rows="5" required placeholder="Tell me about the project or role..."></textarea></div>
+      <button type="submit" class="btn btn-primary magnetic" style="width:100%; justify-content:center;">Send Message <span class="arrow">→</span></button>
+    </form>
+  </div>
+</section>
+
+<button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<div class="lightbox-modal" id="lightboxModal">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close Preview"><i class="fa-solid fa-xmark"></i></button>
+  <img src="" alt="Full Preview" class="lightbox-img" id="lightboxImg">
 </div>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <p class="fname">Harish Kumar</p>
+      <p class="sub">Graphic Designer | Print &amp; Prepress | Digital Branding | Front-End &amp; Web Assets</p>
+    </div>
+    <div class="foot-social">
+      <a class="glass" href="https://wa.me/916384651054" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+      <a class="glass" href="https://www.linkedin.com/in/harish-kumar-b3790934b" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a class="glass" href="https://www.instagram.com/___njr__01" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    <p class="sub">© 2026 Harish Kumar. All rights reserved.</p>
+  </div>
 </footer>
 
-<div class="lightbox" id="lightbox" aria-hidden="true">
-  <button class="lightbox-close" id="lightboxClose" aria-label="Close image">×</button>
-  <img id="lightboxImage" src="" alt="">
-</div>
-
-<style>
-.lightbox{position:fixed;inset:0;z-index:100;background:rgba(27,12,24,.88);backdrop-filter:blur(14px);display:none;align-items:center;justify-content:center;padding:30px}.lightbox.open{display:flex}.lightbox img{max-width:min(1100px,94vw);max-height:88vh;width:auto;height:auto;object-fit:contain;border-radius:18px;box-shadow:0 30px 90px rgba(0,0,0,.45)}.lightbox-close{position:absolute;top:20px;right:24px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);color:#fff;font-size:28px;line-height:1;cursor:pointer}
-</style>
-
 <script>
-(function(){
-  'use strict';
-  const $=(sel,root=document)=>root.querySelector(sel);
-  const $$=(sel,root=document)=>Array.from(root.querySelectorAll(sel));
-  const header=$('#header');
-  if(header) addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>30),{passive:true});
-
-  // Make every intended animated element observable, including section-specific effects.
-  const revealTargets=new Set();
-  $$('.reveal').forEach(el=>revealTargets.add(el));
-  $$('.section-head,.experience-image,.experience-copy,.product,.quote,.service,.contact-card,.offer-card').forEach(el=>{el.classList.add('motion-reveal');revealTargets.add(el)});
-  $$('#gallery .panel').forEach(el=>{el.classList.add('motion-reveal');revealTargets.add(el)});
-  $$('#mainGallery img').forEach(el=>{revealTargets.add(el)});
-  $$('#booking .panel:first-child .gallery-grid img').forEach(el=>revealTargets.add(el));
-
-  const reveal=(el)=>{el.classList.add('show','is-visible')};
-  if('IntersectionObserver' in window){
-    const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){reveal(entry.target);io.unobserve(entry.target)}}),{threshold:.12,rootMargin:'0px 0px -6% 0px'});
-    revealTargets.forEach(el=>io.observe(el));
-  }else revealTargets.forEach(reveal);
-  // Safety fallback: if a browser/file:// environment doesn't trigger observers, reveal based on scroll.
-  function revealInView(){revealTargets.forEach(el=>{if(el.classList.contains('is-visible'))return;const r=el.getBoundingClientRect();if(r.top<innerHeight*.9&&r.bottom>0)reveal(el)})}
-  addEventListener('scroll',revealInView,{passive:true}); addEventListener('resize',revealInView); setTimeout(revealInView,120);
-
-  // Stagger generic cards.
-  $$('.service-grid .service,.product-grid .product,.quote-grid .quote').forEach((el,i)=>el.style.transitionDelay=(i%4)*80+'ms');
-
-  // Booking form.
-  const form=$('#bookingForm');
-  if(form) form.addEventListener('submit',e=>{e.preventDefault();const btn=form.querySelector('button');if(btn){btn.innerHTML='Your Escape Is Reserved <span class="arrow">✓</span>';btn.disabled=true;btn.style.opacity='.8'}});
-
-  // Gallery filtering.
-  const filterButtons=$$('.filter'); const galleryImages=$$('#mainGallery img');
-  filterButtons.forEach(btn=>btn.addEventListener('click',()=>{
-    const filter=btn.dataset.filter||'all'; filterButtons.forEach(b=>b.classList.toggle('active',b===btn));
-    galleryImages.forEach(img=>{const show=filter==='all'||img.dataset.category===filter;img.style.display=show?'block':'none';if(show){img.classList.remove('is-visible');requestAnimationFrame(()=>img.classList.add('is-visible'))}});
-  }));
-
-  // Lightbox.
-  const lightbox=$('#lightbox'),lightboxImage=$('#lightboxImage'),lightboxClose=$('#lightboxClose');
-  function closeLightbox(){if(!lightbox)return;lightbox.classList.remove('open');lightbox.setAttribute('aria-hidden','true');}
-  galleryImages.forEach(img=>img.addEventListener('click',()=>{if(!lightbox)return;lightboxImage.src=img.currentSrc||img.src;lightboxImage.alt=img.alt;lightbox.classList.add('open');lightbox.setAttribute('aria-hidden','false')}));
-  if(lightboxClose) lightboxClose.addEventListener('click',closeLightbox);
-  if(lightbox) lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox()});
-  addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
-
-  // Premium cursor with lagged ring and trail. Disabled on touch devices.
-  const fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
-  const dot=$('#cursorDot'),ring=$('#cursorRing'),label=$('#cursorLabel');
-  if(fine&&dot&&ring&&label){
-    let mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
-    const trail=[];
-    for(let i=0;i<8;i++){const t=document.createElement('div');t.className='cursor-trail';document.body.appendChild(t);trail.push({el:t,x:mx,y:my})}
-    addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';label.style.left=(mx+18)+'px';label.style.top=(my+18)+'px';dot.style.opacity='1';ring.style.opacity='1'});
-    (function cursorLoop(){rx+=(mx-rx)*.17;ry+=(my-ry)*.17;ring.style.left=rx+'px';ring.style.top=ry+'px';let tx=mx,ty=my;trail.forEach((t,i)=>{t.x+=(tx-t.x)*Math.max(.08,.22-i*.018);t.y+=(ty-t.y)*Math.max(.08,.22-i*.018);t.el.style.left=t.x+'px';t.el.style.top=t.y+'px';tx=t.x;ty=t.y});requestAnimationFrame(cursorLoop)})();
-    $$('a,button,.service,.product,.quote,.gallery-grid img,.filter').forEach(el=>{el.addEventListener('mouseenter',()=>{document.body.classList.add('cursor-active');label.textContent=el.dataset.cursor||(el.matches('.gallery-grid img')?'Open':'View')});el.addEventListener('mouseleave',()=>document.body.classList.remove('cursor-active'))});
-  }
-
-  // Real-time 3D tilt on cards/images.
-  $$('.service,.product,.quote,#booking .panel:first-child .gallery-grid img').forEach(card=>{
-    card.addEventListener('pointermove',e=>{
-      if(!fine)return; const r=card.getBoundingClientRect(); const x=(e.clientX-r.left)/r.width-.5; const y=(e.clientY-r.top)/r.height-.5;
-      card.style.setProperty('--mx',(x*100+50)+'%');card.style.setProperty('--my',(y*100+50)+'%');
-      if(card.closest('#booking')) card.style.animationPlayState='paused';
-      card.style.transform=`translateY(-12px) rotateX(${(-y*6).toFixed(2)}deg) rotateY(${(x*8).toFixed(2)}deg) scale(1.035)`;
-    });
-    card.addEventListener('pointerleave',()=>{card.style.transform='';if(card.closest('#booking'))card.style.animationPlayState='running'});
+  document.addEventListener('contextmenu', (e) => e.preventDefault());
+  document.addEventListener('dragstart', (e) => e.preventDefault());
+  document.addEventListener('copy', (e) => {
+    if (!['input', 'textarea'].includes(document.activeElement.tagName.toLowerCase())) {
+      e.preventDefault();
+    }
   });
 
-  // Menu button.
-  const menuBtn=$('#menuBtn');
-  if(menuBtn) menuBtn.addEventListener('click',()=>{const links=$('.links');if(!links)return;const open=links.dataset.open==='1';links.dataset.open=open?'0':'1';links.style.cssText=open?'':'display:flex;position:fixed;inset:0;background:#24101f;flex-direction:column;align-items:center;justify-content:center;gap:30px;font-size:18px;z-index:40';});
-
-  // Ensure all local images resolve correctly and provide a graceful visual fallback.
-  $$('img[src]').forEach(img=>img.addEventListener('error',()=>{img.style.background='linear-gradient(135deg,#24101f,#7d4a66)';img.style.objectFit='cover';img.alt=img.alt||'ASHLEE visual'}));
-})();
-</script>
-
-<style id="ashlee-mobile-fit-final">
-/* ===== ASHLEE FINAL MOBILE FIT ===== */
-html,body{width:100%;max-width:100%;overflow-x:hidden}
-*,*::before,*::after{box-sizing:border-box}
-img,video,svg,canvas{max-width:100%}
-.container,.hero-content{min-width:0}
-
-@media (max-width: 900px){
-  .container,.hero-content{width:calc(100% - 32px);max-width:100%;}
-  .nav{padding-left:16px!important;padding-right:16px!important}
-  .hero h1{font-size:clamp(46px,10vw,76px);max-width:100%;word-break:normal}
-  .hero-copy{max-width:100%}
-  .hero p{max-width:520px}
-  .hero-ctas{flex-wrap:wrap}
-  .experience-grid,.offer-grid,.contact-grid{grid-template-columns:1fr!important}
-  .experience-image,.contact-visual{width:100%;max-width:100%}
-  .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
-  .gallery-grid img{width:100%;min-width:0}
-}
-
-@media (max-width: 600px){
-  body{width:100%;min-width:0;overflow-x:hidden}
-  .container,.hero-content{width:calc(100% - 28px);margin-left:auto;margin-right:auto}
-  section{padding:56px 0!important;overflow:hidden}
-  .hero{min-height:82vh!important;width:100%;overflow:hidden}
-  .hero-content{padding-top:76px!important}
-  .hero h1{font-size:clamp(42px,14vw,62px)!important;line-height:.92!important;margin:14px 0 18px!important;max-width:100%!important}
-  .hero p{font-size:13px;line-height:1.65;max-width:100%}
-  .hero-ctas{width:100%;flex-direction:column;align-items:stretch;gap:10px}
-  .hero-ctas .btn{width:100%;justify-content:center;min-height:48px}
-
-  .section-head{max-width:100%;margin-bottom:28px!important}
-  .section-head h2,.panel h2{font-size:clamp(34px,10vw,48px)!important;line-height:1!important;max-width:100%;overflow-wrap:anywhere}
-  .section-head p{max-width:100%;font-size:12px;line-height:1.65}
-
-  .pillar-grid,.service-grid,.product-grid,.quote-grid,.footer-grid,.experience-grid,.offer-grid,.contact-grid{grid-template-columns:1fr!important;width:100%;max-width:100%}
-  .pillar,.service,.product,.quote,.panel,.contact-card,.contact-visual{width:100%;max-width:100%;min-width:0}
-  .pillar{border-right:0!important}
-  .service,.product,.quote{transform:none;}
-  .service:hover,.product:hover,.quote:hover{transform:translateY(-4px)!important}
-
-  .gallery-grid{grid-template-columns:1fr!important;gap:12px!important;width:100%;max-width:100%}
-  .gallery-grid figure,.gallery-grid a,.gallery-grid img{width:100%!important;max-width:100%!important;min-width:0!important}
-  .gallery-grid img{height:auto!important;aspect-ratio:4/3;object-fit:cover}
-
-  .experience-image{height:auto!important;min-height:280px;max-height:430px;width:100%;overflow:hidden}
-  #about .experience-image img{width:100%;height:100%;object-fit:cover}
-  #about .experience-copy{width:100%;max-width:100%}
-  #about .experience-copy h2{font-size:clamp(36px,11vw,54px)!important}
-
-  .offer-copy{padding:28px!important}
-  .offer-copy h2{font-size:clamp(44px,13vw,62px)!important;line-height:.95!important}
-  .offer-image{min-height:280px!important}
-
-  .contact-visual{min-height:340px!important;padding:28px!important}
-  .contact-visual h3{font-size:36px!important}
-  .contact-card{padding:26px!important}
-
-  .form{grid-template-columns:1fr!important;width:100%}
-  .form input,.form textarea,.form select{width:100%;max-width:100%;min-width:0}
-  .form textarea,.form .full{grid-column:auto!important}
-  button,.btn{max-width:100%}
-
-  .footer-grid{gap:30px!important}
-  .footer-logo{width:138px!important;max-width:100%}
-  .socials{flex-wrap:wrap}
-  .copyright{font-size:10px;line-height:1.5;max-width:100%}
-
-  .lightbox{padding:16px!important}
-  .lightbox img{width:100%!important;max-width:100%!important;height:auto!important}
-
-  /* Keep motion, but never let transforms create layout overflow. */
-  .motion-reveal,.reveal{max-width:100%;}
-}
-
-@media (max-width: 380px){
-  .container,.hero-content{width:calc(100% - 24px)}
-  section{padding:48px 0!important}
-  .hero h1{font-size:clamp(38px,13.5vw,52px)!important}
-  .eyebrow{font-size:9px!important;letter-spacing:.14em!important}
-  .btn{font-size:11px!important;padding:12px 16px!important}
-  .panel h3{font-size:28px!important}
-  .contact-visual h3{font-size:32px!important}
-}
-
-/* Touch devices: keep interactions usable without desktop cursor/hover assumptions. */
-@media (hover:none),(pointer:coarse){
-  body{cursor:auto!important}
-  .cursor-dot,.cursor-ring,.cursor-label,.cursor-trail{display:none!important}
-  .service:hover,.product:hover,.quote:hover{box-shadow:none}
-}
-</style>
-<script>
-/* Mobile overflow guard: neutralizes accidental wide inline elements without removing animations. */
-(function(){
-  const isTouch=matchMedia('(hover:none),(pointer:coarse)').matches;
-  if(isTouch){
-    document.querySelectorAll('[style*="position:fixed"]').forEach(el=>{if(el.classList.contains('cursor-dot')||el.classList.contains('cursor-ring')||el.classList.contains('cursor-label'))el.style.display='none';});
-  }
-  function fitCheck(){
-    if(innerWidth<=600){
-      document.documentElement.style.maxWidth='100%';
-      document.body.style.maxWidth='100%';
-      document.body.style.overflowX='hidden';
-      document.querySelectorAll('img,video,svg,canvas,iframe').forEach(el=>{el.style.maxWidth='100%';});
+  document.addEventListener('keydown', (e) => {
+    if (
+      (e.ctrlKey && (e.key === 's' || e.key === 'u' || e.key === 'p')) ||
+      (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
+      e.key === 'F12'
+    ) {
+      e.preventDefault();
     }
-  }
-  addEventListener('resize',fitCheck,{passive:true});
-  fitCheck();
-})();
-</script>
+  });
 
+  window.addEventListener('DOMContentLoaded', () => {
+    const preloader = document.getElementById('preloader');
+    const loadPct = document.getElementById('loadPct');
+    const loadBar = document.getElementById('loadBar');
+    
+    let progress = 0;
+    const duration = 2400;
+    const intervalTime = 40;
+    const step = 100 / (duration / intervalTime);
+
+    const timer = setInterval(() => {
+      progress += step;
+      if (progress >= 100) {
+        progress = 100;
+        clearInterval(timer);
+        if (loadPct) loadPct.textContent = '100%';
+        if (loadBar) loadBar.style.width = '100%';
+        setTimeout(() => {
+          if (preloader) preloader.classList.add('fade-out');
+        }, 300);
+      } else {
+        const rounded = Math.floor(progress);
+        if (loadPct) loadPct.textContent = rounded + '%';
+        if (loadBar) loadBar.style.width = rounded + '%';
+      }
+    }, intervalTime);
+  });
+
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  window.addEventListener('scroll', ()=>{
+    if(window.scrollY > 350){ scrollTopBtn.classList.add('visible'); }
+    else { scrollTopBtn.classList.remove('visible'); }
+  });
+
+  scrollTopBtn.addEventListener('click', ()=>{ window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  const navItems = document.querySelectorAll('.nav-item');
+
+  if(menuToggle && navLinks){
+    menuToggle.addEventListener('click', (e)=>{
+      e.stopPropagation();
+      navLinks.classList.toggle('active');
+      const icon = menuToggle.querySelector('i');
+      if(navLinks.classList.contains('active')){
+        icon.classList.remove('fa-bars'); icon.classList.add('fa-xmark');
+      } else {
+        icon.classList.remove('fa-xmark'); icon.classList.add('fa-bars');
+      }
+    });
+
+    navItems.forEach(item => {
+      item.addEventListener('click', ()=>{
+        navLinks.classList.remove('active');
+        const icon = menuToggle.querySelector('i');
+        icon.classList.remove('fa-xmark'); icon.classList.add('fa-bars');
+      });
+    });
+
+    document.addEventListener('click', (e)=>{
+      if(!navLinks.contains(e.target) && !menuToggle.contains(e.target)){
+        navLinks.classList.remove('active');
+        const icon = menuToggle.querySelector('i');
+        icon.classList.remove('fa-xmark'); icon.classList.add('fa-bars');
+      }
+    });
+  }
+
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el=>io.observe(el));
+
+  document.querySelectorAll('.magnetic').forEach(btn=>{
+    btn.addEventListener('mousemove', (e)=>{
+      const r = btn.getBoundingClientRect();
+      const x = e.clientX - r.left - r.width/2;
+      const y = e.clientY - r.top - r.height/2;
+      btn.style.transform = `translate(${x*0.25}px, ${y*0.35}px)`;
+    });
+    btn.addEventListener('mouseleave', ()=>{ btn.style.transform = 'translate(0,0)'; });
+  });
+
+  function attachRipple(gridId){
+    const grid = document.getElementById(gridId);
+    if(!grid) return;
+    const cards = Array.from(grid.querySelectorAll('.ripple-card'));
+    cards.forEach((card, i)=>{
+      card.addEventListener('mouseenter', ()=>{
+        cards.forEach((c, j)=>{
+          const dist = Math.abs(i - j);
+          const factor = Math.max(0, 1 - dist * 0.42);
+          c.style.setProperty('--r', factor.toFixed(2));
+        });
+      });
+      grid.addEventListener('mouseleave', ()=>{ cards.forEach(c=> c.style.setProperty('--r', 0)); });
+    });
+  }
+  attachRipple('processGrid');
+  attachRipple('whyGrid');
+
+  const skillBars = document.querySelectorAll('.bar[data-target]');
+  const skillIO = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(!entry.isIntersecting) return;
+      const bar = entry.target;
+      const target = parseInt(bar.getAttribute('data-target'), 10);
+      const fill = bar.querySelector('span');
+      const pctLabel = bar.parentElement.querySelector('.bar-pct');
+      fill.style.width = target + '%';
+      const duration = 1400;
+      const start = performance.now();
+      function tick(now){
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(eased * target);
+        if(pctLabel) pctLabel.textContent = current + '%';
+        if(progress < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+      skillIO.unobserve(bar);
+    });
+  }, { threshold: 0.4 });
+  skillBars.forEach(bar=>skillIO.observe(bar));
+
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    const original = btn.innerHTML;
+    btn.innerHTML = 'Message Sent ✓';
+    btn.style.opacity = '0.7';
+    setTimeout(()=>{ btn.innerHTML = original; btn.style.opacity = '1'; form.reset(); }, 2200);
+  });
+
+  const cursorGlow = document.getElementById('cursorGlow');
+  if (cursorGlow && window.matchMedia('(hover: hover)').matches) {
+    window.addEventListener('mousemove', (e) => {
+      cursorGlow.style.left = e.clientX + 'px';
+      cursorGlow.style.top = e.clientY + 'px';
+    });
+  }
+
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      card.style.transform = `perspective(1000px) rotateX(${-y * 0.04}deg) rotateY(${x * 0.04}deg) translateY(-8px)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)';
+    });
+  });
+
+  const lightboxModal = document.getElementById('lightboxModal');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  document.querySelectorAll('.project-visual img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightboxModal.classList.add('active');
+    });
+  });
+
+  if (lightboxClose) {
+    lightboxClose.addEventListener('click', () => lightboxModal.classList.remove('active'));
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal) lightboxModal.classList.remove('active');
+    });
+  }
+</script>
 </body>
 </html>
