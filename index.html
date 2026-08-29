@@ -134,7 +134,7 @@
   .btn .arrow{transition:transform .35s cubic-bezier(.2,.8,.2,1);}
   .btn:hover .arrow{transform:translateX(5px);}
 
-  /* HERO & PURE SOLID WHITE LUXURY NAME */
+  /* HERO */
   .hero{ min-height:100vh; display:flex; align-items:center; padding-top:110px; position:relative; overflow:hidden; }
   .kicker{ font-size:1.05rem; color:var(--fg-dim); margin-bottom:1.1rem; font-weight:600; letter-spacing:0.02em; }
   
@@ -150,7 +150,6 @@
     text-shadow: 0 4px 30px rgba(0,0,0,0.5);
   }
   
-  /* ROLE BADGES */
   .role-badges{
     display: flex;
     flex-wrap: wrap;
@@ -185,7 +184,7 @@
   .dot::after{content:''; position:absolute; inset:-5px; border-radius:50%; border:1px solid var(--cyan); animation:pulse 2s infinite;}
   @keyframes pulse{0%{transform:scale(.6); opacity:1;} 100%{transform:scale(2); opacity:0;}}
 
-  /* FLOATING VERTICAL SOCIAL DOCK */
+  /* SOCIAL DOCK */
   .social-dock{
     position:absolute; right:2.4vw; top:50%; transform:translateY(-50%);
     display:flex; flex-direction:column; gap:.7rem; padding:.9rem .6rem; z-index:20;
@@ -608,19 +607,19 @@
         </div>
       </article>
 
-      <!-- CARD 2 (UPDATED WITH ASHLEE-TABLET.JPEG & CORRECT ASSETS PATH) -->
+      <!-- CARD 2 -->
       <article class="project-card glass reveal">
         <div class="project-visual">
-          <a href="ashlee-project/index.html" target="_blank" rel="noopener noreferrer" style="display:block; width:100%; height:100%;">
-            <img src="ashlee-project/assets/ashlee-tablet.jpeg" alt="ASHLEE Web Landing Page UI" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1000&auto=format&fit=crop';">
+          <a href="ashlee-project/index.html" target="_blank">
+            <img src="ashlee-tablet.jpeg" alt="ASHLEE Web Landing Page UI" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1000&auto=format&fit=crop';">
           </a>
         </div>
         <div class="project-body">
           <span class="concept-tag">Web Project · 02</span>
-          <h3>ASHLEE Salon &amp; Spa</h3>
-          <p>A fully functional web development project built with cinematic animations and responsive UI.</p>
-          <p class="tools">HTML · CSS · Tailwind · JS</p>
-          <a href="ashlee-project/index.html" target="_blank" rel="noopener noreferrer" class="view-link">View Project <span class="arrow">→</span></a>
+          <h3>Ashlee Project Web</h3>
+          <p>A fully functional web development project built and integrated directly into your portfolio workflow.</p>
+          <p class="tools">HTML · CSS · JS</p>
+          <a href="ashlee-project/index.html" target="_blank" class="view-link">View Project <span class="arrow">→</span></a>
         </div>
       </article>
 
@@ -656,7 +655,7 @@
   </div>
 </section>
 
-<!-- COMPREHENSIVE 4-DOMAIN SERVICES SECTION -->
+<!-- SERVICES SECTION -->
 <section id="services">
   <div class="wrap">
     <div class="section-head reveal">
@@ -839,7 +838,6 @@
             <span class="tname">GitHub</span>
           </div>
 
-        </div>
       </div>
     </div>
   </div>
@@ -912,10 +910,11 @@
       </div>
     </div>
 
-    <form class="reveal contact-form glass" id="contactForm">
-      <div class="form-field"><label>Name</label><input type="text" required placeholder="Your name"></div>
-      <div class="form-field"><label>Email</label><input type="email" required placeholder="you@email.com"></div>
-      <div class="form-field"><label>Message</label><textarea rows="5" required placeholder="Tell me about the project or role..."></textarea></div>
+    <!-- Formspree Connected Contact Form -->
+    <form action="https://formspree.io/f/xvkooeql" method="POST" class="reveal contact-form glass" id="contactForm">
+      <div class="form-field"><label>Name</label><input type="text" name="name" required placeholder="Your name"></div>
+      <div class="form-field"><label>Email</label><input type="email" name="email" required placeholder="you@email.com"></div>
+      <div class="form-field"><label>Message</label><textarea name="message" rows="5" required placeholder="Tell me about the project or role..."></textarea></div>
       <button type="submit" class="btn btn-primary magnetic" style="width:100%; justify-content:center;">Send Message <span class="arrow">→</span></button>
     </form>
   </div>
@@ -1094,16 +1093,6 @@
     });
   }, { threshold: 0.4 });
   skillBars.forEach(bar=>skillIO.observe(bar));
-
-  const form = document.getElementById('contactForm');
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    const btn = form.querySelector('button[type="submit"]');
-    const original = btn.innerHTML;
-    btn.innerHTML = 'Message Sent ✓';
-    btn.style.opacity = '0.7';
-    setTimeout(()=>{ btn.innerHTML = original; btn.style.opacity = '1'; form.reset(); }, 2200);
-  });
 
   const cursorGlow = document.getElementById('cursorGlow');
   if (cursorGlow && window.matchMedia('(hover: hover)').matches) {
