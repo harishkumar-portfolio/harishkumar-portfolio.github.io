@@ -1879,80 +1879,17 @@ h1,h2,h3,h4,.section-head h2,.project-body h3,.service-card h3,.process-step h3,
 
       const to = 'Harishkumar10njr2005@gmail.com';
       const subject = 'Portfolio Inquiry';
-
       const gmailWeb =
         'https://mail.google.com/mail/?view=cm&fs=1&tf=1' +
         '&to=' + encodeURIComponent(to) +
         '&su=' + encodeURIComponent(subject);
 
-      const isAndroid = /Android/i.test(navigator.userAgent);
-
-      // Desktop / laptop: Gmail web Compose.
-      if (!isAndroid) {
-        window.open(gmailWeb, '_blank', 'noopener,noreferrer');
-        return;
-      }
-
-      // Android: force the Gmail package to handle a SENDTO mailto intent.
-      // Gmail registers mailto with its ComposeActivity, so this opens
-      // Compose rather than the Gmail Inbox.
-      const mailtoData =
-        'mailto:' + encodeURIComponent(to) +
-        '?subject=' + encodeURIComponent(subject);
-
-      const intentUrl =
-        'intent://' + encodeURIComponent(to) +
-        '?subject=' + encodeURIComponent(subject) +
-        '#Intent;' +
-        'scheme=mailto;' +
-        'action=android.intent.action.SENDTO;' +
-        'package=com.google.android.gm;' +
-        'end';
-
-      let fallbackTimer = null;
-      let appOpened = false;
-
-      const cancelFallback = () => {
-        appOpened = true;
-        if (fallbackTimer) {
-          clearTimeout(fallbackTimer);
-          fallbackTimer = null;
-        }
-      };
-
-      const onVisibilityChange = () => {
-        if (document.hidden) cancelFallback();
-      };
-
-      document.addEventListener('visibilitychange', onVisibilityChange, { once:true });
-
-      // First try the explicit Gmail Android intent.
-      try {
-        window.location.href = intentUrl;
-      } catch (err) {
-        appOpened = false;
-      }
-
-      // Fallback only if Chrome stayed visible and Gmail did not open.
-      fallbackTimer = setTimeout(() => {
-        document.removeEventListener('visibilitychange', onVisibilityChange);
-
-        if (!document.hidden && !appOpened) {
-          // Use a normal mailto fallback before Gmail web.
-          try {
-            window.location.href = mailtoData;
-          } catch (err) {
-            window.location.href = gmailWeb;
-          }
-
-          // If the mail handler is unavailable, use Gmail web Compose.
-          setTimeout(() => {
-            if (!document.hidden) {
-              window.location.href = gmailWeb;
-            }
-          }, 900);
-        }
-      }, 1400);
+      /*
+       * One clean Gmail Compose URL for both laptop and phone.
+       * IMPORTANT: do not use an Android intent URL here; it can make
+       * Gmail interpret the recipient as //Harishkumar...
+       */
+      window.location.href = gmailWeb;
     });
   });
 
