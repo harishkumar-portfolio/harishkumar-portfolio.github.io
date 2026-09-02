@@ -1873,24 +1873,44 @@ h1,h2,h3,h4,.section-head h2,.project-body h3,.service-card h3,.process-step h3,
    * The visibility check is important: once the Gmail app opens, Chrome
    * becomes hidden. That cancels the fallback so the Inbox is never opened.
    */
+  /*
+   * EMAIL COMPOSE
+   *
+   * Android / iPhone: use the native mailto handler. This lets the OS
+   * open the installed mail app (Gmail on the user's phone) directly
+   * in a NEW COMPOSE message.
+   *
+   * IMPORTANT: no intent:// URL is used. That was the source of the
+   * //Harishkumar... recipient problem shown in Gmail.
+   *
+   * Laptop / desktop: open Gmail's web Compose page.
+   */
   document.querySelectorAll('[data-email-compose="true"]').forEach(link => {
-    link.addEventListener('click', function(e){
-      e.preventDefault();
+    const to = 'Harishkumar10njr2005@gmail.com';
+    const subject = 'Portfolio Inquiry';
 
-      const to = 'Harishkumar10njr2005@gmail.com';
-      const subject = 'Portfolio Inquiry';
-      const gmailWeb =
-        'https://mail.google.com/mail/?view=cm&fs=1&tf=1' +
-        '&to=' + encodeURIComponent(to) +
-        '&su=' + encodeURIComponent(subject);
+    const mailto =
+      'mailto:' + to + '?subject=' + encodeURIComponent(subject);
 
-      /*
-       * One clean Gmail Compose URL for both laptop and phone.
-       * IMPORTANT: do not use an Android intent URL here; it can make
-       * Gmail interpret the recipient as //Harishkumar...
-       */
-      window.location.href = gmailWeb;
-    });
+    const gmailWeb =
+      'https://mail.google.com/mail/?view=cm&fs=1&tf=1' +
+      '&to=' + encodeURIComponent(to) +
+      '&su=' + encodeURIComponent(subject);
+
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      // Let the phone's operating system handle mailto normally.
+      link.setAttribute('href', mailto);
+      link.removeAttribute('target');
+      link.removeAttribute('rel');
+      return;
+    }
+
+    // Laptop / desktop: direct Gmail Web Compose.
+    link.setAttribute('href', gmailWeb);
+    link.setAttribute('target', '_blank');
+    link.setAttribute('rel', 'noopener noreferrer');
   });
 
   const cursorGlow = document.getElementById('cursorGlow');
