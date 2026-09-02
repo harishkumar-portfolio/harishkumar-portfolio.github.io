@@ -108,9 +108,9 @@
     text-transform: uppercase;
     color: #FFFFFF;
     word-break: break-word;
-    background: linear-gradient(135deg, #FFFFFF 30%, var(--cyan) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background: none;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: #FFFFFF;
     text-shadow: 0 10px 40px rgba(0,245,212,0.2);
   }
   
@@ -240,15 +240,15 @@
   .skill-row:last-child{border-bottom:none;}
   .skill-row span{ color:var(--fg); font-weight:600; font-size:0.95rem; }
 
-  /* Headline motion: subtle animated highlight instead of static printed text. */
+  /* Headings stay clean, plain white for a professional portfolio look. */
   section h2, section h3{
-    background:linear-gradient(105deg,#ffffff 0%,#ffffff 38%,#73fff0 50%,#ffffff 62%,#ffffff 100%);
-    background-size:240% auto;
-    -webkit-background-clip:text; background-clip:text;
-    -webkit-text-fill-color:transparent;
-    animation:headlineSweep 7s ease-in-out infinite;
+    background:none;
+    -webkit-background-clip:initial;
+    background-clip:initial;
+    -webkit-text-fill-color:#fff;
+    color:#fff;
+    animation:none;
   }
-  @keyframes headlineSweep{0%,58%{background-position:100% 50%;}78%,100%{background-position:0% 50%;}}
 
   /* Give the fixed navigation/actions a premium tinted glass surface instead of flat black. */
   header .navbar{
@@ -787,7 +787,7 @@ nav.links a.is-section-active:after{transform:scaleX(1);transform-origin:left}
 
 /* ===== TRENDING HEADINGS + PREMIUM MOTION ===== */
 h1,h2,h3,h4,.section-head h2,.project-body h3,.service-card h3,.process-step h3,.why-card h3{font-family:'Sora','Space Grotesk',sans-serif;}
-.section-head h2,.skills-header-area h2,#contact h2{background:linear-gradient(100deg,#fff 15%,#d9fff9 52%,#fff 88%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.section-head h2,.skills-header-area h2,#contact h2{background:none;-webkit-background-clip:initial;background-clip:initial;color:#fff;-webkit-text-fill-color:#fff;}
 .skill-row{gap:1.25rem;}
 .skill-row>span:first-child{min-width:0;}
 .project-card,.service-card,.info-card,.ripple-card{position:relative;overflow:hidden;}
@@ -1119,7 +1119,7 @@ h1,h2,h3,h4,.section-head h2,.project-body h3,.service-card h3,.process-step h3,
         <span class="role-badge">Print Specialist</span>
       </div>
 
-      <p class="lede">Versatile multidisciplinary designer and developer crafting compelling brand identities, striking graphic assets, print-ready prepress, and high-performance responsive web applications for global standards.</p>
+      <p class="lede">Versatile multidisciplinary designer and developer creating compelling brand identities, digital assets, print-ready artwork, and responsive websites to professional standards.</p>
       
       <div class="cta-row">
         <a href="#work" class="btn btn-primary magnetic">View My Work <span class="arrow">→</span></a>
@@ -1265,14 +1265,14 @@ h1,h2,h3,h4,.section-head h2,.project-body h3,.service-card h3,.process-step h3,
       <div class="service-card glass reveal">
         <div class="service-icon"><i class="fa-solid fa-code"></i></div>
         <h3>Web Design &amp; Development</h3>
-        <p>Modern, responsive web applications engineered from UI wireframes to fully deployed, high-performance production sites.</p>
+        <p>Modern, responsive websites designed from UI wireframes to fully deployed, production-ready builds.</p>
         <p class="tools" style="margin-top:1.0rem;">Figma · HTML5 · CSS3 · JavaScript · Git/GitHub · Deployment</p>
       </div>
 
       <div class="service-card glass reveal">
         <div class="service-icon"><i class="fa-solid fa-print"></i></div>
         <h3>Print Design &amp; Prepress</h3>
-        <p>Flawless print production files configured with correct CMYK workflows, 300 DPI resolutions, and precise bleed/trim specifications.</p>
+        <p>Print-ready production files configured with CMYK workflows, 300 DPI resolution, and precise bleed, trim, and safe-margin specifications.</p>
         <p class="tools" style="margin-top:1.0rem;">CorelDRAW · Illustrator · Photoshop</p>
       </div>
 
@@ -1323,7 +1323,7 @@ h1,h2,h3,h4,.section-head h2,.project-body h3,.service-card h3,.process-step h3,
           <div class="pill-item glass">Print Prepress Standards</div>
           <div class="pill-item glass">Responsive Web Design</div>
           <div class="pill-item glass">Git/GitHub Workflow</div>
-          <div class="pill-item glass">Web Hosting &amp; Deploy</div>
+          <div class="pill-item glass">Web Hosting &amp; Deployment</div>
           <div class="pill-item glass">CMYK &amp; 300 DPI Setup</div>
         </div>
       </div>
@@ -1511,7 +1511,7 @@ h1,h2,h3,h4,.section-head h2,.project-body h3,.service-card h3,.process-step h3,
     <div class="ripple-grid why-grid" id="whyGrid">
       <div class="why-card ripple-card glass reveal"><h3>Multidisciplinary</h3><p>Expertise spanning design, branding, code &amp; print.</p></div>
       <div class="why-card ripple-card glass reveal"><h3>UI/UX Precision</h3><p>Pixel-perfect layouts built with Figma &amp; code.</p></div>
-      <div class="why-card ripple-card glass reveal"><h3>Prepress Accuracy</h3><p>Zero color shifts, exact bleed and trim specs.</p></div>
+      <div class="why-card ripple-card glass reveal"><h3>Prepress Accuracy</h3><p>Color-accurate output, exact bleed and trim specifications.</p></div>
       <div class="why-card ripple-card glass reveal"><h3>Modern Workflow</h3><p>Git version control, fast hosting &amp; deployment.</p></div>
       <div class="why-card ripple-card glass reveal"><h3>Global Readiness</h3><p>Ready for opportunities in India, Dubai &amp; remote.</p></div>
     </div>
